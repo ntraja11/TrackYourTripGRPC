@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using System.ComponentModel.DataAnnotations.Schema;
 using static TrackYourTripGRPCApi.Utilities.StaticDetails;
 
 namespace TrackYourTripGRPCApi.Models
@@ -23,6 +24,12 @@ namespace TrackYourTripGRPCApi.Models
         public string? Notes { get; set; }
 
         public string? CreatedByUserEmail { get; set; }
+
+        [NotMapped]
+        public IEnumerable<MemberEntity> Members { get; set; } = new List<MemberEntity>();
+
+        [NotMapped]
+        public IEnumerable<ExpenseEntity> Expenses { get; set; } = new List<ExpenseEntity>();
 
     }
 }

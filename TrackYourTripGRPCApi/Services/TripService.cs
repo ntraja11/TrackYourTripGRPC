@@ -6,7 +6,6 @@ using Microsoft.EntityFrameworkCore;
 using TrackYourTripGRPCApi.Data;
 using TrackYourTripGRPCApi.Models;
 using TrackYourTripGRPCApi.Protos;
-using static TrackYourTripGRPCApi.Utilities.StaticDetails;
 
 namespace TrackYourTripGRPCApi.Services
 {

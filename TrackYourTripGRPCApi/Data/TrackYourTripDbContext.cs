@@ -12,10 +12,25 @@ namespace TrackYourTripGRPCApi.Data
         public DbSet<TripEntity> Trips { get; set; }
         public DbSet<Group> Groups { get; set; }
 
+        public DbSet<MemberEntity> Members { get; set; }
+        public DbSet<ExpenseEntity> Expenses { get; set; }
+
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
-            // Additional configurations can be added here if needed
+
+            builder.Entity<ExpenseEntity>()
+                .HasOne(m => m.Member)
+                .WithMany()
+                .HasForeignKey(i => i.MemberId)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            builder.Entity<ExpenseEntity>()
+                .HasOne(t => t.Trip)
+                .WithMany()
+                .HasForeignKey(i => i.TripId)
+                .OnDelete(DeleteBehavior.Restrict);
+
         }
     }
 }

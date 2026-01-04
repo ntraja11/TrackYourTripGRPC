@@ -5,9 +5,9 @@ using TrackYourTripGRPCApi.Protos;
 
 namespace TrackYourTripGRPCApi.Mappings
 {
-    public class TripMappingProfile : Profile
+    public class MappingProfile : Profile
     {
-        public TripMappingProfile()
+        public MappingProfile()
         {
             CreateMap<TripEntity, TripDetail>()
 
@@ -27,6 +27,31 @@ namespace TrackYourTripGRPCApi.Mappings
                 opt => opt.MapFrom(src => src.TotalExpense.HasValue
                         ? src.TotalExpense.Value.ToString()
                         : "0"));
+
+
+            CreateMap<MemberEntity, MemberDetail>()
+                .ForMember(dest => dest.TotalTripExpense,
+                    opt => opt.MapFrom(src => (double)src.TotalTripExpense));
+
+            CreateMap<MemberDetail, MemberEntity>()
+                .ForMember(dest => dest.TotalTripExpense,
+                    opt => opt.MapFrom(src => (decimal)src.TotalTripExpense));
+
+
+            CreateMap<ExpenseEntity, ExpenseDetail>()
+                .ForMember(dest => dest.Amount,
+                    opt => opt.MapFrom(src => (double)src.Amount))
+                .ForMember(dest => dest.ExpenseDate,
+                    opt => opt.MapFrom(src =>
+                        Timestamp.FromDateTime(DateTime.SpecifyKind(src.ExpenseDate, DateTimeKind.Utc))));
+
+            CreateMap<ExpenseDetail, ExpenseEntity>()
+                .ForMember(dest => dest.Amount,
+                    opt => opt.MapFrom(src => (decimal)src.Amount))
+                .ForMember(dest => dest.ExpenseDate,
+                    opt => opt.MapFrom(src => src.ExpenseDate.ToDateTime()));
+
+
         }        
     }
 }

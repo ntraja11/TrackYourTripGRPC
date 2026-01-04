@@ -1,0 +1,84 @@
+syntax = "proto3";
+
+option csharp_namespace = "TrackYourTripGRPCApi.Protos";
+
+import "google/protobuf/timestamp.proto";
+
+package expense;
+
+service Expense {
+  rpc GetExpense (GetExpenseRequest) returns (GetExpenseResponse);
+  rpc GetAllExpensesByTripId (GetAllExpensesByTripIdRequest) returns (GetAllExpensesByTripIdResponse);
+  rpc GetAllExpensesByMemberId (GetAllExpensesByMemberIdRequest) returns (GetAllExpensesByMemberIdResponse);
+  rpc CreateExpense (CreateExpenseRequest) returns (CreateExpenseResponse);
+  rpc UpdateExpense (UpdateExpenseRequest) returns (UpdateExpenseResponse);
+  rpc DeleteExpense (DeleteExpenseRequest) returns (DeleteExpenseResponse);
+}
+
+message ExpenseDetail {
+  int32 id = 1;
+  string title = 2;
+  string description = 3;
+  double amount = 4;
+  int32 tripId = 5;
+  int32 memberId = 6;
+  google.protobuf.Timestamp expenseDate = 7;
+}
+
+message GetExpenseRequest {
+  int32 id = 1;
+}
+
+message GetExpenseResponse {
+  ExpenseDetail expense = 1;
+}
+
+message GetAllExpensesByTripIdRequest {
+  int32 tripId = 1;
+}
+
+message GetAllExpensesByTripIdResponse {
+  repeated ExpenseDetail expenses = 1;
+}
+
+message GetAllExpensesByMemberIdRequest {
+  int32 memberId = 1;
+}
+
+message GetAllExpensesByMemberIdResponse {
+  repeated ExpenseDetail expenses = 1;
+}
+
+
+message CreateExpenseRequest {
+  string title = 1;
+  string description = 2;
+  double amount = 3;
+  int32 tripId = 4;
+  int32 memberId = 5;
+}
+
+message CreateExpenseResponse {
+  ExpenseDetail expense = 1;
+}
+
+message UpdateExpenseRequest {
+  int32 id = 1;
+  string title = 2;
+  string description = 3;
+  double amount = 4;
+  int32 tripId = 5;
+  int32 memberId = 6;
+}
+
+message UpdateExpenseResponse {
+  ExpenseDetail expense = 1;
+}
+
+message DeleteExpenseRequest {
+  int32 id = 1;
+}
+
+message DeleteExpenseResponse {
+  bool success = 1;
+}

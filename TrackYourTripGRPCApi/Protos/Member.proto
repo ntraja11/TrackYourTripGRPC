@@ -1,0 +1,55 @@
+syntax = "proto3";
+
+option csharp_namespace = "TrackYourTripGRPCApi.Protos";
+
+package member;
+
+service Member {
+  rpc GetMember (GetMemberRequest) returns (GetMemberResponse);
+  rpc GetAllMembersByTripId (GetAllMembersByTripIdRequest) returns (GetAllMembersByTripIdResponse);
+  rpc CreateMember (CreateMemberRequest) returns (CreateMemberResponse);
+  rpc DeleteMember (DeleteMemberRequest) returns (DeleteMemberResponse);
+}
+
+message MemberDetail {
+  int32 id = 1;
+  string name = 2;
+  string email = 3;
+  int32 tripId = 4;
+  double totalTripExpense = 5;
+}
+
+message GetMemberRequest {
+  int32 id = 1;
+}
+
+message GetMemberResponse {
+  MemberDetail member = 1;
+}
+
+message GetAllMembersByTripIdRequest {
+  int32 tripId = 1;
+}
+
+message GetAllMembersByTripIdResponse {
+  repeated MemberDetail members = 1;
+}
+
+message CreateMemberRequest {
+  string name = 1;
+  string email = 2;
+  int32 tripId = 3;
+}
+
+message CreateMemberResponse {
+  MemberDetail member = 1;
+}
+
+message DeleteMemberRequest {
+  int32 id = 1;
+}
+
+message DeleteMemberResponse {
+  bool success = 1;
+}
+

@@ -2,8 +2,6 @@ syntax = "proto3";
 
 option csharp_namespace = "TrackYourTripGRPCApi.Protos";
 
-import "google/protobuf/empty.proto";
-
 package auth;
 
 service Auth{

@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net10.0</TargetFramework>
@@ -8,11 +8,15 @@
 
   <ItemGroup>
     <None Remove="Protos\auth.proto" />
+    <None Remove="Protos\Expense.proto" />
+    <None Remove="Protos\Member.proto" />
     <None Remove="Protos\trip.proto" />
   </ItemGroup>
 
   <ItemGroup>
-    <Protobuf Include="Protos\auth.proto" GrpcServices="Server" />
+    <Protobuf Include="Protos\auth.proto" GrpcServices="Server" OutputDir="Generated"/>
+    <Protobuf Include="Protos\Expense.proto" GrpcServices="Server" OutputDir="Generated"/>
+    <Protobuf Include="Protos\Member.proto" GrpcServices="Server" OutputDir="Generated"/>
     <Protobuf Include="Protos\trip.proto" GrpcServices="Server" OutputDir="Generated" />
   </ItemGroup>
 

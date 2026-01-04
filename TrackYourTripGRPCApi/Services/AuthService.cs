@@ -1,5 +1,6 @@
 ﻿using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using TrackYourTripGRPCApi.Data;
@@ -44,7 +45,8 @@ namespace TrackYourTripGRPCApi.Services
                 }
                 : throw new RpcException(new Status(StatusCode.Unauthenticated, "Invalid credentials."));
         }
-        
+
+        [AllowAnonymous]
         public override async Task<RegisterResponse> Register(RegisterRequest request, ServerCallContext context)
         {
             ApplicationUser? existingUser = await GetUser(request.Email);
