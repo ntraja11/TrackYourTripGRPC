@@ -1,0 +1,101 @@
+syntax = "proto3";
+
+option csharp_namespace = "TrackYourTripGRPCApi.Protos";
+
+import "google/protobuf/empty.proto";
+import "google/protobuf/timestamp.proto";
+
+package trip;
+
+service Trip {
+  rpc GetTrip (GetTripRequest) returns (GetTripResponse);
+  rpc GetAllTrips (google.protobuf.Empty) returns (GetAllTripsResponse);
+  rpc CreateTrip (CreateTripRequest) returns (CreateTripResponse);
+  rpc UpdateTrip (UpdateTripRequest) returns (UpdateTripResponse);
+  rpc DeleteTrip (DeleteTripRequest) returns (DeleteTripResponse);
+}
+
+message TripDetail {
+  int32 id = 1;
+  string title = 2;
+  string description = 3;
+
+  google.protobuf.Timestamp startDate = 4;
+  google.protobuf.Timestamp endDate = 5;
+
+  string from = 6;
+  string to = 7;
+
+  string totalExpense = 8;
+
+  TripStatus status = 9;
+  string notes = 10;
+
+  string createdByUserEmail = 11;
+}
+
+message GetTripRequest {
+  int32 id = 1;
+}
+
+message GetTripResponse {
+  TripDetail trip = 1;
+}
+
+message GetAllTripsResponse {
+  repeated TripDetail trips = 1;
+}
+
+message CreateTripRequest {
+  string title = 1;
+  string description = 2;
+
+  google.protobuf.Timestamp startDate = 3;
+  google.protobuf.Timestamp endDate = 4;
+
+  string from = 5;
+  string to = 6;
+  
+  string notes = 7;
+
+  string createdByUserEmail = 8;
+}
+
+message CreateTripResponse {
+  TripDetail trip = 1;
+}
+
+message UpdateTripRequest {
+  int32 id = 1;
+  string title = 2;
+  string description = 3;
+
+  google.protobuf.Timestamp startDate = 4;
+  google.protobuf.Timestamp endDate = 5;
+
+  string from = 6;
+  string to = 7;
+  
+  TripStatus status = 8;
+  string notes = 9;  
+}
+
+message UpdateTripResponse {
+  TripDetail trip = 1;
+}
+
+message DeleteTripRequest {
+  int32 id = 1;
+}
+
+message DeleteTripResponse {
+  bool success = 1;
+}
+
+enum TripStatus {  
+  PLANNED = 0;
+  ONGOING = 1;
+  COMPLETED = 2;
+  CANCELLED = 3;
+}
+
