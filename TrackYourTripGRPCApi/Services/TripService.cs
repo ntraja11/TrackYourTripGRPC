@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.EntityFrameworkCore;
 using TrackYourTripGRPCApi.Data;
 using TrackYourTripGRPCApi.Models;
@@ -70,6 +71,7 @@ namespace TrackYourTripGRPCApi.Services
             };
         }
 
+        [Authorize]
         public override async Task<GetTripResponse> GetTrip(GetTripRequest request, ServerCallContext context)
         {
             var trip = await _dbContext.Trips.FirstOrDefaultAsync(t => t.Id == request.Id);
@@ -98,6 +100,7 @@ namespace TrackYourTripGRPCApi.Services
             };
         }
 
+        [Authorize]
         public override async Task<GetAllTripsResponse> GetAllTrips(Empty request, ServerCallContext context)
         {
             var response = new GetAllTripsResponse();

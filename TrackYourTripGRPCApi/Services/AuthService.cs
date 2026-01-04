@@ -1,9 +1,11 @@
-﻿using Grpc.Core;
+﻿using Google.Protobuf.WellKnownTypes;
+using Grpc.Core;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using TrackYourTripGRPCApi.Data;
 using TrackYourTripGRPCApi.Models;
 using TrackYourTripGRPCApi.Protos;
+using TrackYourTripGRPCApi.Utilities;
 
 namespace TrackYourTripGRPCApi.Services
 {
@@ -12,15 +14,18 @@ namespace TrackYourTripGRPCApi.Services
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly SignInManager<ApplicationUser> _signInManager;
         private readonly TrackYourTripDbContext _dbContext;
+        private readonly JwtTokenGenerator _jwtTokenGenerator;
 
-        public AuthService(UserManager<ApplicationUser> userManager, 
-            SignInManager<ApplicationUser> signInManager, TrackYourTripDbContext dbContext)
+        public AuthService(UserManager<ApplicationUser> userManager,
+            SignInManager<ApplicationUser> signInManager, TrackYourTripDbContext dbContext, JwtTokenGenerator jwtTokenGenerator)
         {
             _userManager = userManager;
             _signInManager = signInManager;
             _dbContext = dbContext;
+            _jwtTokenGenerator = jwtTokenGenerator;
         }
-        public override async Task<LoginResponse> Login(LoginRequest request, Grpc.Core.ServerCallContext context)
+                
+        public override async Task<LoginResponse> Login(LoginRequest request, ServerCallContext context)
         {
             ApplicationUser? existingUser = await GetUser(request.Email);
 
@@ -34,12 +39,13 @@ namespace TrackYourTripGRPCApi.Services
             return result.Succeeded ?
                 new LoginResponse
                 {
-                    Status = true
+                    Status = true,
+                    Token = await _jwtTokenGenerator.GenerateTokenAsync(existingUser)
                 }
                 : throw new RpcException(new Status(StatusCode.Unauthenticated, "Invalid credentials."));
         }
         
-        public override async Task<RegisterResponse> Register(RegisterRequest request, Grpc.Core.ServerCallContext context)
+        public override async Task<RegisterResponse> Register(RegisterRequest request, ServerCallContext context)
         {
             ApplicationUser? existingUser = await GetUser(request.Email);
             if (existingUser != null)
