@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TrackYourTripGrpc.Maui.Pages.TripDetailPage"
+             Title="Trip Detail">
+    <VerticalStackLayout Padding="20">
+        <Label Text="Trip Name:"
+               FontAttributes="Bold" />
+        <Label Text="{Binding Trip.Title}" />
+
+        <Label Text="Destination:"
+               FontAttributes="Bold"
+               Margin="0,20,0,0" />
+        <Label Text="{Binding Trip.Description}" />
+
+        <Label Text="Start Date:"
+               FontAttributes="Bold"
+               Margin="0,20,0,0" />
+        <Label Text="{Binding Trip.StartDate}" />
+
+        <Label Text="End Date:"
+               FontAttributes="Bold"
+               Margin="0,20,0,0" />
+        <Label Text="{Binding Trip.EndDate}" />
+    </VerticalStackLayout>
+
+</ContentPage>

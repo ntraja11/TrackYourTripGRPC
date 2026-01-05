@@ -1,3 +1,7 @@
 <Solution>
-  <Project Path="TrackYourTripGRPCApi/TrackYourTripGRPCApi.csproj" />
+  <Folder Name="/src/">
+    <Project Path="TrackYourTripGRPC.Api/TrackYourTripGRPC.Api.csproj" />
+    <Project Path="TrackYourTripGrpc.Maui/TrackYourTripGrpc.Maui.csproj" Id="4c06e64b-9230-4a0f-a146-952eaa333fb7" />
+    <Project Path="TrackYourTripGrpc.Sdk/TrackYourTripGrpc.Sdk.csproj" />
+  </Folder>
 </Solution>
