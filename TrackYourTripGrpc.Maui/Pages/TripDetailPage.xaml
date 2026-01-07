@@ -13,6 +13,11 @@
                Margin="0,20,0,0" />
         <Label Text="{Binding Trip.Description}" />
 
+        <Label Text="Notes:"
+           FontAttributes="Bold"
+           Margin="0,20,0,0" />
+            <Label Text="{Binding Trip.Notes}" />
+
         <Label Text="Start Date:"
                FontAttributes="Bold"
                Margin="0,20,0,0" />

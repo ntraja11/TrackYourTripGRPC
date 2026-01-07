@@ -18,7 +18,7 @@ public partial class TripDetailPage : ContentPage
         base.OnAppearing();
 
         // For testing, hardcode a tripId that exists
-        int testTripId = 14;
+        int testTripId = 13;
 
         await _viewModel.LoadTripAsync(testTripId);
     }
