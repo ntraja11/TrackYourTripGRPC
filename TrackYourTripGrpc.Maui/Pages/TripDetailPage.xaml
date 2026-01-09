@@ -1,30 +1,45 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:converters="clr-namespace:TrackYourTripGrpc.Maui.Converters"
              x:Class="TrackYourTripGrpc.Maui.Pages.TripDetailPage"
              Title="Trip Detail">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <converters:TimestampToDateConverter x:Key="TimestampToDateConverter" />
+           
+            <Style x:Key="LabelText" TargetType="Label">
+                <Setter Property="FontSize" Value="18" />
+                <Setter Property="VerticalOptions" Value="Center" />
+                <Setter Property="LineBreakMode" Value="WordWrap" />
+            </Style>
+
+            <Style x:Key="LabelTextBold" TargetType="Label" 
+               BasedOn="{StaticResource LabelText}">
+                <Setter Property="FontAttributes" Value="Bold" />
+            </Style>
+        </ResourceDictionary>
+        <Style TargetType="Label" BasedOn="{StaticResource LabelText}" />
+    </ContentPage.Resources>
+    
     <VerticalStackLayout Padding="20">
-        <Label Text="Trip Name:"
-               FontAttributes="Bold" />
+        <Label Text="Trip Name:" Style="{StaticResource LabelTextBold}" />
         <Label Text="{Binding Trip.Title}" />
 
-        <Label Text="Destination:"
-               FontAttributes="Bold"
+        <Label Text="Destination:" Style="{StaticResource LabelTextBold}"
                Margin="0,20,0,0" />
         <Label Text="{Binding Trip.Description}" />
 
-        <Label Text="Notes:"
-           FontAttributes="Bold"
+        <Label Text="Notes:" Style="{StaticResource LabelTextBold}"
            Margin="0,20,0,0" />
             <Label Text="{Binding Trip.Notes}" />
 
-        <Label Text="Start Date:"
-               FontAttributes="Bold"
+        <Label Text="Start Date:" Style="{StaticResource LabelTextBold}"
                Margin="0,20,0,0" />
         <Label Text="{Binding Trip.StartDate}" />
 
-        <Label Text="End Date:"
-               FontAttributes="Bold"
+        <Label Text="End Date:" Style="{StaticResource LabelTextBold}"
                Margin="0,20,0,0" />
         <Label Text="{Binding Trip.EndDate}" />
     </VerticalStackLayout>

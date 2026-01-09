@@ -1,4 +1,4 @@
-﻿namespace TrackYourTripGrpc.Maui
+﻿namespace TrackYourTripGrpc.Maui.Pages
 {
     public partial class MainPage : ContentPage
     {

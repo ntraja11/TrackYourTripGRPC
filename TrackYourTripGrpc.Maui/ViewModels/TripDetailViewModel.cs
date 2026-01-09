@@ -1,39 +1,24 @@
-﻿using System.ComponentModel;
-using System.Runtime.CompilerServices;
+﻿using CommunityToolkit.Mvvm.ComponentModel;
 using TrackYourTripGrpc.Sdk.Interfaces;
 using TrackYourTripGRPCApi.Protos;
 
 namespace TrackYourTripGrpc.Maui.ViewModels;
 
-public class TripDetailViewModel : INotifyPropertyChanged
+public partial class TripDetailViewModel : ObservableObject
 {
     private readonly ITripGrpcService _tripService;
 
-    private TripDetail? _trip;
-    public TripDetail? Trip
-    {
-        get => _trip;
-        set
-        {
-            _trip = value;
-            OnPropertyChanged();
-        }
-    }
-
-    public event PropertyChangedEventHandler? PropertyChanged;
-
+    [ObservableProperty]
+    private TripDetail? trip;
+    
     public TripDetailViewModel(ITripGrpcService tripService)
     {
         _tripService = tripService;
     }
 
-    public async Task LoadTripAsync(int tripId, CancellationToken cancellationToken = default)
+    public async Task InitializeAsync(int tripId, CancellationToken cancellationToken)
     {
         Trip = await _tripService.GetTripAsync(tripId, cancellationToken);
-        Console.WriteLine("----------");
-    }
-
-    protected void OnPropertyChanged([CallerMemberName] string? propertyName = null) =>
-        PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+    }       
 }
 

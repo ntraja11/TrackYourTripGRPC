@@ -5,10 +5,12 @@ namespace TrackYourTripGrpc.Maui.Pages;
 public partial class TripDetailPage : ContentPage
 {
     private readonly TripDetailViewModel _viewModel;
-
-    public TripDetailPage(TripDetailViewModel viewModel)
+    private readonly int _tripid;
+    private CancellationTokenSource? _cts;
+    public TripDetailPage(int tripId, TripDetailViewModel viewModel)
     {
         InitializeComponent();
+        _tripid = tripId;
         _viewModel = viewModel;
         BindingContext = _viewModel;
     }
@@ -16,11 +18,15 @@ public partial class TripDetailPage : ContentPage
     protected override async void OnAppearing()
     {
         base.OnAppearing();
+        _cts = new CancellationTokenSource();
 
-        // For testing, hardcode a tripId that exists
-        int testTripId = 13;
-
-        await _viewModel.LoadTripAsync(testTripId);
+        await _viewModel.InitializeAsync(_tripid, _cts.Token);
     }
 
+    protected override void OnDisappearing()
+    {
+        base.OnDisappearing();
+        _cts?.Cancel();
+        _cts?.Dispose();
+    }
 }

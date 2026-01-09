@@ -1,4 +1,5 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using CommunityToolkit.Maui;
+using Microsoft.Extensions.Logging;
 using TrackYourTripGrpc.Maui.Pages;
 using TrackYourTripGrpc.Maui.ViewModels;
 using TrackYourTripGrpc.Sdk;
@@ -16,11 +17,17 @@ public static class MauiProgram
             {
                 fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
                 fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
-            });
+            })
+            .UseMauiCommunityToolkit();
 
         builder.Services.AddTrackYourTripGrpcSdk("https://10.0.2.2:7089");
+        
         builder.Services.AddTransient<TripDetailViewModel>();
+        builder.Services.AddTransient<TripsViewModel>();
+        
         builder.Services.AddTransient<TripDetailPage>();
+        builder.Services.AddTransient<TripsPage>();
+
         builder.Services.AddSingleton<App>();
 
 #if DEBUG
