@@ -10,9 +10,9 @@
             <converters:TimestampToDateConverter x:Key="TimestampToDateConverter" />
 
             <ColumnDefinitionCollection x:Key="TripsTableColumns">
-                <ColumnDefinition Width="190" />
+                <ColumnDefinition Width="180" />
                 <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />                
             </ColumnDefinitionCollection>
 
             <Style x:Key="TableCellLabel" TargetType="Label">
@@ -65,7 +65,7 @@
             <CollectionView.ItemTemplate>
                 <DataTemplate>
                     <Grid ColumnDefinitions="{StaticResource TripsTableColumns}"
-                          Padding="8"
+                          Padding="8" ColumnSpacing="5"
                           BackgroundColor="White">
 
                         <Label Text="{Binding Title}" Grid.Column="0"

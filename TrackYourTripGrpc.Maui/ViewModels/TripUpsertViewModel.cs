@@ -29,7 +29,8 @@ public partial class TripUpsertViewModel : ObservableObject
     
     public async Task SaveTripAsync(CancellationToken cancellationToken = default)
     {
-        Trip!.StartDate = Timestamp.FromDateTime(StartDate.ToUniversalTime());
+        var normalizedDate = DateTime.SpecifyKind(StartDate.Date, DateTimeKind.Utc);
+        Trip!.StartDate = normalizedDate.ToTimestamp();
 
         if(Trip.Id == 0)
         {

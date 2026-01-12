@@ -22,7 +22,6 @@ public partial class TripUpsertPage : ContentPage
     private async void SaveTrip_ClickedEvent(object sender, EventArgs e)
     {
         await _viewModel.SaveTripAsync();
-        await Task.Delay(2000);
         await Navigation.PopAsync();
     }
 }

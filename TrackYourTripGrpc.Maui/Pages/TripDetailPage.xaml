@@ -2,6 +2,8 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:converters="clr-namespace:TrackYourTripGrpc.Maui.Converters"
+             xmlns:vm="clr-namespace:TrackYourTripGrpc.Maui.ViewModels"
+             x:DataType="vm:TripDetailViewModel"
              x:Class="TrackYourTripGrpc.Maui.Pages.TripDetailPage"
              Title="Trip Detail">
 
@@ -25,12 +27,15 @@
     
     <VerticalStackLayout Padding="20">
 
-        <Grid ColumnDefinitions="*, Auto" Margin="0 0 25 0">
+        <Grid ColumnDefinitions="*, Auto, Auto" Margin="0 0 25 0" ColumnSpacing="10">
             <Label Text="Trip Detail" FontSize="28" FontAttributes="Bold"
                 Grid.Column="0" VerticalOptions="Center" />
 
-            <Button Text="Update Trip" Padding="20, 10" FontSize="18" Grid.Column="1"
+            <Button Text="Update" Padding="10" FontSize="18" Grid.Column="1"
                 VerticalOptions="Center"  Clicked="UpdateTrip_ClickedEvent"/>
+
+            <Button Text="Delete" Padding="10" BackgroundColor="Red" FontSize="18" Grid.Column="2"
+                VerticalOptions="Center"  Clicked="DeleteTrip_ClickedEvent"/>
         </Grid>
                
         
