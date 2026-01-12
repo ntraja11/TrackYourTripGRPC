@@ -3,21 +3,23 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:converters="clr-namespace:TrackYourTripGrpc.Maui.Converters"
     x:Class="TrackYourTripGrpc.Maui.Pages.TripsPage"
-    Title="Trip Management">
+    >
 
     <ContentPage.Resources>
         <ResourceDictionary>
             <converters:TimestampToDateConverter x:Key="TimestampToDateConverter" />
 
             <ColumnDefinitionCollection x:Key="TripsTableColumns">
-                <ColumnDefinition Width="180" />
-                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="190" />
+                <ColumnDefinition Width="*"  />
                 <ColumnDefinition Width="*" />                
             </ColumnDefinitionCollection>
 
             <Style x:Key="TableCellLabel" TargetType="Label">
-                <Setter Property="FontSize" Value="16" />
+                <Setter Property="FontSize" Value="17" />
+                <Setter Property="TextColor" Value="{StaticResource PrimaryText}" />
                 <Setter Property="VerticalOptions" Value="Center" />
+                <Setter Property="HorizontalOptions" Value="Start" />
                 <Setter Property="LineBreakMode" Value="WordWrap" />
             </Style>
 
@@ -28,7 +30,7 @@
         </ResourceDictionary>
     </ContentPage.Resources>
 
-    <VerticalStackLayout Padding="10" Spacing="10">
+    <VerticalStackLayout Padding="5, 20" Spacing="10" >
 
         <Grid ColumnDefinitions="*, Auto" Padding="5, 10">
             <Label Text="Trips" FontSize="28" FontAttributes="Bold"
@@ -38,50 +40,61 @@
                     VerticalOptions="Center"  Clicked="CreateTrip_ClickedEvent"/>
         </Grid>
 
-        
 
-        <!-- Table Header -->
-        <Grid ColumnDefinitions="{StaticResource TripsTableColumns}"
-              Padding="8"
-              BackgroundColor="#eeeeee"
-              HeightRequest="40">
+        <Border BackgroundColor="{StaticResource PrimaryLight}"
+                StrokeThickness="0"
+                StrokeShape="RoundRectangle 10">
+            <VerticalStackLayout>
 
-            <Label Text="Title" Grid.Column="0"
-                   Style="{StaticResource TableHeaderLabel}" />
+                <!-- Table Header -->
+                <Grid ColumnDefinitions="{StaticResource TripsTableColumns}"
+                  Padding="10,15" HeightRequest="60">
 
-            <Label Text="Status"
-                   Grid.Column="1"
-                   Style="{StaticResource TableHeaderLabel}" />
+                    <Label Text="Title" Grid.Column="0"
+                       Style="{StaticResource TableHeaderLabel}" />
 
-            <Label Text="Start Date"
-                   Grid.Column="2"
-                   Style="{StaticResource TableHeaderLabel}" />
-        </Grid>
+                    <Label Text="Status"
+                       Grid.Column="1"
+                       Style="{StaticResource TableHeaderLabel}" />
 
-        <!-- Table Rows -->
-        <CollectionView ItemsSource="{Binding Trips}"
+                    <Label Text="Start Date"
+                       Grid.Column="2"
+                       Style="{StaticResource TableHeaderLabel}" /> 
+                </Grid>
+
+                <BoxView BackgroundColor="{StaticResource PrimaryText}" HeightRequest="1" />
+
+                <!-- Table Rows -->
+                <VerticalStackLayout Padding="0,10" >
+
+                    <CollectionView ItemsSource="{Binding Trips}"                         
                         SelectionMode="Single" SelectionChanged="OnTripSelected">
 
-            <CollectionView.ItemTemplate>
-                <DataTemplate>
-                    <Grid ColumnDefinitions="{StaticResource TripsTableColumns}"
-                          Padding="8" ColumnSpacing="5"
-                          BackgroundColor="White">
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate>
+                                <Grid ColumnDefinitions="{StaticResource TripsTableColumns}"
+                                      Padding="10,15" ColumnSpacing="5"
+                                      > 
 
-                        <Label Text="{Binding Title}" Grid.Column="0"
-                               Style="{StaticResource TableCellLabel}" />
+                                    <Label Text="{Binding Title}" Grid.Column="0"
+                                        Style="{StaticResource TableCellLabel}" />
 
-                        <Label Text="{Binding Status}" Grid.Column="1"
-                               Style="{StaticResource TableCellLabel}" />
+                                    <Label Text="{Binding Status}" Grid.Column="1"
+                                        Style="{StaticResource TableCellLabel}" />
 
-                        <Label Text="{Binding StartDate, Converter={StaticResource TimestampToDateConverter}}"
-                               Grid.Column="2"
-                               Style="{StaticResource TableCellLabel}" />
-                    </Grid>
-                </DataTemplate>
-            </CollectionView.ItemTemplate>
+                                    <Label Text="{Binding StartDate, Converter={StaticResource TimestampToDateConverter}}"
+                                       Grid.Column="2"
+                                       Style="{StaticResource TableCellLabel}" />
+                                </Grid>
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
 
-        </CollectionView>
+                    </CollectionView>
+                </VerticalStackLayout>
+
+            </VerticalStackLayout>
+        </Border>
+        
 
     </VerticalStackLayout>
 
