@@ -30,11 +30,15 @@
 
     <VerticalStackLayout Padding="10" Spacing="10">
 
-        <!-- Page Title -->
-        <Label Text="Trips"
-               FontSize="28"
-               FontAttributes="Bold"
-               HorizontalOptions="Center" />
+        <Grid ColumnDefinitions="*, Auto" Padding="5, 10">
+            <Label Text="Trips" FontSize="28" FontAttributes="Bold"
+               Grid.Column="0" VerticalOptions="Center" />
+
+            <Button Text="Create New Trip" Padding="20, 10" FontSize="18" Grid.Column="1"
+                    VerticalOptions="Center"  Clicked="CreateTrip_ClickedEvent"/>
+        </Grid>
+
+        
 
         <!-- Table Header -->
         <Grid ColumnDefinitions="{StaticResource TripsTableColumns}"

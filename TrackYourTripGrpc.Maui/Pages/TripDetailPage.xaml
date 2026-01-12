@@ -24,12 +24,30 @@
     </ContentPage.Resources>
     
     <VerticalStackLayout Padding="20">
+
+        <Grid ColumnDefinitions="*, Auto" Margin="0 0 25 0">
+            <Label Text="Trip Detail" FontSize="28" FontAttributes="Bold"
+                Grid.Column="0" VerticalOptions="Center" />
+
+            <Button Text="Update Trip" Padding="20, 10" FontSize="18" Grid.Column="1"
+                VerticalOptions="Center"  Clicked="UpdateTrip_ClickedEvent"/>
+        </Grid>
+               
+        
         <Label Text="Trip Name:" Style="{StaticResource LabelTextBold}" />
         <Label Text="{Binding Trip.Title}" />
 
-        <Label Text="Destination:" Style="{StaticResource LabelTextBold}"
+        <Label Text="Description:" Style="{StaticResource LabelTextBold}"
                Margin="0,20,0,0" />
         <Label Text="{Binding Trip.Description}" />
+
+        <Label Text="From:" Style="{StaticResource LabelTextBold}"
+            Margin="0,20,0,0" />
+        <Label Text="{Binding Trip.From}" />
+
+        <Label Text="To:" Style="{StaticResource LabelTextBold}"
+            Margin="0,20,0,0" />
+        <Label Text="{Binding Trip.To}" />
 
         <Label Text="Notes:" Style="{StaticResource LabelTextBold}"
            Margin="0,20,0,0" />
@@ -37,11 +55,11 @@
 
         <Label Text="Start Date:" Style="{StaticResource LabelTextBold}"
                Margin="0,20,0,0" />
-        <Label Text="{Binding Trip.StartDate}" />
+        <Label Text="{Binding Trip.StartDate, Converter={StaticResource TimestampToDateConverter}}" />
 
         <Label Text="End Date:" Style="{StaticResource LabelTextBold}"
                Margin="0,20,0,0" />
-        <Label Text="{Binding Trip.EndDate}" />
+        <Label Text="{Binding Trip.EndDate, Converter={StaticResource TimestampToDateConverter}}" />
     </VerticalStackLayout>
 
 </ContentPage>

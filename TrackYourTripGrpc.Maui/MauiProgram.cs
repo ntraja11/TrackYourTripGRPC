@@ -24,11 +24,13 @@ public static class MauiProgram
         
         builder.Services.AddTransient<TripDetailViewModel>();
         builder.Services.AddTransient<TripsViewModel>();
-        
+        builder.Services.AddTransient<TripUpsertViewModel>();
+
         builder.Services.AddTransient<TripDetailPage>();
         builder.Services.AddTransient<TripsPage>();
+        builder.Services.AddTransient<TripUpsertPage>();
 
-        builder.Services.AddSingleton<App>();
+        //builder.Services.AddSingleton<App>();
 
 #if DEBUG
         builder.Logging.AddDebug();

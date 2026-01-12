@@ -5,15 +5,26 @@ namespace TrackYourTripGrpc.Maui
 {
     public partial class App : Application
     {
-        public App(TripsPage tripsPage)
+        private readonly IServiceProvider _services;
+        public App(IServiceProvider services)
         {
             InitializeComponent();
-            MainPage = new NavigationPage(tripsPage);
+            _services = services;
         }
 
-        //protected override Window CreateWindow(IActivationState? activationState)
+        //public App(TripsPage tripsPage)
         //{
-        //    return new Window(new AppShell());
+        //    InitializeComponent();
+        //    MainPage = new NavigationPage(tripsPage);
         //}
+
+        protected override Window CreateWindow(IActivationState? activationState)
+        {
+            var rootPage = _services.GetRequiredService<TripsPage>();
+            var navigationPage = new NavigationPage(rootPage);
+
+            return new Window(navigationPage);
+        }
+
     }
 }

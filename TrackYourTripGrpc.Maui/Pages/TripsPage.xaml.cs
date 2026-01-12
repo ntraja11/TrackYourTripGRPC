@@ -1,4 +1,3 @@
-using Android.App;
 using TrackYourTripGrpc.Maui.ViewModels;
 using TrackYourTripGRPCApi.Protos;
 
@@ -7,14 +6,14 @@ namespace TrackYourTripGrpc.Maui.Pages;
 public partial class TripsPage : ContentPage
 {
 	private readonly TripsViewModel _viewModel;
-    private readonly TripDetailViewModel _tripDetailViewModel;
-    
-    public TripsPage(TripsViewModel viewModel, TripDetailViewModel vm)
-	{
-		_viewModel = viewModel;		
-        _tripDetailViewModel = vm;
+    private readonly IServiceProvider _services;
+
+    public TripsPage(TripsViewModel viewModel, IServiceProvider services)
+    {
+        _viewModel = viewModel;
         InitializeComponent();
         BindingContext = _viewModel;
+        _services = services;
     }
 
     protected override async void OnAppearing()
@@ -29,8 +28,17 @@ public partial class TripsPage : ContentPage
     {
         if(e.CurrentSelection.FirstOrDefault() is TripDetail selectedTrip)
         {
-            await Navigation.PushAsync(new TripDetailPage(selectedTrip.Id, _tripDetailViewModel));            
+            var detailPage = _services.GetService<TripDetailPage>();
+            detailPage!.Initialize(selectedTrip.Id);
+
+            await Navigation.PushAsync(detailPage);            
         }
         ((CollectionView)sender).SelectedItem = null;
+    }
+
+    private async void CreateTrip_ClickedEvent(object sender, EventArgs e)
+    {
+        var createTripPage = _services.GetService<TripUpsertPage>();
+        await Navigation.PushAsync(createTripPage);
     }
 }

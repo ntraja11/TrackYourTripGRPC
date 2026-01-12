@@ -1,5 +1,5 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
-using Google.Protobuf.WellKnownTypes;
+using CommunityToolkit.Mvvm.Input;
 using System.Collections.ObjectModel;
 using TrackYourTripGrpc.Sdk.Interfaces;
 using TrackYourTripGRPCApi.Protos;
@@ -12,6 +12,9 @@ public partial class TripsViewModel : ObservableObject
     private ObservableCollection<TripDetail> trips = new ();
 
     [ObservableProperty]
+    private bool isRefreshing;
+
+    [ObservableProperty]
     private bool isBusy;
 
     private readonly ITripGrpcService _tripService;
@@ -20,6 +23,22 @@ public partial class TripsViewModel : ObservableObject
     public TripsViewModel(ITripGrpcService tripService)
     {
         _tripService = tripService;
+        RefreshCommand = new AsyncRelayCommand(RefreshAsync);
+    }
+
+    public IAsyncRelayCommand RefreshCommand { get; }
+
+    private async Task RefreshAsync()
+    {
+        try
+        {
+            IsRefreshing = true;
+            await LoadTripsAsync();
+        }
+        finally
+        {
+            IsRefreshing = false;
+        }
     }
 
     public async Task LoadTripsAsync(CancellationToken cancellationToken = default)
@@ -30,9 +49,11 @@ public partial class TripsViewModel : ObservableObject
         try
         {
             IsBusy = true;
-            var tripsList = await _tripService.GetAllTripsAsync(cancellationToken);
-            Trips = new ObservableCollection<TripDetail>(tripsList);
+            var tripList = await _tripService.GetAllTripsAsync(cancellationToken);
 
+            Trips.Clear();
+            foreach (var trip in tripList)
+                Trips.Add(trip);
         }
         finally
         {

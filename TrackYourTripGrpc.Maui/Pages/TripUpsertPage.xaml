@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:TrackYourTripGrpc.Maui.ViewModels"
+             x:DataType="vm:TripUpsertViewModel"
+             x:Class="TrackYourTripGrpc.Maui.Pages.TripUpsertPage"
+             Title="Trip Upsert">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="LabelText" TargetType="Label">
+                <Setter Property="FontSize" Value="18" />
+                <Setter Property="VerticalOptions" Value="Center" />
+                <Setter Property="LineBreakMode" Value="WordWrap" />
+            </Style>
+
+            <Style x:Key="LabelTextBold" TargetType="Label" 
+           BasedOn="{StaticResource LabelText}">
+                <Setter Property="FontAttributes" Value="Bold" />
+            </Style>
+        </ResourceDictionary>
+        <Style TargetType="Label" BasedOn="{StaticResource LabelText}" />
+    </ContentPage.Resources>
+
+    <VerticalStackLayout Padding="20" Spacing="20">
+        <Label 
+            Text="Trip Upsert"
+            FontSize="20" FontAttributes="Bold"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+        <Grid ColumnDefinitions="Auto, *" ColumnSpacing="10" RowSpacing="15"
+              RowDefinitions="Auto, Auto, Auto, Auto, Auto">
+
+            <Label Text="Title" Grid.Row="0" />
+            <Entry Text="{Binding Trip.Title}" Grid.Row="0" Grid.Column="1" />
+
+            <Label Text="Description" Grid.Row="1" />
+            <Entry Text="{Binding Trip.Description}" Grid.Row="1" Grid.Column="1" />
+
+            <Label Text="From" Grid.Row="2" />
+            <Entry Text="{Binding Trip.From}" Grid.Row="2" Grid.Column="1" />
+
+            <Label Text="To" Grid.Row="3" />
+            <Entry Text="{Binding Trip.To}" Grid.Row="3" Grid.Column="1"  />
+            
+            <Label Text="Start Date" Grid.Row="4" />
+            <DatePicker Date="{Binding StartDate}" Grid.Row="4" Grid.Column="1" Format="dd-MM-yyyy" />   
+            
+        </Grid>
+
+        <Button Text="Save"
+            Clicked="SaveTrip_ClickedEvent"
+            Margin="0,20,0,0"
+            HorizontalOptions="Center" />
+
+    </VerticalStackLayout>
+</ContentPage>
