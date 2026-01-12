@@ -54,10 +54,6 @@
             Margin="0,20,0,0" />
         <Label Text="{Binding Trip.To}" />
 
-        <Label Text="Notes:" Style="{StaticResource LabelTextBold}"
-           Margin="0,20,0,0" />
-            <Label Text="{Binding Trip.Notes}" />
-
         <Label Text="Start Date:" Style="{StaticResource LabelTextBold}"
                Margin="0,20,0,0" />
         <Label Text="{Binding Trip.StartDate, Converter={StaticResource TimestampToDateConverter}}" />

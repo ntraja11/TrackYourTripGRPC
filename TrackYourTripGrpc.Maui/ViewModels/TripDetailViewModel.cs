@@ -18,6 +18,7 @@ public partial class TripDetailViewModel : ObservableObject
 
     public async Task InitializeAsync(int tripId, CancellationToken cancellationToken)
     {
+        Trip = null;
         Trip = await _tripService.GetTripAsync(tripId, cancellationToken);
     }
 

@@ -28,8 +28,6 @@ public partial class TripDetailPage : ContentPage
         base.OnAppearing();
         _cts = new CancellationTokenSource();
 
-        _viewModel.Trip = null;
-
         await _viewModel.InitializeAsync(_tripid, _cts.Token);
     }
 

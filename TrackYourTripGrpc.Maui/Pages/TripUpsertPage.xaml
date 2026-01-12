@@ -14,12 +14,18 @@
                 <Setter Property="LineBreakMode" Value="WordWrap" />
             </Style>
 
+            <Style x:Key="EntryText" TargetType="Entry">
+                <Setter Property="FontSize" Value="18" />
+                <Setter Property="VerticalOptions" Value="Center" />
+            </Style>
+
             <Style x:Key="LabelTextBold" TargetType="Label" 
            BasedOn="{StaticResource LabelText}">
                 <Setter Property="FontAttributes" Value="Bold" />
             </Style>
         </ResourceDictionary>
         <Style TargetType="Label" BasedOn="{StaticResource LabelText}" />
+        <Style TargetType="Entry" BasedOn="{StaticResource EntryText}" />
     </ContentPage.Resources>
 
     <VerticalStackLayout Padding="20" Spacing="20">
@@ -30,28 +36,29 @@
             HorizontalOptions="Center" />
 
         <Grid ColumnDefinitions="Auto, *" ColumnSpacing="10" RowSpacing="15"
-              RowDefinitions="Auto, Auto, Auto, Auto, Auto">
+              RowDefinitions="Auto, Auto, Auto, Auto, Auto, Auto, Auto, Auto, Auto">
 
             <Label Text="Title" Grid.Row="0" />
-            <Entry Text="{Binding Trip.Title}" Grid.Row="0" Grid.Column="1" />
+            <Entry Text="{Binding Title}" Grid.Row="0" Grid.Column="1" />
 
-            <Label Text="Description" Grid.Row="1" />
-            <Entry Text="{Binding Trip.Description}" Grid.Row="1" Grid.Column="1" />
+            <Label Text="Description" Grid.Row="2" />
+            <Entry Text="{Binding Description}" Grid.Row="2" Grid.Column="1" />
 
-            <Label Text="From" Grid.Row="2" />
-            <Entry Text="{Binding Trip.From}" Grid.Row="2" Grid.Column="1" />
-
-            <Label Text="To" Grid.Row="3" />
-            <Entry Text="{Binding Trip.To}" Grid.Row="3" Grid.Column="1"  />
+            <Label Text="From" Grid.Row="4" />
+            <Entry Text="{Binding From}" Grid.Row="4" Grid.Column="1" />
             
-            <Label Text="Start Date" Grid.Row="4" />
-            <DatePicker Date="{Binding StartDate}" Grid.Row="4" Grid.Column="1" Format="dd-MM-yyyy" />   
+            <Label Text="To" Grid.Row="6" />
+            <Entry Text="{Binding To}" Grid.Row="6" Grid.Column="1"  />
+            
+            <Label Text="Start Date" Grid.Row="8" />
+            <DatePicker Date="{Binding StartDate}" Grid.Row="8" Grid.Column="1"
+                        FontSize="18" Format="dd-MM-yyyy" />   
             
         </Grid>
 
         <Button Text="Save"
             Clicked="SaveTrip_ClickedEvent"
-            Margin="0,20,0,0"
+            Margin="0,20,0,0" IsEnabled="{Binding IsValid}"
             HorizontalOptions="Center" />
 
     </VerticalStackLayout>

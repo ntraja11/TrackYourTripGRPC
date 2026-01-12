@@ -1,45 +1,99 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using Google.Protobuf.WellKnownTypes;
+using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 using TrackYourTripGrpc.Sdk.Interfaces;
 using TrackYourTripGRPCApi.Protos;
 
 namespace TrackYourTripGrpc.Maui.ViewModels;
 
-public partial class TripUpsertViewModel : ObservableObject
+public partial class TripUpsertViewModel : ObservableValidator
 {
-    private readonly ITripGrpcService _tripService;
+    private readonly ITripGrpcService? _tripService;        
+        
+    public TripUpsertViewModel(ITripGrpcService tripService)
+    {
+        _tripService = tripService;
+        ValidateAllProperties();
+    }
 
     [ObservableProperty]
-    private TripDetail? trip;
+    [NotifyDataErrorInfo]
+    [Required(ErrorMessage = "Title is required.")]
+    [MaxLength(100, ErrorMessage = "Title cannot exceed 100 characters.")]
+    private string title = "";
+
+    [ObservableProperty]
+    private string description = "";
+
+    [ObservableProperty]
+    [NotifyDataErrorInfo]
+    [Required(ErrorMessage = "Please provide your starting place.")]
+    private string from = "";
+
+    [ObservableProperty]
+    [NotifyDataErrorInfo]
+    [Required(ErrorMessage = "Please provide your destination.")]
+    private string to = "";
 
     [ObservableProperty]
     private DateTime startDate = DateTime.Today;
 
-    public TripUpsertViewModel(ITripGrpcService tripService)
+    [ObservableProperty]
+    private DateTime endDate;
+
+    public TripDetail? Trip { get; private set; }
+
+    public bool IsValid => !HasErrors;
+
+
+    public async Task InitializeAsync(TripDetail tripToUpdate, CancellationToken cancellationToken = default)
     {
-        _tripService = tripService;
-        trip = new();
+        Trip = tripToUpdate;
+
+        Title = Trip.Title;
+        Description = Trip.Description;
+        From = Trip.From;
+        To = Trip.To;
+        StartDate = Trip.StartDate.ToDateTime();
     }
 
-    public async Task InitializeAsync(int tripId, CancellationToken cancellationToken)
+    protected override void OnPropertyChanged(PropertyChangedEventArgs e)
     {
-        Trip = await _tripService.GetTripAsync(tripId, cancellationToken);
-    }
+        base.OnPropertyChanged(e);
 
+        if(e.PropertyName != nameof(IsValid))
+            OnPropertyChanged(nameof(IsValid));
+    }
     
     public async Task SaveTripAsync(CancellationToken cancellationToken = default)
     {
-        var normalizedDate = DateTime.SpecifyKind(StartDate.Date, DateTimeKind.Utc);
-        Trip!.StartDate = normalizedDate.ToTimestamp();
+        if (HasErrors)
+            return;
 
-        if(Trip.Id == 0)
+
+        var normalizedStartDate = DateTime.SpecifyKind(StartDate.Date, DateTimeKind.Utc);
+
+        var tripDetail = new TripDetail
         {
-            Trip.CreatedByUserEmail = "test@mauiapp.com";
-            await _tripService.CreateTripAsync(Trip!, cancellationToken);
+            Id = Trip?.Id ?? 0,
+            Title = Title,
+            Description = Description,
+            From = From,
+            To = To,
+            StartDate = normalizedStartDate.ToTimestamp(),
+            EndDate = normalizedStartDate.AddDays(7).ToTimestamp()
+        };
+
+
+        if(Trip is null)
+        {
+            tripDetail.CreatedByUserEmail = "test@mauiapp.com";            
+            await _tripService!.CreateTripAsync(tripDetail!, cancellationToken);
         }
         else
         {
-            await _tripService.UpdateTripAsync(Trip, cancellationToken);
+            await _tripService!.UpdateTripAsync(tripDetail, cancellationToken);
         }        
 
         Trip = new();

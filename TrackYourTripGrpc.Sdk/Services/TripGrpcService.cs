@@ -61,6 +61,7 @@ public class TripGrpcService : ITripGrpcService
                 Description = tripDetail.Description,
                 CreatedByUserEmail = tripDetail.CreatedByUserEmail,
                 StartDate = tripDetail.StartDate,
+                EndDate = tripDetail.EndDate,
                 From = tripDetail.From,
                 To = tripDetail.To,
                 Notes = tripDetail.Notes,

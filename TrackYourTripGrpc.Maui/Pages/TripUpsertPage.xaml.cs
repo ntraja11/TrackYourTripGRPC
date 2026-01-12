@@ -13,10 +13,9 @@ public partial class TripUpsertPage : ContentPage
         BindingContext = _viewModel;
     }
 
-    public void InitializeForEdit(TripDetail trip)
+    public async void InitializeForEdit(TripDetail trip)
     {
-        _viewModel.Trip = trip;
-        _viewModel.StartDate = trip.StartDate.ToDateTime();
+        await _viewModel.InitializeAsync(trip);
     }
 
     private async void SaveTrip_ClickedEvent(object sender, EventArgs e)
