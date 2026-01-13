@@ -10,18 +10,19 @@ public partial class TripDetailPage : ContentPage
     private int _tripid;
 
     private CancellationTokenSource? _cts;
+
     public TripDetailPage(TripDetailViewModel viewModel, IServiceProvider services)
     {
         InitializeComponent();
         _viewModel = viewModel;
-        BindingContext = _viewModel;
         _services = services;
+        BindingContext = _viewModel;
     }
 
     public void Initialize(int tripId)
     {
-        _tripid =  tripId;
-    }   
+        _tripid = tripId;
+    }
 
     protected override async void OnAppearing()
     {

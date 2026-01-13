@@ -4,6 +4,7 @@
              xmlns:vm="clr-namespace:TrackYourTripGrpc.Maui.ViewModels"
              x:DataType="vm:TripUpsertViewModel"
              x:Class="TrackYourTripGrpc.Maui.Pages.TripUpsertPage"
+             Title="Trip Management"
              >
 
     <ContentPage.Resources>

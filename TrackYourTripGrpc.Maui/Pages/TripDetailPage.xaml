@@ -4,7 +4,8 @@
              xmlns:converters="clr-namespace:TrackYourTripGrpc.Maui.Converters"
              xmlns:vm="clr-namespace:TrackYourTripGrpc.Maui.ViewModels"
              x:DataType="vm:TripDetailViewModel"
-             x:Class="TrackYourTripGrpc.Maui.Pages.TripDetailPage"
+             x:Class="TrackYourTripGrpc.Maui.Pages.TripDetailPage"  
+             Title="Trip Management"
              >
 
     <ContentPage.Resources>

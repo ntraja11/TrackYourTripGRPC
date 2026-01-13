@@ -3,6 +3,8 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:converters="clr-namespace:TrackYourTripGrpc.Maui.Converters"
     x:Class="TrackYourTripGrpc.Maui.Pages.TripsPage"
+    Shell.BackgroundColor="{StaticResource Primary}"
+    Title="Trip Management"
     >
 
     <ContentPage.Resources>
@@ -46,7 +48,6 @@
                 StrokeShape="RoundRectangle 10">
             <VerticalStackLayout>
 
-                <!-- Table Header -->
                 <Grid ColumnDefinitions="{StaticResource TripsTableColumns}"
                   Padding="10,15" HeightRequest="60">
 
@@ -64,7 +65,6 @@
 
                 <BoxView BackgroundColor="{StaticResource PrimaryText}" HeightRequest="1" />
 
-                <!-- Table Rows -->
                 <VerticalStackLayout Padding="0,10" >
 
                     <CollectionView ItemsSource="{Binding Trips}"                         

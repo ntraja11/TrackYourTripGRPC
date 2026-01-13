@@ -10,6 +10,7 @@ namespace TrackYourTripGrpc.Maui
         {
             InitializeComponent();
             _services = services;
+            //MainPage = _services.GetRequiredService<AppShell>();
         }
 
         //public App(TripsPage tripsPage)
@@ -18,12 +19,17 @@ namespace TrackYourTripGrpc.Maui
         //    MainPage = new NavigationPage(tripsPage);
         //}
 
+        //protected override Window CreateWindow(IActivationState? activationState)
+        //{
+        //    var rootPage = _services.GetRequiredService<TripsPage>();
+        //    var navigationPage = new NavigationPage(rootPage);
+
+        //    return new Window(navigationPage);
+        //}
+
         protected override Window CreateWindow(IActivationState? activationState)
         {
-            var rootPage = _services.GetRequiredService<TripsPage>();
-            var navigationPage = new NavigationPage(rootPage);
-
-            return new Window(navigationPage);
+            return new Window(_services.GetRequiredService<AppShell>());
         }
 
     }

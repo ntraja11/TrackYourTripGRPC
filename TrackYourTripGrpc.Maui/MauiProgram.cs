@@ -31,6 +31,7 @@ public static class MauiProgram
         builder.Services.AddTransient<TripsPage>();
         builder.Services.AddTransient<TripUpsertPage>();
 
+        builder.Services.AddTransient<AppShell>();
         //builder.Services.AddSingleton<App>();
 
 #if DEBUG

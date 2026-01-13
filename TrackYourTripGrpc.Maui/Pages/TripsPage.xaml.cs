@@ -31,7 +31,7 @@ public partial class TripsPage : ContentPage
             var detailPage = _services.GetService<TripDetailPage>();
             detailPage!.Initialize(selectedTrip.Id);
 
-            await Navigation.PushAsync(detailPage);            
+            await Navigation.PushAsync(detailPage);
         }
         ((CollectionView)sender).SelectedItem = null;
     }
