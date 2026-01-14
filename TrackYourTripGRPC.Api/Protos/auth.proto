@@ -14,11 +14,13 @@ message RegisterRequest {
   string password = 2;
   string name = 3;
   string groupName = 4;
-  bool newGroup = 5;
+  bool isNewGroup = 5;
 }
 
 message RegisterResponse {
-  bool status = 1;
+  bool isSuccess = 1;
+  int32 statusCode = 2;
+  string errorMessage = 3;
 }
 
 message LoginRequest {
@@ -27,7 +29,7 @@ message LoginRequest {
 }
 
 message LoginResponse {
-  bool status = 1;
+  bool isSuccess = 1;
   string token = 2;
   int32 statusCode = 3;
   string errorMessage = 4;

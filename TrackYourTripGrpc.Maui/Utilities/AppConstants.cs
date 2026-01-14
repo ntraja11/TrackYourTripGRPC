@@ -1,4 +1,4 @@
-﻿namespace TrackYourTripGrpc.Maui;
+﻿namespace TrackYourTripGrpc.Maui.Utilities;
 
 public static class AppConstants
 {

@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="TrackYourTripGrpc.Maui.Pages.LoginPage"
+             x:Class="TrackYourTripGrpc.Maui.Pages.RegisterPage"
              xmlns:vm="clr-namespace:TrackYourTripGrpc.Maui.ViewModels"
-             x:DataType="vm:LoginViewModel"
-             Title="Login">
-    
-    <VerticalStackLayout Padding="20" Spacing="20">
+             x:DataType="vm:RegisterViewModel"
+             Title="Register">
+
+    <VerticalStackLayout Padding="20">
         <Label 
-            Text="Please login to see your trip details."
+            Text="Register"
             FontSize="20"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
@@ -17,6 +17,12 @@
 
             <Label Text="{Binding ErrorMessage}" TextColor="Red"
                    IsVisible="{Binding ShowErrorMessage}"/>
+
+            <Entry
+                    x:Name="nameEntry"
+                    Placeholder="Name"
+                    Text="{Binding Name}"
+                    ClearButtonVisibility="WhileEditing" />
 
             <Entry
                     x:Name="emailEntry"
@@ -32,30 +38,31 @@
                     Text="{Binding Password}"
                     ClearButtonVisibility="WhileEditing" />
 
+            <Entry
+                    x:Name="groupEntry"
+                    Placeholder="Group name"
+                    Text="{Binding GroupName}"
+                    ClearButtonVisibility="WhileEditing" />
+
+            <HorizontalStackLayout Spacing="8" VerticalOptions="Center">
+                
+                <CheckBox
+                    x:Name="isNewGroupCheckBox"
+                    IsChecked="{Binding IsNewGroup}" />
+
+                <Label
+                    Text="Create a new group"
+                    VerticalTextAlignment="Center" />
+                
+            </HorizontalStackLayout>
+
             <Button
-                    Text="Login"
+                    Text="Submit"
                     Margin="0,16,0,0"
                     FontSize="20"
-                    Command="{Binding LoginCommand}" />
+                    Command="{Binding RegisterCommand}" />
 
         </VerticalStackLayout>
-
-        <VerticalStackLayout Spacing="10" HorizontalOptions="Center">
-
-            <Label Text="Don't have an account?"
-                HorizontalOptions="Center" />
-
-            <Label Text="Register here!"
-                   TextColor="Blue"
-                   FontAttributes="Bold"
-                   HorizontalOptions="Center">
-                <Label.GestureRecognizers>
-                    <TapGestureRecognizer Command="{Binding NavigateToRegisterCommand}" />
-                </Label.GestureRecognizers>
-            </Label>
-
-
-        </VerticalStackLayout>
-
+        
     </VerticalStackLayout>
 </ContentPage>

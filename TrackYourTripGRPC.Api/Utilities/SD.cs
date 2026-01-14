@@ -11,9 +11,11 @@
         }
 
         public const int Success = 200;
-        public const int InvalidCredentials = 401;
+        public const int UnAuthorized = 401;
+        public const int AlreadyExists = 403;
         public const int NotFound = 404;
         public const int ServerError = 500;
+        
 
     }
 }

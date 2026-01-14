@@ -35,6 +35,10 @@
         Route="LoginPage" />
 
     <ShellContent
+        ContentTemplate="{DataTemplate pages:RegisterPage}"
+        Route="RegisterPage" />
+
+    <ShellContent
         ContentTemplate="{DataTemplate pages:TripsPage}"
         Route="TripsPage" />
 

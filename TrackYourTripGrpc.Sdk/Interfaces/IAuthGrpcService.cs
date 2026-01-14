@@ -4,6 +4,6 @@ namespace TrackYourTripGrpc.Sdk.Interfaces;
 
 public interface IAuthGrpcService
 {
-    Task<LoginResponse> LoginAsync(string email, string password, CancellationToken cancellationToken);
-    Task<bool> RegisterAsync(string email, string password, string Name, string groupName, bool newGroup, CancellationToken cancellationToken);
+    Task<LoginResponse> LoginAsync(LoginRequest request, CancellationToken cancellationToken);
+    Task<RegisterResponse> RegisterAsync(RegisterRequest request, CancellationToken cancellationToken);
 }

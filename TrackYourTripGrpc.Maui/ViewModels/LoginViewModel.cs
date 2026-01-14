@@ -1,6 +1,7 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using TrackYourTripGrpc.Maui.Pages;
+using TrackYourTripGrpc.Maui.Utilities;
 using TrackYourTripGrpc.Sdk.Interfaces;
 using TrackYourTripGRPCApi.Protos;
 
@@ -29,6 +30,12 @@ public partial class LoginViewModel : ObservableObject
     }
 
     [RelayCommand]
+    private async Task NavigateToRegisterAsync()
+    {
+        await Shell.Current.GoToAsync($"//{nameof(RegisterPage)}");
+    }
+
+    [RelayCommand]
     private async Task LoginAsync(CancellationToken cancellationToken = default)
     {
         ErrorMessage = string.Empty;
@@ -44,9 +51,15 @@ public partial class LoginViewModel : ObservableObject
             return;
         }
 
-        LoginResponse response = await _authService.LoginAsync(Email, Password, cancellationToken);
+        LoginRequest request = new LoginRequest
+        {
+            Email = Email,
+            Password = Password
+        };
 
-        if (response.Status)
+        LoginResponse response = await _authService.LoginAsync(request, cancellationToken);
+
+        if (response.IsSuccess)
         {
             await SecureStorage.SetAsync(AppConstants.AuthTokenKey, response.Token);
             await Shell.Current.GoToAsync($"//{nameof(TripsPage)}");
@@ -56,7 +69,5 @@ public partial class LoginViewModel : ObservableObject
             ErrorMessage = response.ErrorMessage;
             return;
         }
-
-
     }
 }

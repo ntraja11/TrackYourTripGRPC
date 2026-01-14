@@ -1,4 +1,6 @@
-﻿namespace TrackYourTripGrpc.Maui.Pages;
+﻿using TrackYourTripGrpc.Maui.Utilities;
+
+namespace TrackYourTripGrpc.Maui.Pages;
 
 public partial class MainPage : ContentPage
 {
@@ -10,9 +12,7 @@ public partial class MainPage : ContentPage
 
     private async void CheckAuthenticationState()
     {
-        var token = await SecureStorage.GetAsync(AppConstants.AuthTokenKey);
-
-        if (!string.IsNullOrEmpty(token))
+        if (await AuthViewState.IsLoggedInAsync())
         {
             await Shell.Current.GoToAsync($"//{nameof(TripsPage)}");
         }
@@ -26,11 +26,7 @@ public partial class MainPage : ContentPage
     {
         base.OnAppearing();
 
-        var shell = Shell.Current as AppShell;
-        var logoutButton = shell?.FindByName<Button>("LogoutButton");
-
-        if (logoutButton != null)
-            logoutButton.IsVisible = false;
+        AuthViewState.ToggleLogoutButton(false);
 
         CheckAuthenticationState();
     }
@@ -39,11 +35,7 @@ public partial class MainPage : ContentPage
     {
         base.OnDisappearing();
 
-        var shell = Shell.Current as AppShell;
-        var logoutButton = shell?.FindByName<Button>("LogoutButton");
-
-        if (logoutButton != null)
-            logoutButton.IsVisible = true;
+        AuthViewState.ToggleLogoutButton(false);
     }
 
 }

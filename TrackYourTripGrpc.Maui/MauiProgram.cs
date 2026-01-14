@@ -24,8 +24,10 @@ public static class MauiProgram
         builder.Services.AddTrackYourTripGrpcSdk("https://10.0.2.2:7089");
 
         builder.Services.AddTransient<LoginPage>();
+        builder.Services.AddTransient<RegisterPage>();
 
         builder.Services.AddTransient<LoginViewModel>();
+        builder.Services.AddTransient<RegisterViewModel>();
         builder.Services.AddTransient<TripDetailViewModel>();
         builder.Services.AddTransient<TripsViewModel>();
         builder.Services.AddTransient<TripUpsertViewModel>();

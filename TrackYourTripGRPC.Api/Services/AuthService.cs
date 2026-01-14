@@ -1,5 +1,4 @@
-﻿using Google.Protobuf.WellKnownTypes;
-using Grpc.Core;
+﻿using Grpc.Core;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -10,7 +9,7 @@ using TrackYourTripGRPCApi.Utilities;
 
 namespace TrackYourTripGRPCApi.Services
 {
-    public class AuthService : Protos.Auth.AuthBase
+    public class AuthService : Auth.AuthBase
     {
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly SignInManager<ApplicationUser> _signInManager;
@@ -31,7 +30,7 @@ namespace TrackYourTripGRPCApi.Services
             ApplicationUser? existingUser = await GetUser(request.Email);
 
             LoginResponse response = new LoginResponse();
-            response.Status = false;
+            response.IsSuccess = false;
 
             if (existingUser == null)
             {
@@ -44,13 +43,13 @@ namespace TrackYourTripGRPCApi.Services
 
             if (result.Succeeded)
             {
-                response.Status = true;
+                response.IsSuccess = true;
                 response.StatusCode = SD.Success;
                 response.Token = await _jwtTokenGenerator.GenerateTokenAsync(existingUser);
             }
             else
             {
-                response.StatusCode = SD.InvalidCredentials;
+                response.StatusCode = SD.UnAuthorized;
                 response.ErrorMessage = "Invalid credentials.";
             }
 
@@ -60,34 +59,53 @@ namespace TrackYourTripGRPCApi.Services
         [AllowAnonymous]
         public override async Task<RegisterResponse> Register(RegisterRequest request, ServerCallContext context)
         {
+            RegisterResponse response = new RegisterResponse();
+            response.IsSuccess = false;
+
             ApplicationUser? existingUser = await GetUser(request.Email);
             if (existingUser != null)
             {
-                throw new RpcException(new Status(StatusCode.AlreadyExists, $"User with email {request.Email} already exists."));
+                response.StatusCode = SD.AlreadyExists;
+                response.ErrorMessage = $"User with email '{request.Email}' already exists.";
+                return response;
             }
 
-            if(request.NewGroup)
+            var existingGroup = await GetGroup(request.GroupName);
+
+            if (request.IsNewGroup)
             {
-                var group = new Group { Name = request.GroupName };
-                _dbContext.Groups.Add(group);
+                if (existingGroup is not null)
+                {
+                    response.StatusCode = SD.AlreadyExists;
+                    response.ErrorMessage = $"Group with name '{request.GroupName}' already exists.";
+                    return response;
+                }
+
+                var newGroup = new Group { Name = request.GroupName };
+                _dbContext.Groups.Add(newGroup);
                 await _dbContext.SaveChangesAsync();
 
-                return await GenerateRegisterResponseAsync(request, group);
+                return await GenerateRegisterResponseAsync(request, newGroup, response);
             }
             else
-            {
-                var group = await _dbContext.Groups.FirstOrDefaultAsync(g => g.Name == request.GroupName);
-                if (group == null)
+            {                
+                if (existingGroup == null)
                 {
-                    throw new RpcException(new Status(StatusCode.NotFound, $"Group with name {request.GroupName} not found."));
+                    response.StatusCode = SD.NotFound;
+                    response.ErrorMessage = $"Group with name '{request.GroupName}' not found.";
+                    return response;
                 }
                 else
                 {
-                    return await GenerateRegisterResponseAsync(request, group);
+                    return await GenerateRegisterResponseAsync(request, existingGroup, response);
                 }
-            }
+            }                      
+        }
 
-            throw new RpcException(new Status(StatusCode.InvalidArgument, "Invalid registration request."));
+        private async Task<Group?> GetGroup(string groupName)
+        {
+            return await _dbContext.Groups
+                .FirstOrDefaultAsync(g => g.Name == groupName);
         }
 
         private async Task<ApplicationUser?> GetUser(string email)
@@ -97,7 +115,8 @@ namespace TrackYourTripGRPCApi.Services
                 .FirstOrDefaultAsync(u => u.NormalizedEmail == normalizedEmail);
         }
 
-        private async Task<RegisterResponse> GenerateRegisterResponseAsync(RegisterRequest request, Group group)
+        private async Task<RegisterResponse> GenerateRegisterResponseAsync(RegisterRequest request, 
+            Group group, RegisterResponse response)
         {
             var newUser = new ApplicationUser
             {
@@ -107,10 +126,28 @@ namespace TrackYourTripGRPCApi.Services
                 GroupId = group.Id
             };
             var result = await _userManager.CreateAsync(newUser, request.Password);
-            return new RegisterResponse
+
+            if (result.Succeeded)
             {
-                Status = result.Succeeded
-            };
+                response.IsSuccess = true;
+                response.StatusCode = SD.Success;
+            }
+            else
+            {
+                if (request.IsNewGroup)
+                {
+                    var groupToRemove = await _dbContext.Groups.FindAsync(group.Id);
+                    if (groupToRemove != null)
+                    {
+                        _dbContext.Groups.Remove(groupToRemove);
+                        await _dbContext.SaveChangesAsync();
+                    }
+                }
+                
+                response.StatusCode = SD.ServerError;
+                response.ErrorMessage = string.Join("; ", result.Errors.Select(e => e.Description));
+            }
+            return response;
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using TrackYourTripGrpc.Sdk.Interfaces;
+﻿using Grpc.Core;
+using TrackYourTripGrpc.Sdk.Interfaces;
 using TrackYourTripGRPCApi.Protos;
 
 namespace TrackYourTripGrpc.Sdk.Services;
@@ -12,56 +13,43 @@ public class AuthGrpcService : IAuthGrpcService
         _authClient = authClient;
     }
        
-    public async Task<LoginResponse> LoginAsync(string email, string password, CancellationToken cancellationToken)
+    public async Task<LoginResponse> LoginAsync(LoginRequest loginRequest, CancellationToken cancellationToken)
     {
         try
-        {
-            var request = new LoginRequest
-            {
-                Email = email,
-                Password = password
-            };
-            var response = await _authClient.LoginAsync(request, cancellationToken: cancellationToken);
+        {            
+            var response = await _authClient.LoginAsync(loginRequest, cancellationToken: cancellationToken);
             return response;
 
-        }
-        catch (Grpc.Core.RpcException ex)
-        {
-            System.Diagnostics.Debug.WriteLine($"gRPC ERROR: {ex.StatusCode} - {ex.Status.Detail}");
-            throw;
-        }
+        }        
         catch (Exception ex)
         {
-            System.Diagnostics.Debug.WriteLine($"UNEXPECTED ERROR: {ex.Message}");
-            throw;
+            LoginResponse response = new LoginResponse
+            {
+                IsSuccess = false,
+                Token = string.Empty,
+                StatusCode = (int)StatusCode.Unknown,
+                ErrorMessage = $"UNEXPECTED ERROR: {ex.Message}"
+            };
+            return response;
         }
     }
 
-    public async Task<bool> RegisterAsync(string email, string password, string Name, string groupName, bool newGroup, CancellationToken cancellationToken)
+    public async Task<RegisterResponse> RegisterAsync(RegisterRequest registerRequest, CancellationToken cancellationToken)
     {
         try
-        {
-            var request = new RegisterRequest
-            {
-                Email = email,
-                Password = password,
-                Name = Name,
-                GroupName = groupName,
-                NewGroup = newGroup
-            };
-            var response = await _authClient.RegisterAsync(request, cancellationToken: cancellationToken);
-            return response.Status;
+        {            
+            var response = await _authClient.RegisterAsync(registerRequest, cancellationToken: cancellationToken);
+            return response;
 
-        }
-        catch (Grpc.Core.RpcException ex)
-        {
-            System.Diagnostics.Debug.WriteLine($"gRPC ERROR: {ex.StatusCode} - {ex.Status.Detail}");
-            throw;
-        }
+        }        
         catch (Exception ex)
         {
-            System.Diagnostics.Debug.WriteLine($"UNEXPECTED ERROR: {ex.Message}");
-            throw;
+            RegisterResponse response = new RegisterResponse
+            {
+                IsSuccess = false,
+                ErrorMessage = $"UNEXPECTED ERROR: {ex.Message}"
+            };
+            return response;
         }
     }
 }

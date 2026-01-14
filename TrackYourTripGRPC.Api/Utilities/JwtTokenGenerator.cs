@@ -22,12 +22,13 @@ namespace TrackYourTripGRPCApi.Utilities
         {
             var authClaims = new List<Claim>
             {
-                new Claim(ClaimTypes.Name, user.Name ?? string.Empty),
-                new Claim(ClaimTypes.Email, user.Email ?? string.Empty),
+                new Claim(ClaimTypes.Name, user.Name!),
+                new Claim(ClaimTypes.Email, user.Email!),
+                new Claim("GroupId", user.GroupId.ToString()),
                 new Claim(ClaimTypes.NameIdentifier, user.Id),
             };
             var authSigningKey = new SymmetricSecurityKey(
-                Encoding.UTF8.GetBytes(_configuration["Jwt:SecretKey"] ?? string.Empty));
+                Encoding.UTF8.GetBytes(_configuration["Jwt:SecretKey"]!));
 
             var token = new JwtSecurityToken(
                 issuer: _configuration["Jwt:Issuer"],
