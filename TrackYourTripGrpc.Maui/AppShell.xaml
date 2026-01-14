@@ -5,13 +5,34 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:pages="clr-namespace:TrackYourTripGrpc.Maui.Pages"    
     Title="TrackYourTripGrpc.Maui"
+    Shell.FlyoutBehavior="Disabled"
     Shell.BackgroundColor="{StaticResource Primary}"
     >
+    
 
-    <!--<ShellContent
-        Title="Home"
+    <Shell.TitleView>
+        <Grid ColumnDefinitions="*,Auto">
+            <Label Text="Track Your Trip"
+               VerticalOptions="Center"
+               HorizontalOptions="CenterAndExpand"
+               FontSize="24" />
+
+            <Button Text="Logout" Padding="5" Margin="0,0,15,0" x:Name="LogoutButton"
+                FontSize="18"
+                Command="{Binding LogoutCommand}"
+                Grid.Column="1" />
+        </Grid>
+    </Shell.TitleView>
+
+
+    <ShellContent
+        Title="Loading"
         ContentTemplate="{DataTemplate pages:MainPage}"
-        Route="MainPage" />-->
+        Route="MainPage" />
+
+    <ShellContent
+        ContentTemplate="{DataTemplate pages:LoginPage}"
+        Route="LoginPage" />
 
     <ShellContent
         ContentTemplate="{DataTemplate pages:TripsPage}"

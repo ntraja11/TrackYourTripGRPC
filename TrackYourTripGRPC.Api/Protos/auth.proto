@@ -29,4 +29,6 @@ message LoginRequest {
 message LoginResponse {
   bool status = 1;
   string token = 2;
+  int32 statusCode = 3;
+  string errorMessage = 4;
 }

@@ -28,19 +28,20 @@ namespace TrackYourTripGRPCApi.Protos {
             "DQoFZW1haWwYASABKAkSEAoIcGFzc3dvcmQYAiABKAkSDAoEbmFtZRgDIAEo",
             "CRIRCglncm91cE5hbWUYBCABKAkSEAoIbmV3R3JvdXAYBSABKAgiIgoQUmVn",
             "aXN0ZXJSZXNwb25zZRIOCgZzdGF0dXMYASABKAgiLwoMTG9naW5SZXF1ZXN0",
-            "Eg0KBWVtYWlsGAEgASgJEhAKCHBhc3N3b3JkGAIgASgJIi4KDUxvZ2luUmVz",
-            "cG9uc2USDgoGc3RhdHVzGAEgASgIEg0KBXRva2VuGAIgASgJMnMKBEF1dGgS",
-            "OQoIUmVnaXN0ZXISFS5hdXRoLlJlZ2lzdGVyUmVxdWVzdBoWLmF1dGguUmVn",
-            "aXN0ZXJSZXNwb25zZRIwCgVMb2dpbhISLmF1dGguTG9naW5SZXF1ZXN0GhMu",
-            "YXV0aC5Mb2dpblJlc3BvbnNlQh6qAhtUcmFja1lvdXJUcmlwR1JQQ0FwaS5Q",
-            "cm90b3NiBnByb3RvMw=="));
+            "Eg0KBWVtYWlsGAEgASgJEhAKCHBhc3N3b3JkGAIgASgJIlgKDUxvZ2luUmVz",
+            "cG9uc2USDgoGc3RhdHVzGAEgASgIEg0KBXRva2VuGAIgASgJEhIKCnN0YXR1",
+            "c0NvZGUYAyABKAUSFAoMZXJyb3JNZXNzYWdlGAQgASgJMnMKBEF1dGgSOQoI",
+            "UmVnaXN0ZXISFS5hdXRoLlJlZ2lzdGVyUmVxdWVzdBoWLmF1dGguUmVnaXN0",
+            "ZXJSZXNwb25zZRIwCgVMb2dpbhISLmF1dGguTG9naW5SZXF1ZXN0GhMuYXV0",
+            "aC5Mb2dpblJlc3BvbnNlQh6qAhtUcmFja1lvdXJUcmlwR1JQQ0FwaS5Qcm90",
+            "b3NiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::TrackYourTripGRPCApi.Protos.RegisterRequest), global::TrackYourTripGRPCApi.Protos.RegisterRequest.Parser, new[]{ "Email", "Password", "Name", "GroupName", "NewGroup" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::TrackYourTripGRPCApi.Protos.RegisterResponse), global::TrackYourTripGRPCApi.Protos.RegisterResponse.Parser, new[]{ "Status" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::TrackYourTripGRPCApi.Protos.LoginRequest), global::TrackYourTripGRPCApi.Protos.LoginRequest.Parser, new[]{ "Email", "Password" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::TrackYourTripGRPCApi.Protos.LoginResponse), global::TrackYourTripGRPCApi.Protos.LoginResponse.Parser, new[]{ "Status", "Token" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::TrackYourTripGRPCApi.Protos.LoginResponse), global::TrackYourTripGRPCApi.Protos.LoginResponse.Parser, new[]{ "Status", "Token", "StatusCode", "ErrorMessage" }, null, null, null, null)
           }));
     }
     #endregion
@@ -839,6 +840,8 @@ namespace TrackYourTripGRPCApi.Protos {
     public LoginResponse(LoginResponse other) : this() {
       status_ = other.status_;
       token_ = other.token_;
+      statusCode_ = other.statusCode_;
+      errorMessage_ = other.errorMessage_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -872,6 +875,30 @@ namespace TrackYourTripGRPCApi.Protos {
       }
     }
 
+    /// <summary>Field number for the "statusCode" field.</summary>
+    public const int StatusCodeFieldNumber = 3;
+    private int statusCode_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int StatusCode {
+      get { return statusCode_; }
+      set {
+        statusCode_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "errorMessage" field.</summary>
+    public const int ErrorMessageFieldNumber = 4;
+    private string errorMessage_ = "";
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ErrorMessage {
+      get { return errorMessage_; }
+      set {
+        errorMessage_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -889,6 +916,8 @@ namespace TrackYourTripGRPCApi.Protos {
       }
       if (Status != other.Status) return false;
       if (Token != other.Token) return false;
+      if (StatusCode != other.StatusCode) return false;
+      if (ErrorMessage != other.ErrorMessage) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -898,6 +927,8 @@ namespace TrackYourTripGRPCApi.Protos {
       int hash = 1;
       if (Status != false) hash ^= Status.GetHashCode();
       if (Token.Length != 0) hash ^= Token.GetHashCode();
+      if (StatusCode != 0) hash ^= StatusCode.GetHashCode();
+      if (ErrorMessage.Length != 0) hash ^= ErrorMessage.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -924,6 +955,14 @@ namespace TrackYourTripGRPCApi.Protos {
         output.WriteRawTag(18);
         output.WriteString(Token);
       }
+      if (StatusCode != 0) {
+        output.WriteRawTag(24);
+        output.WriteInt32(StatusCode);
+      }
+      if (ErrorMessage.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(ErrorMessage);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -942,6 +981,14 @@ namespace TrackYourTripGRPCApi.Protos {
         output.WriteRawTag(18);
         output.WriteString(Token);
       }
+      if (StatusCode != 0) {
+        output.WriteRawTag(24);
+        output.WriteInt32(StatusCode);
+      }
+      if (ErrorMessage.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(ErrorMessage);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -957,6 +1004,12 @@ namespace TrackYourTripGRPCApi.Protos {
       }
       if (Token.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Token);
+      }
+      if (StatusCode != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(StatusCode);
+      }
+      if (ErrorMessage.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ErrorMessage);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -975,6 +1028,12 @@ namespace TrackYourTripGRPCApi.Protos {
       }
       if (other.Token.Length != 0) {
         Token = other.Token;
+      }
+      if (other.StatusCode != 0) {
+        StatusCode = other.StatusCode;
+      }
+      if (other.ErrorMessage.Length != 0) {
+        ErrorMessage = other.ErrorMessage;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -999,6 +1058,14 @@ namespace TrackYourTripGRPCApi.Protos {
             Token = input.ReadString();
             break;
           }
+          case 24: {
+            StatusCode = input.ReadInt32();
+            break;
+          }
+          case 34: {
+            ErrorMessage = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -1020,6 +1087,14 @@ namespace TrackYourTripGRPCApi.Protos {
           }
           case 18: {
             Token = input.ReadString();
+            break;
+          }
+          case 24: {
+            StatusCode = input.ReadInt32();
+            break;
+          }
+          case 34: {
+            ErrorMessage = input.ReadString();
             break;
           }
         }

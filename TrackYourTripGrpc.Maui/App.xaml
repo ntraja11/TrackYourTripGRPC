@@ -29,8 +29,29 @@
             <Style TargetType="VerticalStackLayout" >
                 <Setter Property="BackgroundColor" Value="Transparent" />
             </Style>
+
+            <Style x:Key="MyLabelText" TargetType="Label">
+                <Setter Property="FontSize" Value="18" />
+                <Setter Property="TextColor" Value="{StaticResource PrimaryText}" />
+                <Setter Property="VerticalOptions" Value="Center" />
+                <Setter Property="LineBreakMode" Value="WordWrap" />
+            </Style>
+
+            <Style x:Key="EntryText" TargetType="Entry">
+                <Setter Property="FontSize" Value="18" />
+                <Setter Property="TextColor" Value="{StaticResource PrimaryText}" />
+                <Setter Property="VerticalOptions" Value="Center" />
+            </Style>
+
+            <Style x:Key="LabelTextBold" TargetType="Label" 
+                BasedOn="{StaticResource MyLabelText}">
+                <Setter Property="FontAttributes" Value="Bold" />
+            </Style>
+
+            <Style TargetType="Label" BasedOn="{StaticResource MyLabelText}" />
+            <Style TargetType="Entry" BasedOn="{StaticResource EntryText}" />
+
         </ResourceDictionary>
 
-        
     </Application.Resources>
 </Application>

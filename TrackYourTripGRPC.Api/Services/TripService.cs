@@ -30,7 +30,7 @@ namespace TrackYourTripGRPCApi.Services
                 EndDate = request.EndDate?.ToDateTime() is DateTime dt ? dt : null,
                 From = request.From,
                 To = request.To,
-                Status = Utilities.StaticDetails.TripStatus.Planned,
+                Status = Utilities.SD.TripStatus.Planned,
                 Notes = request.Notes,
                 CreatedByUserEmail = request.CreatedByUserEmail
             };

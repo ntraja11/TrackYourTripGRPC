@@ -7,9 +7,18 @@ namespace TrackYourTripGrpc.Maui
         public AppShell()
         {
             InitializeComponent();
+            BindingContext = this;
 
             Routing.RegisterRoute(nameof(TripDetailPage), typeof(TripDetailPage));
             Routing.RegisterRoute(nameof(TripUpsertPage), typeof(TripUpsertPage));
         }
+
+        public Command LogoutCommand => new Command(async () =>
+        {
+            SecureStorage.Remove(AppConstants.AuthTokenKey);
+
+            await Shell.Current.GoToAsync($"//{nameof(LoginPage)}");
+        });
+
     }
 }

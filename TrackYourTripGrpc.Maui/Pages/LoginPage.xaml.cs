@@ -1,25 +1,16 @@
-﻿namespace TrackYourTripGrpc.Maui.Pages;
+using TrackYourTripGrpc.Maui.ViewModels;
 
-public partial class MainPage : ContentPage
+namespace TrackYourTripGrpc.Maui.Pages;
+
+public partial class LoginPage : ContentPage
 {
-    public MainPage()
-    {
-        InitializeComponent();
-        
-    }
+    private readonly LoginViewModel _viewModel;
 
-    private async void CheckAuthenticationState()
-    {
-        var token = await SecureStorage.GetAsync(AppConstants.AuthTokenKey);
-
-        if (!string.IsNullOrEmpty(token))
-        {
-            await Shell.Current.GoToAsync($"//{nameof(TripsPage)}");
-        }
-        else
-        {
-            await Shell.Current.GoToAsync($"//{nameof(LoginPage)}");
-        }
+    public LoginPage(LoginViewModel viewModel)
+	{
+		InitializeComponent();
+        _viewModel = viewModel;
+        BindingContext = _viewModel;
     }
 
     protected override void OnAppearing()
@@ -31,8 +22,6 @@ public partial class MainPage : ContentPage
 
         if (logoutButton != null)
             logoutButton.IsVisible = false;
-
-        CheckAuthenticationState();
     }
 
     protected override void OnDisappearing()
@@ -45,5 +34,4 @@ public partial class MainPage : ContentPage
         if (logoutButton != null)
             logoutButton.IsVisible = true;
     }
-
 }

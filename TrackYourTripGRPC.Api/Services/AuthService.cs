@@ -30,20 +30,31 @@ namespace TrackYourTripGRPCApi.Services
         {
             ApplicationUser? existingUser = await GetUser(request.Email);
 
+            LoginResponse response = new LoginResponse();
+            response.Status = false;
+
             if (existingUser == null)
             {
-                throw new RpcException(new Status(StatusCode.NotFound, $"User with email {request.Email} not found."));
+                response.ErrorMessage = $"User with email '{request.Email}' not found.";
+                response.StatusCode = SD.NotFound;
+                return response;
             }
 
             var result = await _signInManager.CheckPasswordSignInAsync(existingUser, request.Password, false);
 
-            return result.Succeeded ?
-                new LoginResponse
-                {
-                    Status = true,
-                    Token = await _jwtTokenGenerator.GenerateTokenAsync(existingUser)
-                }
-                : throw new RpcException(new Status(StatusCode.Unauthenticated, "Invalid credentials."));
+            if (result.Succeeded)
+            {
+                response.Status = true;
+                response.StatusCode = SD.Success;
+                response.Token = await _jwtTokenGenerator.GenerateTokenAsync(existingUser);
+            }
+            else
+            {
+                response.StatusCode = SD.InvalidCredentials;
+                response.ErrorMessage = "Invalid credentials.";
+            }
+
+            return response;            
         }
 
         [AllowAnonymous]

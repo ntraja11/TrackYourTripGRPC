@@ -26,44 +26,62 @@
         </ResourceDictionary>
         <Style TargetType="Label" BasedOn="{StaticResource LabelText}" />
     </ContentPage.Resources>
+
+    <ScrollView>        
     
-    <VerticalStackLayout Padding="20">
+        <VerticalStackLayout Padding="20">
 
-        <Grid ColumnDefinitions="*, Auto, Auto" Margin="0 0 25 0" ColumnSpacing="10">
-            <Label Text="Trip Detail" FontSize="28" FontAttributes="Bold"
-                Grid.Column="0" VerticalOptions="Center" />
+            <Grid ColumnDefinitions="*, Auto, Auto" Margin="0 0 25 0" ColumnSpacing="10">
+                <Label Text="Trip Detail" FontSize="28" FontAttributes="Bold"
+                        Grid.Column="0" VerticalOptions="Center" />
 
-            <Button Text="Update" Padding="10" FontSize="18" Grid.Column="1"
-                VerticalOptions="Center"  Clicked="UpdateTrip_ClickedEvent"/>
+                <Button Text="Update" Padding="10" FontSize="18" Grid.Column="1"
+                        VerticalOptions="Center"  Clicked="UpdateTrip_ClickedEvent"/>
 
-            <Button Text="Delete" Padding="10" BackgroundColor="{StaticResource Error}" 
-                    FontSize="18" TextColor="{StaticResource Secondary}" Grid.Column="2"
-                VerticalOptions="Center"  Clicked="DeleteTrip_ClickedEvent"/>
-        </Grid>
-               
+                <Button Text="Delete" Padding="10" BackgroundColor="{StaticResource Error}" 
+                            FontSize="18" TextColor="{StaticResource Secondary}" Grid.Column="2"
+                        VerticalOptions="Center"  Clicked="DeleteTrip_ClickedEvent"/>
+            </Grid>
+
+
+            <Label Text="Trip Name:" Style="{StaticResource LabelTextBold}" />
+            <Label Text="{Binding Trip.Title}" />
+
+            <Label Text="Description:" Style="{StaticResource LabelTextBold}"
+                       Margin="0,20,0,0" />
+            <Label Text="{Binding Trip.Description}" />
+
+            <Label Text="From:" Style="{StaticResource LabelTextBold}"
+                    Margin="0,20,0,0" />
+            <Label Text="{Binding Trip.From}" />
+
+            <Label Text="To:" Style="{StaticResource LabelTextBold}"
+                    Margin="0,20,0,0" />
+            <Label Text="{Binding Trip.To}" />
+
+            <Label Text="Start Date:" Style="{StaticResource LabelTextBold}"
+                       Margin="0,20,0,0" />
+            <Label Text="{Binding Trip.StartDate, Converter={StaticResource TimestampToDateConverter}}" />
+
+            <Label Text="End Date:" Style="{StaticResource LabelTextBold}"
+                       Margin="0,20,0,0" />
+            <Label Text="{Binding Trip.EndDate, Converter={StaticResource TimestampToDateConverter}}" />
+
+            <BoxView BackgroundColor="{StaticResource PrimaryText}" Margin="0, 20" HeightRequest="1" />
+
+            <HorizontalStackLayout>
+
+                <Button Text="Manage Members" Padding="10" FontSize="18" HorizontalOptions="Start"
+                    VerticalOptions="Center"  Clicked="ManageMembers_ClickedEvent"/>
+
+            </HorizontalStackLayout>
+            
+        </VerticalStackLayout>
+
         
-        <Label Text="Trip Name:" Style="{StaticResource LabelTextBold}" />
-        <Label Text="{Binding Trip.Title}" />
+        
+        
 
-        <Label Text="Description:" Style="{StaticResource LabelTextBold}"
-               Margin="0,20,0,0" />
-        <Label Text="{Binding Trip.Description}" />
-
-        <Label Text="From:" Style="{StaticResource LabelTextBold}"
-            Margin="0,20,0,0" />
-        <Label Text="{Binding Trip.From}" />
-
-        <Label Text="To:" Style="{StaticResource LabelTextBold}"
-            Margin="0,20,0,0" />
-        <Label Text="{Binding Trip.To}" />
-
-        <Label Text="Start Date:" Style="{StaticResource LabelTextBold}"
-               Margin="0,20,0,0" />
-        <Label Text="{Binding Trip.StartDate, Converter={StaticResource TimestampToDateConverter}}" />
-
-        <Label Text="End Date:" Style="{StaticResource LabelTextBold}"
-               Margin="0,20,0,0" />
-        <Label Text="{Binding Trip.EndDate, Converter={StaticResource TimestampToDateConverter}}" />
-    </VerticalStackLayout>
+    </ScrollView>
 
 </ContentPage>

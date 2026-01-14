@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System.ComponentModel.DataAnnotations.Schema;
-using static TrackYourTripGRPCApi.Utilities.StaticDetails;
+using static TrackYourTripGRPCApi.Utilities.SD;
 
 namespace TrackYourTripGRPCApi.Models
 {
