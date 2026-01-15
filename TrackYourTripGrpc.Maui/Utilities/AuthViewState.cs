@@ -1,7 +1,33 @@
-﻿namespace TrackYourTripGrpc.Maui.Utilities;
+﻿
+using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
+
+namespace TrackYourTripGrpc.Maui.Utilities;
 
 public static class AuthViewState
 {
+    public static string? UserName { get; private set; }
+    public static string? Email { get; private set; }
+    public static string? GroupId { get; private set; }
+    public static string? UserId { get; private set; }
+
+    public static async Task DecodeAndStoreClaimsAsync()
+    {
+        var token = await GetTokenAsync();
+        if (string.IsNullOrWhiteSpace(token))
+            return;
+
+        var handler = new JwtSecurityTokenHandler();
+        var jwt = handler.ReadJwtToken(token);
+
+        UserName = jwt.Claims.FirstOrDefault(c => c.Type == ClaimTypes.Name)?.Value;
+        Email = jwt.Claims.FirstOrDefault(c => c.Type == ClaimTypes.Email)?.Value;
+        GroupId = jwt.Claims.FirstOrDefault(c => c.Type == "groupid")?.Value;
+        UserId = jwt.Claims.FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier)?.Value;
+    }
+
+
+
     public static async Task<string> GetTokenAsync()
         => await SecureStorage.GetAsync(AppConstants.AuthTokenKey);
 

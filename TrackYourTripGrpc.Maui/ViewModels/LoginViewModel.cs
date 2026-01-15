@@ -62,6 +62,7 @@ public partial class LoginViewModel : ObservableObject
         if (response.IsSuccess)
         {
             await SecureStorage.SetAsync(AppConstants.AuthTokenKey, response.Token);
+            await AuthViewState.DecodeAndStoreClaimsAsync();
             await Shell.Current.GoToAsync($"//{nameof(TripsPage)}");
         }
         else

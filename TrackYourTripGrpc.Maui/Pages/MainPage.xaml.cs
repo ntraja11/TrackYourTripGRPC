@@ -35,7 +35,7 @@ public partial class MainPage : ContentPage
     {
         base.OnDisappearing();
 
-        AuthViewState.ToggleLogoutButton(false);
+        AuthViewState.ToggleLogoutButton(true);
     }
 
 }

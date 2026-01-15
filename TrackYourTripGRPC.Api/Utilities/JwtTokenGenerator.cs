@@ -24,7 +24,7 @@ namespace TrackYourTripGRPCApi.Utilities
             {
                 new Claim(ClaimTypes.Name, user.Name!),
                 new Claim(ClaimTypes.Email, user.Email!),
-                new Claim("GroupId", user.GroupId.ToString()),
+                new Claim("groupid", user.GroupId.ToString()),
                 new Claim(ClaimTypes.NameIdentifier, user.Id),
             };
             var authSigningKey = new SymmetricSecurityKey(

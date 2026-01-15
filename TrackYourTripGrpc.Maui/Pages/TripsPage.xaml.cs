@@ -1,3 +1,4 @@
+using TrackYourTripGrpc.Maui.Utilities;
 using TrackYourTripGrpc.Maui.ViewModels;
 using TrackYourTripGRPCApi.Protos;
 
@@ -20,7 +21,7 @@ public partial class TripsPage : ContentPage
     {
         base.OnAppearing();
 
-        if(!_viewModel.IsBusy)
+        if (!_viewModel.IsBusy)
             await _viewModel.LoadTripsAsync();
     }
 
