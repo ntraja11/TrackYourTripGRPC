@@ -7,8 +7,8 @@ namespace TrackYourTripGrpc.Maui.Utilities;
 public static class AuthViewState
 {
     public static string? UserName { get; private set; }
-    public static string? Email { get; private set; }
-    public static string? GroupId { get; private set; }
+    public static string? UserEmail { get; private set; }
+    public static int? GroupId { get; private set; }
     public static string? UserId { get; private set; }
 
     public static async Task DecodeAndStoreClaimsAsync()
@@ -21,8 +21,8 @@ public static class AuthViewState
         var jwt = handler.ReadJwtToken(token);
 
         UserName = jwt.Claims.FirstOrDefault(c => c.Type == ClaimTypes.Name)?.Value;
-        Email = jwt.Claims.FirstOrDefault(c => c.Type == ClaimTypes.Email)?.Value;
-        GroupId = jwt.Claims.FirstOrDefault(c => c.Type == "groupid")?.Value;
+        UserEmail = jwt.Claims.FirstOrDefault(c => c.Type == ClaimTypes.Email)?.Value;
+        GroupId = Convert.ToInt32(jwt.Claims.FirstOrDefault(c => c.Type == "groupid")?.Value);
         UserId = jwt.Claims.FirstOrDefault(c => c.Type == ClaimTypes.NameIdentifier)?.Value;
     }
 

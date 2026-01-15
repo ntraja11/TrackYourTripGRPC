@@ -17,10 +17,5 @@ public partial class TripUpsertPage : ContentPage
     {
         await _viewModel.InitializeAsync(trip);
     }
-
-    private async void SaveTrip_ClickedEvent(object sender, EventArgs e)
-    {
-        await _viewModel.SaveTripAsync();
-        await Navigation.PopAsync();
-    }
+    
 }

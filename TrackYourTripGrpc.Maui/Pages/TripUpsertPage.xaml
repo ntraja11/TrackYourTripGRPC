@@ -59,10 +59,8 @@
             
         </Grid>
 
-        <Button Text="Save"
-            Clicked="SaveTrip_ClickedEvent" FontSize="18"
-            Margin="0,20,0,0" IsEnabled="{Binding IsValid}"
-            HorizontalOptions="Center" />
+        <Button Text="Save" FontSize="18" Margin="0,20,0,0" IsEnabled="{Binding IsValid}"
+            Command="{Binding SaveTripCommand}" HorizontalOptions="Center" />
 
     </VerticalStackLayout>
 </ContentPage>

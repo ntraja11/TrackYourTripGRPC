@@ -1,7 +1,9 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.Input;
 using Google.Protobuf.WellKnownTypes;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
+using TrackYourTripGrpc.Maui.Utilities;
 using TrackYourTripGrpc.Sdk.Interfaces;
 using TrackYourTripGRPCApi.Protos;
 
@@ -65,7 +67,8 @@ public partial class TripUpsertViewModel : ObservableValidator
         if(e.PropertyName != nameof(IsValid))
             OnPropertyChanged(nameof(IsValid));
     }
-    
+
+    [RelayCommand]
     public async Task SaveTripAsync(CancellationToken cancellationToken = default)
     {
         if (HasErrors)
@@ -76,26 +79,29 @@ public partial class TripUpsertViewModel : ObservableValidator
 
         var tripDetail = new TripDetail
         {
-            Id = Trip?.Id ?? 0,
             Title = Title,
             Description = Description,
             From = From,
             To = To,
             StartDate = normalizedStartDate.ToTimestamp(),
-            EndDate = normalizedStartDate.AddDays(7).ToTimestamp()
+            EndDate = normalizedStartDate.AddDays(7).ToTimestamp(),
         };
 
 
         if(Trip is null)
         {
-            tripDetail.CreatedByUserEmail = "test@mauiapp.com";            
+            tripDetail.CreatedByUserEmail = AuthViewState.UserEmail;            
+            tripDetail.GroupId = AuthViewState.GroupId ?? 0;
             await _tripService!.CreateTripAsync(tripDetail!, cancellationToken);
         }
         else
         {
+            tripDetail.Id = Trip.Id;
             await _tripService!.UpdateTripAsync(tripDetail, cancellationToken);
         }        
 
         Trip = new();
+
+        await Shell.Current.GoToAsync("..");
     }
 }

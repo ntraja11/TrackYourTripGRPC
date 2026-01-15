@@ -14,6 +14,7 @@ public partial class MainPage : ContentPage
     {
         if (await AuthViewState.IsLoggedInAsync())
         {
+            await AuthViewState.DecodeAndStoreClaimsAsync();
             await Shell.Current.GoToAsync($"//{nameof(TripsPage)}");
         }
         else

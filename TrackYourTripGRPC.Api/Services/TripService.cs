@@ -32,7 +32,8 @@ namespace TrackYourTripGRPCApi.Services
                 To = request.To,
                 Status = Utilities.SD.TripStatus.Planned,
                 Notes = request.Notes,
-                CreatedByUserEmail = request.CreatedByUserEmail
+                CreatedByUserEmail = request.CreatedByUserEmail,
+                GroupId = request.GroupId
             };
             _dbContext.Trips.Add(trip);
             await _dbContext.SaveChangesAsync();

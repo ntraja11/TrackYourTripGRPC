@@ -32,6 +32,7 @@ message TripDetail {
   string notes = 10;
 
   string createdByUserEmail = 11;
+  int32 groupId	= 12;
 }
 
 message GetTripRequest {
@@ -59,6 +60,7 @@ message CreateTripRequest {
   string notes = 7;
 
   string createdByUserEmail = 8;
+  int32 groupId	= 9;
 }
 
 message CreateTripResponse {
@@ -77,7 +79,7 @@ message UpdateTripRequest {
   string to = 7;
   
   TripStatus status = 8;
-  string notes = 9;  
+  string notes = 9; 
 }
 
 message UpdateTripResponse {

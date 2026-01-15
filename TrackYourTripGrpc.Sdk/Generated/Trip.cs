@@ -25,48 +25,49 @@ namespace TrackYourTripGRPCApi.Protos {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Cgp0cmlwLnByb3RvEgR0cmlwGhtnb29nbGUvcHJvdG9idWYvZW1wdHkucHJv",
-            "dG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8ilQIKClRyaXBE",
+            "dG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8ipgIKClRyaXBE",
             "ZXRhaWwSCgoCaWQYASABKAUSDQoFdGl0bGUYAiABKAkSEwoLZGVzY3JpcHRp",
             "b24YAyABKAkSLQoJc3RhcnREYXRlGAQgASgLMhouZ29vZ2xlLnByb3RvYnVm",
             "LlRpbWVzdGFtcBIrCgdlbmREYXRlGAUgASgLMhouZ29vZ2xlLnByb3RvYnVm",
             "LlRpbWVzdGFtcBIMCgRmcm9tGAYgASgJEgoKAnRvGAcgASgJEhQKDHRvdGFs",
             "RXhwZW5zZRgIIAEoCRIgCgZzdGF0dXMYCSABKA4yEC50cmlwLlRyaXBTdGF0",
             "dXMSDQoFbm90ZXMYCiABKAkSGgoSY3JlYXRlZEJ5VXNlckVtYWlsGAsgASgJ",
-            "IhwKDkdldFRyaXBSZXF1ZXN0EgoKAmlkGAEgASgFIjEKD0dldFRyaXBSZXNw",
-            "b25zZRIeCgR0cmlwGAEgASgLMhAudHJpcC5UcmlwRGV0YWlsIjYKE0dldEFs",
-            "bFRyaXBzUmVzcG9uc2USHwoFdHJpcHMYASADKAsyEC50cmlwLlRyaXBEZXRh",
-            "aWwi2AEKEUNyZWF0ZVRyaXBSZXF1ZXN0Eg0KBXRpdGxlGAEgASgJEhMKC2Rl",
-            "c2NyaXB0aW9uGAIgASgJEi0KCXN0YXJ0RGF0ZRgDIAEoCzIaLmdvb2dsZS5w",
-            "cm90b2J1Zi5UaW1lc3RhbXASKwoHZW5kRGF0ZRgEIAEoCzIaLmdvb2dsZS5w",
-            "cm90b2J1Zi5UaW1lc3RhbXASDAoEZnJvbRgFIAEoCRIKCgJ0bxgGIAEoCRIN",
-            "CgVub3RlcxgHIAEoCRIaChJjcmVhdGVkQnlVc2VyRW1haWwYCCABKAkiNAoS",
-            "Q3JlYXRlVHJpcFJlc3BvbnNlEh4KBHRyaXAYASABKAsyEC50cmlwLlRyaXBE",
-            "ZXRhaWwi6gEKEVVwZGF0ZVRyaXBSZXF1ZXN0EgoKAmlkGAEgASgFEg0KBXRp",
-            "dGxlGAIgASgJEhMKC2Rlc2NyaXB0aW9uGAMgASgJEi0KCXN0YXJ0RGF0ZRgE",
-            "IAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASKwoHZW5kRGF0ZRgF",
-            "IAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASDAoEZnJvbRgGIAEo",
-            "CRIKCgJ0bxgHIAEoCRIgCgZzdGF0dXMYCCABKA4yEC50cmlwLlRyaXBTdGF0",
-            "dXMSDQoFbm90ZXMYCSABKAkiNAoSVXBkYXRlVHJpcFJlc3BvbnNlEh4KBHRy",
-            "aXAYASABKAsyEC50cmlwLlRyaXBEZXRhaWwiHwoRRGVsZXRlVHJpcFJlcXVl",
-            "c3QSCgoCaWQYASABKAUiJQoSRGVsZXRlVHJpcFJlc3BvbnNlEg8KB3N1Y2Nl",
-            "c3MYASABKAgqRAoKVHJpcFN0YXR1cxILCgdQTEFOTkVEEAASCwoHT05HT0lO",
-            "RxABEg0KCUNPTVBMRVRFRBACEg0KCUNBTkNFTExFRBADMsMCCgRUcmlwEjYK",
-            "B0dldFRyaXASFC50cmlwLkdldFRyaXBSZXF1ZXN0GhUudHJpcC5HZXRUcmlw",
-            "UmVzcG9uc2USQAoLR2V0QWxsVHJpcHMSFi5nb29nbGUucHJvdG9idWYuRW1w",
-            "dHkaGS50cmlwLkdldEFsbFRyaXBzUmVzcG9uc2USPwoKQ3JlYXRlVHJpcBIX",
-            "LnRyaXAuQ3JlYXRlVHJpcFJlcXVlc3QaGC50cmlwLkNyZWF0ZVRyaXBSZXNw",
-            "b25zZRI/CgpVcGRhdGVUcmlwEhcudHJpcC5VcGRhdGVUcmlwUmVxdWVzdBoY",
-            "LnRyaXAuVXBkYXRlVHJpcFJlc3BvbnNlEj8KCkRlbGV0ZVRyaXASFy50cmlw",
-            "LkRlbGV0ZVRyaXBSZXF1ZXN0GhgudHJpcC5EZWxldGVUcmlwUmVzcG9uc2VC",
-            "HqoCG1RyYWNrWW91clRyaXBHUlBDQXBpLlByb3Rvc2IGcHJvdG8z"));
+            "Eg8KB2dyb3VwSWQYDCABKAUiHAoOR2V0VHJpcFJlcXVlc3QSCgoCaWQYASAB",
+            "KAUiMQoPR2V0VHJpcFJlc3BvbnNlEh4KBHRyaXAYASABKAsyEC50cmlwLlRy",
+            "aXBEZXRhaWwiNgoTR2V0QWxsVHJpcHNSZXNwb25zZRIfCgV0cmlwcxgBIAMo",
+            "CzIQLnRyaXAuVHJpcERldGFpbCLpAQoRQ3JlYXRlVHJpcFJlcXVlc3QSDQoF",
+            "dGl0bGUYASABKAkSEwoLZGVzY3JpcHRpb24YAiABKAkSLQoJc3RhcnREYXRl",
+            "GAMgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIrCgdlbmREYXRl",
+            "GAQgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIMCgRmcm9tGAUg",
+            "ASgJEgoKAnRvGAYgASgJEg0KBW5vdGVzGAcgASgJEhoKEmNyZWF0ZWRCeVVz",
+            "ZXJFbWFpbBgIIAEoCRIPCgdncm91cElkGAkgASgFIjQKEkNyZWF0ZVRyaXBS",
+            "ZXNwb25zZRIeCgR0cmlwGAEgASgLMhAudHJpcC5UcmlwRGV0YWlsIuoBChFV",
+            "cGRhdGVUcmlwUmVxdWVzdBIKCgJpZBgBIAEoBRINCgV0aXRsZRgCIAEoCRIT",
+            "CgtkZXNjcmlwdGlvbhgDIAEoCRItCglzdGFydERhdGUYBCABKAsyGi5nb29n",
+            "bGUucHJvdG9idWYuVGltZXN0YW1wEisKB2VuZERhdGUYBSABKAsyGi5nb29n",
+            "bGUucHJvdG9idWYuVGltZXN0YW1wEgwKBGZyb20YBiABKAkSCgoCdG8YByAB",
+            "KAkSIAoGc3RhdHVzGAggASgOMhAudHJpcC5UcmlwU3RhdHVzEg0KBW5vdGVz",
+            "GAkgASgJIjQKElVwZGF0ZVRyaXBSZXNwb25zZRIeCgR0cmlwGAEgASgLMhAu",
+            "dHJpcC5UcmlwRGV0YWlsIh8KEURlbGV0ZVRyaXBSZXF1ZXN0EgoKAmlkGAEg",
+            "ASgFIiUKEkRlbGV0ZVRyaXBSZXNwb25zZRIPCgdzdWNjZXNzGAEgASgIKkQK",
+            "ClRyaXBTdGF0dXMSCwoHUExBTk5FRBAAEgsKB09OR09JTkcQARINCglDT01Q",
+            "TEVURUQQAhINCglDQU5DRUxMRUQQAzLDAgoEVHJpcBI2CgdHZXRUcmlwEhQu",
+            "dHJpcC5HZXRUcmlwUmVxdWVzdBoVLnRyaXAuR2V0VHJpcFJlc3BvbnNlEkAK",
+            "C0dldEFsbFRyaXBzEhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5GhkudHJpcC5H",
+            "ZXRBbGxUcmlwc1Jlc3BvbnNlEj8KCkNyZWF0ZVRyaXASFy50cmlwLkNyZWF0",
+            "ZVRyaXBSZXF1ZXN0GhgudHJpcC5DcmVhdGVUcmlwUmVzcG9uc2USPwoKVXBk",
+            "YXRlVHJpcBIXLnRyaXAuVXBkYXRlVHJpcFJlcXVlc3QaGC50cmlwLlVwZGF0",
+            "ZVRyaXBSZXNwb25zZRI/CgpEZWxldGVUcmlwEhcudHJpcC5EZWxldGVUcmlw",
+            "UmVxdWVzdBoYLnRyaXAuRGVsZXRlVHJpcFJlc3BvbnNlQh6qAhtUcmFja1lv",
+            "dXJUcmlwR1JQQ0FwaS5Qcm90b3NiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::TrackYourTripGRPCApi.Protos.TripStatus), }, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::TrackYourTripGRPCApi.Protos.TripDetail), global::TrackYourTripGRPCApi.Protos.TripDetail.Parser, new[]{ "Id", "Title", "Description", "StartDate", "EndDate", "From", "To", "TotalExpense", "Status", "Notes", "CreatedByUserEmail" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::TrackYourTripGRPCApi.Protos.TripDetail), global::TrackYourTripGRPCApi.Protos.TripDetail.Parser, new[]{ "Id", "Title", "Description", "StartDate", "EndDate", "From", "To", "TotalExpense", "Status", "Notes", "CreatedByUserEmail", "GroupId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::TrackYourTripGRPCApi.Protos.GetTripRequest), global::TrackYourTripGRPCApi.Protos.GetTripRequest.Parser, new[]{ "Id" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::TrackYourTripGRPCApi.Protos.GetTripResponse), global::TrackYourTripGRPCApi.Protos.GetTripResponse.Parser, new[]{ "Trip" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::TrackYourTripGRPCApi.Protos.GetAllTripsResponse), global::TrackYourTripGRPCApi.Protos.GetAllTripsResponse.Parser, new[]{ "Trips" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::TrackYourTripGRPCApi.Protos.CreateTripRequest), global::TrackYourTripGRPCApi.Protos.CreateTripRequest.Parser, new[]{ "Title", "Description", "StartDate", "EndDate", "From", "To", "Notes", "CreatedByUserEmail" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::TrackYourTripGRPCApi.Protos.CreateTripRequest), global::TrackYourTripGRPCApi.Protos.CreateTripRequest.Parser, new[]{ "Title", "Description", "StartDate", "EndDate", "From", "To", "Notes", "CreatedByUserEmail", "GroupId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::TrackYourTripGRPCApi.Protos.CreateTripResponse), global::TrackYourTripGRPCApi.Protos.CreateTripResponse.Parser, new[]{ "Trip" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::TrackYourTripGRPCApi.Protos.UpdateTripRequest), global::TrackYourTripGRPCApi.Protos.UpdateTripRequest.Parser, new[]{ "Id", "Title", "Description", "StartDate", "EndDate", "From", "To", "Status", "Notes" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::TrackYourTripGRPCApi.Protos.UpdateTripResponse), global::TrackYourTripGRPCApi.Protos.UpdateTripResponse.Parser, new[]{ "Trip" }, null, null, null, null),
@@ -134,6 +135,7 @@ namespace TrackYourTripGRPCApi.Protos {
       status_ = other.status_;
       notes_ = other.notes_;
       createdByUserEmail_ = other.createdByUserEmail_;
+      groupId_ = other.groupId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -275,6 +277,18 @@ namespace TrackYourTripGRPCApi.Protos {
       }
     }
 
+    /// <summary>Field number for the "groupId" field.</summary>
+    public const int GroupIdFieldNumber = 12;
+    private int groupId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int GroupId {
+      get { return groupId_; }
+      set {
+        groupId_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -301,6 +315,7 @@ namespace TrackYourTripGRPCApi.Protos {
       if (Status != other.Status) return false;
       if (Notes != other.Notes) return false;
       if (CreatedByUserEmail != other.CreatedByUserEmail) return false;
+      if (GroupId != other.GroupId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -319,6 +334,7 @@ namespace TrackYourTripGRPCApi.Protos {
       if (Status != global::TrackYourTripGRPCApi.Protos.TripStatus.Planned) hash ^= Status.GetHashCode();
       if (Notes.Length != 0) hash ^= Notes.GetHashCode();
       if (CreatedByUserEmail.Length != 0) hash ^= CreatedByUserEmail.GetHashCode();
+      if (GroupId != 0) hash ^= GroupId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -381,6 +397,10 @@ namespace TrackYourTripGRPCApi.Protos {
         output.WriteRawTag(90);
         output.WriteString(CreatedByUserEmail);
       }
+      if (GroupId != 0) {
+        output.WriteRawTag(96);
+        output.WriteInt32(GroupId);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -435,6 +455,10 @@ namespace TrackYourTripGRPCApi.Protos {
         output.WriteRawTag(90);
         output.WriteString(CreatedByUserEmail);
       }
+      if (GroupId != 0) {
+        output.WriteRawTag(96);
+        output.WriteInt32(GroupId);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -477,6 +501,9 @@ namespace TrackYourTripGRPCApi.Protos {
       }
       if (CreatedByUserEmail.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(CreatedByUserEmail);
+      }
+      if (GroupId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(GroupId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -528,6 +555,9 @@ namespace TrackYourTripGRPCApi.Protos {
       }
       if (other.CreatedByUserEmail.Length != 0) {
         CreatedByUserEmail = other.CreatedByUserEmail;
+      }
+      if (other.GroupId != 0) {
+        GroupId = other.GroupId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -598,6 +628,10 @@ namespace TrackYourTripGRPCApi.Protos {
             CreatedByUserEmail = input.ReadString();
             break;
           }
+          case 96: {
+            GroupId = input.ReadInt32();
+            break;
+          }
         }
       }
     #endif
@@ -665,6 +699,10 @@ namespace TrackYourTripGRPCApi.Protos {
           }
           case 90: {
             CreatedByUserEmail = input.ReadString();
+            break;
+          }
+          case 96: {
+            GroupId = input.ReadInt32();
             break;
           }
         }
@@ -1309,6 +1347,7 @@ namespace TrackYourTripGRPCApi.Protos {
       to_ = other.to_;
       notes_ = other.notes_;
       createdByUserEmail_ = other.createdByUserEmail_;
+      groupId_ = other.groupId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1414,6 +1453,18 @@ namespace TrackYourTripGRPCApi.Protos {
       }
     }
 
+    /// <summary>Field number for the "groupId" field.</summary>
+    public const int GroupIdFieldNumber = 9;
+    private int groupId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int GroupId {
+      get { return groupId_; }
+      set {
+        groupId_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -1437,6 +1488,7 @@ namespace TrackYourTripGRPCApi.Protos {
       if (To != other.To) return false;
       if (Notes != other.Notes) return false;
       if (CreatedByUserEmail != other.CreatedByUserEmail) return false;
+      if (GroupId != other.GroupId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1452,6 +1504,7 @@ namespace TrackYourTripGRPCApi.Protos {
       if (To.Length != 0) hash ^= To.GetHashCode();
       if (Notes.Length != 0) hash ^= Notes.GetHashCode();
       if (CreatedByUserEmail.Length != 0) hash ^= CreatedByUserEmail.GetHashCode();
+      if (GroupId != 0) hash ^= GroupId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1502,6 +1555,10 @@ namespace TrackYourTripGRPCApi.Protos {
         output.WriteRawTag(66);
         output.WriteString(CreatedByUserEmail);
       }
+      if (GroupId != 0) {
+        output.WriteRawTag(72);
+        output.WriteInt32(GroupId);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1544,6 +1601,10 @@ namespace TrackYourTripGRPCApi.Protos {
         output.WriteRawTag(66);
         output.WriteString(CreatedByUserEmail);
       }
+      if (GroupId != 0) {
+        output.WriteRawTag(72);
+        output.WriteInt32(GroupId);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1577,6 +1638,9 @@ namespace TrackYourTripGRPCApi.Protos {
       }
       if (CreatedByUserEmail.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(CreatedByUserEmail);
+      }
+      if (GroupId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(GroupId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1619,6 +1683,9 @@ namespace TrackYourTripGRPCApi.Protos {
       }
       if (other.CreatedByUserEmail.Length != 0) {
         CreatedByUserEmail = other.CreatedByUserEmail;
+      }
+      if (other.GroupId != 0) {
+        GroupId = other.GroupId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1677,6 +1744,10 @@ namespace TrackYourTripGRPCApi.Protos {
             CreatedByUserEmail = input.ReadString();
             break;
           }
+          case 72: {
+            GroupId = input.ReadInt32();
+            break;
+          }
         }
       }
     #endif
@@ -1732,6 +1803,10 @@ namespace TrackYourTripGRPCApi.Protos {
           }
           case 66: {
             CreatedByUserEmail = input.ReadString();
+            break;
+          }
+          case 72: {
+            GroupId = input.ReadInt32();
             break;
           }
         }

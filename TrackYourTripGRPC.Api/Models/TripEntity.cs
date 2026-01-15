@@ -25,6 +25,8 @@ namespace TrackYourTripGRPCApi.Models
 
         public string? CreatedByUserEmail { get; set; }
 
+        public int GroupId { get; set; } = 0;
+
         [NotMapped]
         public IEnumerable<MemberEntity> Members { get; set; } = new List<MemberEntity>();
 

@@ -65,6 +65,7 @@ public class TripGrpcService : ITripGrpcService
                 From = tripDetail.From,
                 To = tripDetail.To,
                 Notes = tripDetail.Notes,
+                GroupId = tripDetail.GroupId
             };
             var response = await _tripClient.CreateTripAsync(request, cancellationToken: cancellationToken);
             return response.Trip;
@@ -95,7 +96,6 @@ public class TripGrpcService : ITripGrpcService
                 To = tripDetail.To,
                 Notes = tripDetail.Notes,
                 EndDate = tripDetail.EndDate,
-                Status = tripDetail.Status
             };
             var response = await _tripClient.UpdateTripAsync(request, cancellationToken: cancellationToken);
             return response.Trip;
