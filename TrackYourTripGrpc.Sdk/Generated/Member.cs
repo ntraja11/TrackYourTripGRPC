@@ -28,35 +28,41 @@ namespace TrackYourTripGRPCApi.Protos {
             "ASABKAUSDAoEbmFtZRgCIAEoCRINCgVlbWFpbBgDIAEoCRIOCgZ0cmlwSWQY",
             "BCABKAUSGAoQdG90YWxUcmlwRXhwZW5zZRgFIAEoASIeChBHZXRNZW1iZXJS",
             "ZXF1ZXN0EgoKAmlkGAEgASgFIjkKEUdldE1lbWJlclJlc3BvbnNlEiQKBm1l",
-            "bWJlchgBIAEoCzIULm1lbWJlci5NZW1iZXJEZXRhaWwiLgocR2V0QWxsTWVt",
-            "YmVyc0J5VHJpcElkUmVxdWVzdBIOCgZ0cmlwSWQYASABKAUiRgodR2V0QWxs",
-            "TWVtYmVyc0J5VHJpcElkUmVzcG9uc2USJQoHbWVtYmVycxgBIAMoCzIULm1l",
-            "bWJlci5NZW1iZXJEZXRhaWwiQgoTQ3JlYXRlTWVtYmVyUmVxdWVzdBIMCgRu",
-            "YW1lGAEgASgJEg0KBWVtYWlsGAIgASgJEg4KBnRyaXBJZBgDIAEoBSI8ChRD",
-            "cmVhdGVNZW1iZXJSZXNwb25zZRIkCgZtZW1iZXIYASABKAsyFC5tZW1iZXIu",
-            "TWVtYmVyRGV0YWlsIiEKE0RlbGV0ZU1lbWJlclJlcXVlc3QSCgoCaWQYASAB",
-            "KAUiJwoURGVsZXRlTWVtYmVyUmVzcG9uc2USDwoHc3VjY2VzcxgBIAEoCDLG",
-            "AgoGTWVtYmVyEkAKCUdldE1lbWJlchIYLm1lbWJlci5HZXRNZW1iZXJSZXF1",
-            "ZXN0GhkubWVtYmVyLkdldE1lbWJlclJlc3BvbnNlEmQKFUdldEFsbE1lbWJl",
-            "cnNCeVRyaXBJZBIkLm1lbWJlci5HZXRBbGxNZW1iZXJzQnlUcmlwSWRSZXF1",
-            "ZXN0GiUubWVtYmVyLkdldEFsbE1lbWJlcnNCeVRyaXBJZFJlc3BvbnNlEkkK",
-            "DENyZWF0ZU1lbWJlchIbLm1lbWJlci5DcmVhdGVNZW1iZXJSZXF1ZXN0Ghwu",
-            "bWVtYmVyLkNyZWF0ZU1lbWJlclJlc3BvbnNlEkkKDERlbGV0ZU1lbWJlchIb",
-            "Lm1lbWJlci5EZWxldGVNZW1iZXJSZXF1ZXN0GhwubWVtYmVyLkRlbGV0ZU1l",
-            "bWJlclJlc3BvbnNlQh6qAhtUcmFja1lvdXJUcmlwR1JQQ0FwaS5Qcm90b3Ni",
-            "BnByb3RvMw=="));
+            "bWJlchgBIAEoCzIULm1lbWJlci5NZW1iZXJEZXRhaWwiLgobR2V0QWxsTWVt",
+            "YmVyc0J5R3JvdXBSZXF1ZXN0Eg8KB2dyb3VwSWQYASABKAUiRQocR2V0QWxs",
+            "TWVtYmVyc0J5R3JvdXBSZXNwb25zZRIlCgdtZW1iZXJzGAEgAygLMhQubWVt",
+            "YmVyLk1lbWJlckRldGFpbCIsChpHZXRBbGxNZW1iZXJzQnlUcmlwUmVxdWVz",
+            "dBIOCgZ0cmlwSWQYASABKAUiRAobR2V0QWxsTWVtYmVyc0J5VHJpcFJlc3Bv",
+            "bnNlEiUKB21lbWJlcnMYASADKAsyFC5tZW1iZXIuTWVtYmVyRGV0YWlsIj0K",
+            "FENyZWF0ZU1lbWJlcnNSZXF1ZXN0EiUKB21lbWJlcnMYASADKAsyFC5tZW1i",
+            "ZXIuTWVtYmVyRGV0YWlsIigKFUNyZWF0ZU1lbWJlcnNSZXNwb25zZRIPCgdz",
+            "dWNjZXNzGAEgASgIIikKFERlbGV0ZU1lbWJlcnNSZXF1ZXN0EhEKCW1lbWJl",
+            "cklkcxgBIAMoBSIoChVEZWxldGVNZW1iZXJzUmVzcG9uc2USDwoHc3VjY2Vz",
+            "cxgBIAEoCDKpAwoGTWVtYmVyEkAKCUdldE1lbWJlchIYLm1lbWJlci5HZXRN",
+            "ZW1iZXJSZXF1ZXN0GhkubWVtYmVyLkdldE1lbWJlclJlc3BvbnNlEmEKFEdl",
+            "dEFsbE1lbWJlcnNCeUdyb3VwEiMubWVtYmVyLkdldEFsbE1lbWJlcnNCeUdy",
+            "b3VwUmVxdWVzdBokLm1lbWJlci5HZXRBbGxNZW1iZXJzQnlHcm91cFJlc3Bv",
+            "bnNlEl4KE0dldEFsbE1lbWJlcnNCeVRyaXASIi5tZW1iZXIuR2V0QWxsTWVt",
+            "YmVyc0J5VHJpcFJlcXVlc3QaIy5tZW1iZXIuR2V0QWxsTWVtYmVyc0J5VHJp",
+            "cFJlc3BvbnNlEkwKDUNyZWF0ZU1lbWJlcnMSHC5tZW1iZXIuQ3JlYXRlTWVt",
+            "YmVyc1JlcXVlc3QaHS5tZW1iZXIuQ3JlYXRlTWVtYmVyc1Jlc3BvbnNlEkwK",
+            "DURlbGV0ZU1lbWJlcnMSHC5tZW1iZXIuRGVsZXRlTWVtYmVyc1JlcXVlc3Qa",
+            "HS5tZW1iZXIuRGVsZXRlTWVtYmVyc1Jlc3BvbnNlQh6qAhtUcmFja1lvdXJU",
+            "cmlwR1JQQ0FwaS5Qcm90b3NiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::TrackYourTripGRPCApi.Protos.MemberDetail), global::TrackYourTripGRPCApi.Protos.MemberDetail.Parser, new[]{ "Id", "Name", "Email", "TripId", "TotalTripExpense" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::TrackYourTripGRPCApi.Protos.GetMemberRequest), global::TrackYourTripGRPCApi.Protos.GetMemberRequest.Parser, new[]{ "Id" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::TrackYourTripGRPCApi.Protos.GetMemberResponse), global::TrackYourTripGRPCApi.Protos.GetMemberResponse.Parser, new[]{ "Member" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::TrackYourTripGRPCApi.Protos.GetAllMembersByTripIdRequest), global::TrackYourTripGRPCApi.Protos.GetAllMembersByTripIdRequest.Parser, new[]{ "TripId" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::TrackYourTripGRPCApi.Protos.GetAllMembersByTripIdResponse), global::TrackYourTripGRPCApi.Protos.GetAllMembersByTripIdResponse.Parser, new[]{ "Members" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::TrackYourTripGRPCApi.Protos.CreateMemberRequest), global::TrackYourTripGRPCApi.Protos.CreateMemberRequest.Parser, new[]{ "Name", "Email", "TripId" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::TrackYourTripGRPCApi.Protos.CreateMemberResponse), global::TrackYourTripGRPCApi.Protos.CreateMemberResponse.Parser, new[]{ "Member" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::TrackYourTripGRPCApi.Protos.DeleteMemberRequest), global::TrackYourTripGRPCApi.Protos.DeleteMemberRequest.Parser, new[]{ "Id" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::TrackYourTripGRPCApi.Protos.DeleteMemberResponse), global::TrackYourTripGRPCApi.Protos.DeleteMemberResponse.Parser, new[]{ "Success" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::TrackYourTripGRPCApi.Protos.GetAllMembersByGroupRequest), global::TrackYourTripGRPCApi.Protos.GetAllMembersByGroupRequest.Parser, new[]{ "GroupId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::TrackYourTripGRPCApi.Protos.GetAllMembersByGroupResponse), global::TrackYourTripGRPCApi.Protos.GetAllMembersByGroupResponse.Parser, new[]{ "Members" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::TrackYourTripGRPCApi.Protos.GetAllMembersByTripRequest), global::TrackYourTripGRPCApi.Protos.GetAllMembersByTripRequest.Parser, new[]{ "TripId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::TrackYourTripGRPCApi.Protos.GetAllMembersByTripResponse), global::TrackYourTripGRPCApi.Protos.GetAllMembersByTripResponse.Parser, new[]{ "Members" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::TrackYourTripGRPCApi.Protos.CreateMembersRequest), global::TrackYourTripGRPCApi.Protos.CreateMembersRequest.Parser, new[]{ "Members" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::TrackYourTripGRPCApi.Protos.CreateMembersResponse), global::TrackYourTripGRPCApi.Protos.CreateMembersResponse.Parser, new[]{ "Success" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::TrackYourTripGRPCApi.Protos.DeleteMembersRequest), global::TrackYourTripGRPCApi.Protos.DeleteMembersRequest.Parser, new[]{ "MemberIds" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::TrackYourTripGRPCApi.Protos.DeleteMembersResponse), global::TrackYourTripGRPCApi.Protos.DeleteMembersResponse.Parser, new[]{ "Success" }, null, null, null, null)
           }));
     }
     #endregion
@@ -815,16 +821,16 @@ namespace TrackYourTripGRPCApi.Protos {
   }
 
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
-  public sealed partial class GetAllMembersByTripIdRequest : pb::IMessage<GetAllMembersByTripIdRequest>
+  public sealed partial class GetAllMembersByGroupRequest : pb::IMessage<GetAllMembersByGroupRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
   #endif
   {
-    private static readonly pb::MessageParser<GetAllMembersByTripIdRequest> _parser = new pb::MessageParser<GetAllMembersByTripIdRequest>(() => new GetAllMembersByTripIdRequest());
+    private static readonly pb::MessageParser<GetAllMembersByGroupRequest> _parser = new pb::MessageParser<GetAllMembersByGroupRequest>(() => new GetAllMembersByGroupRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pb::MessageParser<GetAllMembersByTripIdRequest> Parser { get { return _parser; } }
+    public static pb::MessageParser<GetAllMembersByGroupRequest> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -840,7 +846,7 @@ namespace TrackYourTripGRPCApi.Protos {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public GetAllMembersByTripIdRequest() {
+    public GetAllMembersByGroupRequest() {
       OnConstruction();
     }
 
@@ -848,45 +854,45 @@ namespace TrackYourTripGRPCApi.Protos {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public GetAllMembersByTripIdRequest(GetAllMembersByTripIdRequest other) : this() {
-      tripId_ = other.tripId_;
+    public GetAllMembersByGroupRequest(GetAllMembersByGroupRequest other) : this() {
+      groupId_ = other.groupId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public GetAllMembersByTripIdRequest Clone() {
-      return new GetAllMembersByTripIdRequest(this);
+    public GetAllMembersByGroupRequest Clone() {
+      return new GetAllMembersByGroupRequest(this);
     }
 
-    /// <summary>Field number for the "tripId" field.</summary>
-    public const int TripIdFieldNumber = 1;
-    private int tripId_;
+    /// <summary>Field number for the "groupId" field.</summary>
+    public const int GroupIdFieldNumber = 1;
+    private int groupId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int TripId {
-      get { return tripId_; }
+    public int GroupId {
+      get { return groupId_; }
       set {
-        tripId_ = value;
+        groupId_ = value;
       }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
-      return Equals(other as GetAllMembersByTripIdRequest);
+      return Equals(other as GetAllMembersByGroupRequest);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Equals(GetAllMembersByTripIdRequest other) {
+    public bool Equals(GetAllMembersByGroupRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (TripId != other.TripId) return false;
+      if (GroupId != other.GroupId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -894,7 +900,7 @@ namespace TrackYourTripGRPCApi.Protos {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (TripId != 0) hash ^= TripId.GetHashCode();
+      if (GroupId != 0) hash ^= GroupId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -913,9 +919,9 @@ namespace TrackYourTripGRPCApi.Protos {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (TripId != 0) {
+      if (GroupId != 0) {
         output.WriteRawTag(8);
-        output.WriteInt32(TripId);
+        output.WriteInt32(GroupId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -927,9 +933,9 @@ namespace TrackYourTripGRPCApi.Protos {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (TripId != 0) {
+      if (GroupId != 0) {
         output.WriteRawTag(8);
-        output.WriteInt32(TripId);
+        output.WriteInt32(GroupId);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -941,8 +947,8 @@ namespace TrackYourTripGRPCApi.Protos {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (TripId != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(TripId);
+      if (GroupId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(GroupId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -952,12 +958,12 @@ namespace TrackYourTripGRPCApi.Protos {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(GetAllMembersByTripIdRequest other) {
+    public void MergeFrom(GetAllMembersByGroupRequest other) {
       if (other == null) {
         return;
       }
-      if (other.TripId != 0) {
-        TripId = other.TripId;
+      if (other.GroupId != 0) {
+        GroupId = other.GroupId;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -979,7 +985,7 @@ namespace TrackYourTripGRPCApi.Protos {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 8: {
-            TripId = input.ReadInt32();
+            GroupId = input.ReadInt32();
             break;
           }
         }
@@ -1002,7 +1008,7 @@ namespace TrackYourTripGRPCApi.Protos {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 8: {
-            TripId = input.ReadInt32();
+            GroupId = input.ReadInt32();
             break;
           }
         }
@@ -1013,16 +1019,16 @@ namespace TrackYourTripGRPCApi.Protos {
   }
 
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
-  public sealed partial class GetAllMembersByTripIdResponse : pb::IMessage<GetAllMembersByTripIdResponse>
+  public sealed partial class GetAllMembersByGroupResponse : pb::IMessage<GetAllMembersByGroupResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
   #endif
   {
-    private static readonly pb::MessageParser<GetAllMembersByTripIdResponse> _parser = new pb::MessageParser<GetAllMembersByTripIdResponse>(() => new GetAllMembersByTripIdResponse());
+    private static readonly pb::MessageParser<GetAllMembersByGroupResponse> _parser = new pb::MessageParser<GetAllMembersByGroupResponse>(() => new GetAllMembersByGroupResponse());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pb::MessageParser<GetAllMembersByTripIdResponse> Parser { get { return _parser; } }
+    public static pb::MessageParser<GetAllMembersByGroupResponse> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1038,7 +1044,7 @@ namespace TrackYourTripGRPCApi.Protos {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public GetAllMembersByTripIdResponse() {
+    public GetAllMembersByGroupResponse() {
       OnConstruction();
     }
 
@@ -1046,15 +1052,15 @@ namespace TrackYourTripGRPCApi.Protos {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public GetAllMembersByTripIdResponse(GetAllMembersByTripIdResponse other) : this() {
+    public GetAllMembersByGroupResponse(GetAllMembersByGroupResponse other) : this() {
       members_ = other.members_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public GetAllMembersByTripIdResponse Clone() {
-      return new GetAllMembersByTripIdResponse(this);
+    public GetAllMembersByGroupResponse Clone() {
+      return new GetAllMembersByGroupResponse(this);
     }
 
     /// <summary>Field number for the "members" field.</summary>
@@ -1071,12 +1077,12 @@ namespace TrackYourTripGRPCApi.Protos {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
-      return Equals(other as GetAllMembersByTripIdResponse);
+      return Equals(other as GetAllMembersByGroupResponse);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Equals(GetAllMembersByTripIdResponse other) {
+    public bool Equals(GetAllMembersByGroupResponse other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
@@ -1141,7 +1147,7 @@ namespace TrackYourTripGRPCApi.Protos {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(GetAllMembersByTripIdResponse other) {
+    public void MergeFrom(GetAllMembersByGroupResponse other) {
       if (other == null) {
         return;
       }
@@ -1200,16 +1206,16 @@ namespace TrackYourTripGRPCApi.Protos {
   }
 
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
-  public sealed partial class CreateMemberRequest : pb::IMessage<CreateMemberRequest>
+  public sealed partial class GetAllMembersByTripRequest : pb::IMessage<GetAllMembersByTripRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
   #endif
   {
-    private static readonly pb::MessageParser<CreateMemberRequest> _parser = new pb::MessageParser<CreateMemberRequest>(() => new CreateMemberRequest());
+    private static readonly pb::MessageParser<GetAllMembersByTripRequest> _parser = new pb::MessageParser<GetAllMembersByTripRequest>(() => new GetAllMembersByTripRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pb::MessageParser<CreateMemberRequest> Parser { get { return _parser; } }
+    public static pb::MessageParser<GetAllMembersByTripRequest> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1225,7 +1231,7 @@ namespace TrackYourTripGRPCApi.Protos {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public CreateMemberRequest() {
+    public GetAllMembersByTripRequest() {
       OnConstruction();
     }
 
@@ -1233,45 +1239,19 @@ namespace TrackYourTripGRPCApi.Protos {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public CreateMemberRequest(CreateMemberRequest other) : this() {
-      name_ = other.name_;
-      email_ = other.email_;
+    public GetAllMembersByTripRequest(GetAllMembersByTripRequest other) : this() {
       tripId_ = other.tripId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public CreateMemberRequest Clone() {
-      return new CreateMemberRequest(this);
-    }
-
-    /// <summary>Field number for the "name" field.</summary>
-    public const int NameFieldNumber = 1;
-    private string name_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string Name {
-      get { return name_; }
-      set {
-        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
-    }
-
-    /// <summary>Field number for the "email" field.</summary>
-    public const int EmailFieldNumber = 2;
-    private string email_ = "";
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
-    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string Email {
-      get { return email_; }
-      set {
-        email_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
-      }
+    public GetAllMembersByTripRequest Clone() {
+      return new GetAllMembersByTripRequest(this);
     }
 
     /// <summary>Field number for the "tripId" field.</summary>
-    public const int TripIdFieldNumber = 3;
+    public const int TripIdFieldNumber = 1;
     private int tripId_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1285,20 +1265,18 @@ namespace TrackYourTripGRPCApi.Protos {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
-      return Equals(other as CreateMemberRequest);
+      return Equals(other as GetAllMembersByTripRequest);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Equals(CreateMemberRequest other) {
+    public bool Equals(GetAllMembersByTripRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (Name != other.Name) return false;
-      if (Email != other.Email) return false;
       if (TripId != other.TripId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -1307,8 +1285,6 @@ namespace TrackYourTripGRPCApi.Protos {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (Name.Length != 0) hash ^= Name.GetHashCode();
-      if (Email.Length != 0) hash ^= Email.GetHashCode();
       if (TripId != 0) hash ^= TripId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -1328,16 +1304,8 @@ namespace TrackYourTripGRPCApi.Protos {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Name.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(Name);
-      }
-      if (Email.Length != 0) {
-        output.WriteRawTag(18);
-        output.WriteString(Email);
-      }
       if (TripId != 0) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(8);
         output.WriteInt32(TripId);
       }
       if (_unknownFields != null) {
@@ -1350,16 +1318,8 @@ namespace TrackYourTripGRPCApi.Protos {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Name.Length != 0) {
-        output.WriteRawTag(10);
-        output.WriteString(Name);
-      }
-      if (Email.Length != 0) {
-        output.WriteRawTag(18);
-        output.WriteString(Email);
-      }
       if (TripId != 0) {
-        output.WriteRawTag(24);
+        output.WriteRawTag(8);
         output.WriteInt32(TripId);
       }
       if (_unknownFields != null) {
@@ -1372,12 +1332,6 @@ namespace TrackYourTripGRPCApi.Protos {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (Name.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
-      }
-      if (Email.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(Email);
-      }
       if (TripId != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(TripId);
       }
@@ -1389,15 +1343,9 @@ namespace TrackYourTripGRPCApi.Protos {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(CreateMemberRequest other) {
+    public void MergeFrom(GetAllMembersByTripRequest other) {
       if (other == null) {
         return;
-      }
-      if (other.Name.Length != 0) {
-        Name = other.Name;
-      }
-      if (other.Email.Length != 0) {
-        Email = other.Email;
       }
       if (other.TripId != 0) {
         TripId = other.TripId;
@@ -1421,15 +1369,7 @@ namespace TrackYourTripGRPCApi.Protos {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 10: {
-            Name = input.ReadString();
-            break;
-          }
-          case 18: {
-            Email = input.ReadString();
-            break;
-          }
-          case 24: {
+          case 8: {
             TripId = input.ReadInt32();
             break;
           }
@@ -1452,15 +1392,7 @@ namespace TrackYourTripGRPCApi.Protos {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 10: {
-            Name = input.ReadString();
-            break;
-          }
-          case 18: {
-            Email = input.ReadString();
-            break;
-          }
-          case 24: {
+          case 8: {
             TripId = input.ReadInt32();
             break;
           }
@@ -1472,16 +1404,16 @@ namespace TrackYourTripGRPCApi.Protos {
   }
 
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
-  public sealed partial class CreateMemberResponse : pb::IMessage<CreateMemberResponse>
+  public sealed partial class GetAllMembersByTripResponse : pb::IMessage<GetAllMembersByTripResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
   #endif
   {
-    private static readonly pb::MessageParser<CreateMemberResponse> _parser = new pb::MessageParser<CreateMemberResponse>(() => new CreateMemberResponse());
+    private static readonly pb::MessageParser<GetAllMembersByTripResponse> _parser = new pb::MessageParser<GetAllMembersByTripResponse>(() => new GetAllMembersByTripResponse());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pb::MessageParser<CreateMemberResponse> Parser { get { return _parser; } }
+    public static pb::MessageParser<GetAllMembersByTripResponse> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1497,7 +1429,7 @@ namespace TrackYourTripGRPCApi.Protos {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public CreateMemberResponse() {
+    public GetAllMembersByTripResponse() {
       OnConstruction();
     }
 
@@ -1505,45 +1437,44 @@ namespace TrackYourTripGRPCApi.Protos {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public CreateMemberResponse(CreateMemberResponse other) : this() {
-      member_ = other.member_ != null ? other.member_.Clone() : null;
+    public GetAllMembersByTripResponse(GetAllMembersByTripResponse other) : this() {
+      members_ = other.members_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public CreateMemberResponse Clone() {
-      return new CreateMemberResponse(this);
+    public GetAllMembersByTripResponse Clone() {
+      return new GetAllMembersByTripResponse(this);
     }
 
-    /// <summary>Field number for the "member" field.</summary>
-    public const int MemberFieldNumber = 1;
-    private global::TrackYourTripGRPCApi.Protos.MemberDetail member_;
+    /// <summary>Field number for the "members" field.</summary>
+    public const int MembersFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::TrackYourTripGRPCApi.Protos.MemberDetail> _repeated_members_codec
+        = pb::FieldCodec.ForMessage(10, global::TrackYourTripGRPCApi.Protos.MemberDetail.Parser);
+    private readonly pbc::RepeatedField<global::TrackYourTripGRPCApi.Protos.MemberDetail> members_ = new pbc::RepeatedField<global::TrackYourTripGRPCApi.Protos.MemberDetail>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::TrackYourTripGRPCApi.Protos.MemberDetail Member {
-      get { return member_; }
-      set {
-        member_ = value;
-      }
+    public pbc::RepeatedField<global::TrackYourTripGRPCApi.Protos.MemberDetail> Members {
+      get { return members_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
-      return Equals(other as CreateMemberResponse);
+      return Equals(other as GetAllMembersByTripResponse);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Equals(CreateMemberResponse other) {
+    public bool Equals(GetAllMembersByTripResponse other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (!object.Equals(Member, other.Member)) return false;
+      if(!members_.Equals(other.members_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1551,7 +1482,7 @@ namespace TrackYourTripGRPCApi.Protos {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (member_ != null) hash ^= Member.GetHashCode();
+      hash ^= members_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1570,10 +1501,7 @@ namespace TrackYourTripGRPCApi.Protos {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (member_ != null) {
-        output.WriteRawTag(10);
-        output.WriteMessage(Member);
-      }
+      members_.WriteTo(output, _repeated_members_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1584,10 +1512,7 @@ namespace TrackYourTripGRPCApi.Protos {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (member_ != null) {
-        output.WriteRawTag(10);
-        output.WriteMessage(Member);
-      }
+      members_.WriteTo(ref output, _repeated_members_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1598,9 +1523,7 @@ namespace TrackYourTripGRPCApi.Protos {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (member_ != null) {
-        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Member);
-      }
+      size += members_.CalculateSize(_repeated_members_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -1609,16 +1532,11 @@ namespace TrackYourTripGRPCApi.Protos {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(CreateMemberResponse other) {
+    public void MergeFrom(GetAllMembersByTripResponse other) {
       if (other == null) {
         return;
       }
-      if (other.member_ != null) {
-        if (member_ == null) {
-          Member = new global::TrackYourTripGRPCApi.Protos.MemberDetail();
-        }
-        Member.MergeFrom(other.Member);
-      }
+      members_.Add(other.members_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -1639,10 +1557,7 @@ namespace TrackYourTripGRPCApi.Protos {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
           case 10: {
-            if (member_ == null) {
-              Member = new global::TrackYourTripGRPCApi.Protos.MemberDetail();
-            }
-            input.ReadMessage(Member);
+            members_.AddEntriesFrom(input, _repeated_members_codec);
             break;
           }
         }
@@ -1665,10 +1580,7 @@ namespace TrackYourTripGRPCApi.Protos {
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
           case 10: {
-            if (member_ == null) {
-              Member = new global::TrackYourTripGRPCApi.Protos.MemberDetail();
-            }
-            input.ReadMessage(Member);
+            members_.AddEntriesFrom(ref input, _repeated_members_codec);
             break;
           }
         }
@@ -1679,16 +1591,16 @@ namespace TrackYourTripGRPCApi.Protos {
   }
 
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
-  public sealed partial class DeleteMemberRequest : pb::IMessage<DeleteMemberRequest>
+  public sealed partial class CreateMembersRequest : pb::IMessage<CreateMembersRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
   #endif
   {
-    private static readonly pb::MessageParser<DeleteMemberRequest> _parser = new pb::MessageParser<DeleteMemberRequest>(() => new DeleteMemberRequest());
+    private static readonly pb::MessageParser<CreateMembersRequest> _parser = new pb::MessageParser<CreateMembersRequest>(() => new CreateMembersRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pb::MessageParser<DeleteMemberRequest> Parser { get { return _parser; } }
+    public static pb::MessageParser<CreateMembersRequest> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1704,7 +1616,7 @@ namespace TrackYourTripGRPCApi.Protos {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public DeleteMemberRequest() {
+    public CreateMembersRequest() {
       OnConstruction();
     }
 
@@ -1712,45 +1624,44 @@ namespace TrackYourTripGRPCApi.Protos {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public DeleteMemberRequest(DeleteMemberRequest other) : this() {
-      id_ = other.id_;
+    public CreateMembersRequest(CreateMembersRequest other) : this() {
+      members_ = other.members_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public DeleteMemberRequest Clone() {
-      return new DeleteMemberRequest(this);
+    public CreateMembersRequest Clone() {
+      return new CreateMembersRequest(this);
     }
 
-    /// <summary>Field number for the "id" field.</summary>
-    public const int IdFieldNumber = 1;
-    private int id_;
+    /// <summary>Field number for the "members" field.</summary>
+    public const int MembersFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::TrackYourTripGRPCApi.Protos.MemberDetail> _repeated_members_codec
+        = pb::FieldCodec.ForMessage(10, global::TrackYourTripGRPCApi.Protos.MemberDetail.Parser);
+    private readonly pbc::RepeatedField<global::TrackYourTripGRPCApi.Protos.MemberDetail> members_ = new pbc::RepeatedField<global::TrackYourTripGRPCApi.Protos.MemberDetail>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public int Id {
-      get { return id_; }
-      set {
-        id_ = value;
-      }
+    public pbc::RepeatedField<global::TrackYourTripGRPCApi.Protos.MemberDetail> Members {
+      get { return members_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
-      return Equals(other as DeleteMemberRequest);
+      return Equals(other as CreateMembersRequest);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Equals(DeleteMemberRequest other) {
+    public bool Equals(CreateMembersRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
       if (ReferenceEquals(other, this)) {
         return true;
       }
-      if (Id != other.Id) return false;
+      if(!members_.Equals(other.members_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1758,7 +1669,7 @@ namespace TrackYourTripGRPCApi.Protos {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
-      if (Id != 0) hash ^= Id.GetHashCode();
+      hash ^= members_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1777,10 +1688,7 @@ namespace TrackYourTripGRPCApi.Protos {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
     #else
-      if (Id != 0) {
-        output.WriteRawTag(8);
-        output.WriteInt32(Id);
-      }
+      members_.WriteTo(output, _repeated_members_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1791,10 +1699,7 @@ namespace TrackYourTripGRPCApi.Protos {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
-      if (Id != 0) {
-        output.WriteRawTag(8);
-        output.WriteInt32(Id);
-      }
+      members_.WriteTo(ref output, _repeated_members_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1805,9 +1710,7 @@ namespace TrackYourTripGRPCApi.Protos {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
-      if (Id != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeInt32Size(Id);
-      }
+      size += members_.CalculateSize(_repeated_members_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -1816,13 +1719,11 @@ namespace TrackYourTripGRPCApi.Protos {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(DeleteMemberRequest other) {
+    public void MergeFrom(CreateMembersRequest other) {
       if (other == null) {
         return;
       }
-      if (other.Id != 0) {
-        Id = other.Id;
-      }
+      members_.Add(other.members_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -1842,8 +1743,8 @@ namespace TrackYourTripGRPCApi.Protos {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
             break;
-          case 8: {
-            Id = input.ReadInt32();
+          case 10: {
+            members_.AddEntriesFrom(input, _repeated_members_codec);
             break;
           }
         }
@@ -1865,8 +1766,8 @@ namespace TrackYourTripGRPCApi.Protos {
           default:
             _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
             break;
-          case 8: {
-            Id = input.ReadInt32();
+          case 10: {
+            members_.AddEntriesFrom(ref input, _repeated_members_codec);
             break;
           }
         }
@@ -1877,16 +1778,16 @@ namespace TrackYourTripGRPCApi.Protos {
   }
 
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
-  public sealed partial class DeleteMemberResponse : pb::IMessage<DeleteMemberResponse>
+  public sealed partial class CreateMembersResponse : pb::IMessage<CreateMembersResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
   #endif
   {
-    private static readonly pb::MessageParser<DeleteMemberResponse> _parser = new pb::MessageParser<DeleteMemberResponse>(() => new DeleteMemberResponse());
+    private static readonly pb::MessageParser<CreateMembersResponse> _parser = new pb::MessageParser<CreateMembersResponse>(() => new CreateMembersResponse());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public static pb::MessageParser<DeleteMemberResponse> Parser { get { return _parser; } }
+    public static pb::MessageParser<CreateMembersResponse> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1902,7 +1803,7 @@ namespace TrackYourTripGRPCApi.Protos {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public DeleteMemberResponse() {
+    public CreateMembersResponse() {
       OnConstruction();
     }
 
@@ -1910,15 +1811,15 @@ namespace TrackYourTripGRPCApi.Protos {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public DeleteMemberResponse(DeleteMemberResponse other) : this() {
+    public CreateMembersResponse(CreateMembersResponse other) : this() {
       success_ = other.success_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public DeleteMemberResponse Clone() {
-      return new DeleteMemberResponse(this);
+    public CreateMembersResponse Clone() {
+      return new CreateMembersResponse(this);
     }
 
     /// <summary>Field number for the "success" field.</summary>
@@ -1936,12 +1837,12 @@ namespace TrackYourTripGRPCApi.Protos {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
-      return Equals(other as DeleteMemberResponse);
+      return Equals(other as CreateMembersResponse);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public bool Equals(DeleteMemberResponse other) {
+    public bool Equals(CreateMembersResponse other) {
       if (ReferenceEquals(other, null)) {
         return false;
       }
@@ -2014,7 +1915,394 @@ namespace TrackYourTripGRPCApi.Protos {
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public void MergeFrom(DeleteMemberResponse other) {
+    public void MergeFrom(CreateMembersResponse other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Success != false) {
+        Success = other.Success;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            Success = input.ReadBool();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            Success = input.ReadBool();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class DeleteMembersRequest : pb::IMessage<DeleteMembersRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<DeleteMembersRequest> _parser = new pb::MessageParser<DeleteMembersRequest>(() => new DeleteMembersRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<DeleteMembersRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::TrackYourTripGRPCApi.Protos.MemberReflection.Descriptor.MessageTypes[9]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DeleteMembersRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DeleteMembersRequest(DeleteMembersRequest other) : this() {
+      memberIds_ = other.memberIds_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DeleteMembersRequest Clone() {
+      return new DeleteMembersRequest(this);
+    }
+
+    /// <summary>Field number for the "memberIds" field.</summary>
+    public const int MemberIdsFieldNumber = 1;
+    private static readonly pb::FieldCodec<int> _repeated_memberIds_codec
+        = pb::FieldCodec.ForInt32(10);
+    private readonly pbc::RepeatedField<int> memberIds_ = new pbc::RepeatedField<int>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<int> MemberIds {
+      get { return memberIds_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as DeleteMembersRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(DeleteMembersRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!memberIds_.Equals(other.memberIds_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= memberIds_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      memberIds_.WriteTo(output, _repeated_memberIds_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      memberIds_.WriteTo(ref output, _repeated_memberIds_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      size += memberIds_.CalculateSize(_repeated_memberIds_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(DeleteMembersRequest other) {
+      if (other == null) {
+        return;
+      }
+      memberIds_.Add(other.memberIds_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10:
+          case 8: {
+            memberIds_.AddEntriesFrom(input, _repeated_memberIds_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10:
+          case 8: {
+            memberIds_.AddEntriesFrom(ref input, _repeated_memberIds_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class DeleteMembersResponse : pb::IMessage<DeleteMembersResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<DeleteMembersResponse> _parser = new pb::MessageParser<DeleteMembersResponse>(() => new DeleteMembersResponse());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<DeleteMembersResponse> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::TrackYourTripGRPCApi.Protos.MemberReflection.Descriptor.MessageTypes[10]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DeleteMembersResponse() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DeleteMembersResponse(DeleteMembersResponse other) : this() {
+      success_ = other.success_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public DeleteMembersResponse Clone() {
+      return new DeleteMembersResponse(this);
+    }
+
+    /// <summary>Field number for the "success" field.</summary>
+    public const int SuccessFieldNumber = 1;
+    private bool success_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Success {
+      get { return success_; }
+      set {
+        success_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as DeleteMembersResponse);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(DeleteMembersResponse other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Success != other.Success) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Success != false) hash ^= Success.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Success != false) {
+        output.WriteRawTag(8);
+        output.WriteBool(Success);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Success != false) {
+        output.WriteRawTag(8);
+        output.WriteBool(Success);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Success != false) {
+        size += 1 + 1;
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(DeleteMembersResponse other) {
       if (other == null) {
         return;
       }

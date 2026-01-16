@@ -2,7 +2,7 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:converters="clr-namespace:TrackYourTripGrpc.Maui.Converters"
-    x:Class="TrackYourTripGrpc.Maui.Pages.TripsPage"
+    x:Class="TrackYourTripGrpc.Maui.Pages.Trip.TripsPage"
     Shell.BackgroundColor="{StaticResource Primary}"
     Title="Trip Management"
     >

@@ -58,25 +58,28 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Compile Update="Pages\TripUpsertPage.xaml.cs">
+	  <Compile Update="Pages\Trip\TripUpsertPage.xaml.cs">
 	    <DependentUpon>TripUpsertPage.xaml</DependentUpon>
 	  </Compile>
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiXaml Update="Pages\LoginPage.xaml">
+	  <MauiXaml Update="Pages\Account\LoginPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Pages\RegisterPage.xaml">
+	  <MauiXaml Update="Pages\Account\RegisterPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Pages\TripDetailPage.xaml">
+	  <MauiXaml Update="Pages\Member\MembersPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Pages\TripsPage.xaml">
+	  <MauiXaml Update="Pages\Trip\TripDetailPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Pages\TripUpsertPage.xaml">
+	  <MauiXaml Update="Pages\Trip\TripsPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\Trip\TripUpsertPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>

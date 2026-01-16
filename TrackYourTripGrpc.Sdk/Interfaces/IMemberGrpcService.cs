@@ -6,9 +6,11 @@ public interface IMemberGrpcService
 {
     Task<MemberDetail> GetMemberAsync(int memberId, CancellationToken cancellationToken);
 
-    Task<MemberDetail> CreateMemberAsync(MemberDetail memberDetail, CancellationToken cancellationToken);
+    Task<CreateMembersResponse> CreateMembersAsync(CreateMembersRequest request, CancellationToken cancellationToken);
 
-    Task<bool> DeleteMemberAsync(int memberId, CancellationToken cancellationToken);
+    Task<DeleteMembersResponse> DeleteMembersAsync(DeleteMembersRequest request, CancellationToken cancellationToken);
 
-    Task<IEnumerable<MemberDetail>> GetAllMembersByTripIdAsync(int tripId, CancellationToken cancellationToken);
+    Task<GetAllMembersByTripResponse> GetAllMembersByTripAsync(GetAllMembersByTripRequest request, CancellationToken cancellationToken);
+
+    Task<GetAllMembersByGroupResponse> GetAllMembersByGroupAsync(GetAllMembersByGroupRequest request, CancellationToken cancellationToken);
 }

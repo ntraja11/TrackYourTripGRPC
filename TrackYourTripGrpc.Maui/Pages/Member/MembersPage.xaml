@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TrackYourTripGrpc.Maui.Pages.Member.MembersPage"
+             xmlns:vm="clr-namespace:TrackYourTripGrpc.Maui.ViewModels"
+             xmlns:protos="clr-namespace:TrackYourTripGRPCApi.Protos;assembly=TrackYourTripGrpc.Sdk"
+             x:DataType="vm:MembersViewModel"             
+             >
+
+    <VerticalStackLayout Padding="10" Spacing="20">
+
+        <Label 
+            Text="Select Members"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+        <CollectionView
+            x:Name="MembersList"
+            ItemsSource="{Binding AvailableMembers}"
+            SelectionMode="Multiple"
+            SelectedItems="{Binding SelectedMembers, Mode=TwoWay}"
+            SelectionChangedCommand="{Binding MembersSelectionChangedCommand}"
+            SelectionChangedCommandParameter="{Binding SelectedItems, Source={x:Reference MembersList}}">
+
+            <CollectionView.ItemTemplate>
+                <DataTemplate x:DataType="protos:MemberDetail">    
+                    <Border 
+                        Padding="10"
+                        Margin="5"
+                        >
+
+                        <Label Padding="5" 
+                            Text="{Binding Name}" HorizontalOptions="Center"
+                            TextColor="{StaticResource PrimaryText}"
+                            />
+                    </Border>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+        <Button Text="Submit" Command="{Binding SubmitMemberSelectionCommand}"/>
+
+    </VerticalStackLayout>
+
+</ContentPage>

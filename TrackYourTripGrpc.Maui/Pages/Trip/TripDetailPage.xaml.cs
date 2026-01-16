@@ -1,13 +1,14 @@
+using TrackYourTripGrpc.Maui.Pages.Member;
 using TrackYourTripGrpc.Maui.ViewModels;
 using TrackYourTripGrpc.Sdk.Services;
 
-namespace TrackYourTripGrpc.Maui.Pages;
+namespace TrackYourTripGrpc.Maui.Pages.Trip;
 
 public partial class TripDetailPage : ContentPage
 {
     private readonly TripDetailViewModel _viewModel;
     private readonly IServiceProvider _services;
-    private int _tripid;
+    private int _tripId;
 
     private CancellationTokenSource? _cts;
 
@@ -21,7 +22,7 @@ public partial class TripDetailPage : ContentPage
 
     public void Initialize(int tripId)
     {
-        _tripid = tripId;
+        _tripId = tripId;
     }
 
     protected override async void OnAppearing()
@@ -29,7 +30,7 @@ public partial class TripDetailPage : ContentPage
         base.OnAppearing();
         _cts = new CancellationTokenSource();
 
-        await _viewModel.InitializeAsync(_tripid, _cts.Token);
+        await _viewModel.InitializeAsync(_tripId, _cts.Token);
     }
 
     protected override void OnDisappearing()
@@ -56,5 +57,13 @@ public partial class TripDetailPage : ContentPage
             await _viewModel.DeleteAsync();
             await Navigation.PopAsync();
         }
+    }
+
+    private async void ManageMembers_ClickedEvent(object sender, EventArgs e)
+    {
+        var membersPage = _services.GetRequiredService<MembersPage>();
+        await membersPage.Initialize(_tripId);
+        await Navigation.PushAsync(membersPage);
+        
     }
 }

@@ -1,6 +1,7 @@
-﻿using TrackYourTripGrpc.Maui.Utilities;
+﻿using TrackYourTripGrpc.Maui.Pages.Trip;
+using TrackYourTripGrpc.Maui.Utilities;
 
-namespace TrackYourTripGrpc.Maui.Pages;
+namespace TrackYourTripGrpc.Maui.Pages.Account;
 
 public partial class MainPage : ContentPage
 {

@@ -16,13 +16,8 @@ namespace TrackYourTripGRPCApi.Models
         public decimal Amount { get; set; } = 0;
         public DateTime ExpenseDate { get; set; }
 
-
-        [ForeignKey("Member")]
         public int MemberId { get; set; }
-        public MemberEntity? Member { get; set; }
 
-        [ForeignKey("Trip")]
         public int TripId { get; set; }
-        public TripEntity? Trip { get; set; }
     }
 }

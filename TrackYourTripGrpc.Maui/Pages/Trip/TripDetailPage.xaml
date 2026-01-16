@@ -4,7 +4,7 @@
              xmlns:converters="clr-namespace:TrackYourTripGrpc.Maui.Converters"
              xmlns:vm="clr-namespace:TrackYourTripGrpc.Maui.ViewModels"
              x:DataType="vm:TripDetailViewModel"
-             x:Class="TrackYourTripGrpc.Maui.Pages.TripDetailPage"  
+             x:Class="TrackYourTripGrpc.Maui.Pages.Trip.TripDetailPage"  
              Title="Trip Management"
              >
 
@@ -12,7 +12,7 @@
         <ResourceDictionary>
             <converters:TimestampToDateConverter x:Key="TimestampToDateConverter" />
            
-            <Style x:Key="LabelText" TargetType="Label">
+            <!--<Style x:Key="LabelText" TargetType="Label">
                 <Setter Property="FontSize" Value="18" />
                 <Setter Property="TextColor" Value="{StaticResource PrimaryText}" />
                 <Setter Property="VerticalOptions" Value="Center" />
@@ -22,9 +22,9 @@
             <Style x:Key="LabelTextBold" TargetType="Label" 
                BasedOn="{StaticResource LabelText}">
                 <Setter Property="FontAttributes" Value="Bold" />
-            </Style>
+            </Style>-->
         </ResourceDictionary>
-        <Style TargetType="Label" BasedOn="{StaticResource LabelText}" />
+        <!--<Style TargetType="Label" BasedOn="{StaticResource LabelText}" />-->
     </ContentPage.Resources>
 
     <ScrollView>        

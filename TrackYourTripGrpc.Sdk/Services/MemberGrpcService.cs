@@ -33,17 +33,12 @@ public class MemberGrpcService : IMemberGrpcService
         }
     }
 
-    public async Task<MemberDetail> CreateMemberAsync(MemberDetail memberDetail, CancellationToken cancellationToken)
+    public async Task<CreateMembersResponse> CreateMembersAsync(CreateMembersRequest request, CancellationToken cancellationToken)
     {
         try
-        {
-            var request = new CreateMemberRequest { 
-                Email = memberDetail.Email,
-                Name = memberDetail.Name,
-                TripId = memberDetail.TripId
-            };
-            var response =  await _memberClient.CreateMemberAsync(request, cancellationToken: cancellationToken);
-            return response.Member;
+        {            
+            var response =  await _memberClient.CreateMembersAsync(request, cancellationToken: cancellationToken);
+            return response;
         }
         catch (RpcException ex)
         {
@@ -57,13 +52,12 @@ public class MemberGrpcService : IMemberGrpcService
         }
     }
 
-    public async Task<bool> DeleteMemberAsync(int memberId, CancellationToken cancellationToken)
+    public async Task<DeleteMembersResponse> DeleteMembersAsync(DeleteMembersRequest request, CancellationToken cancellationToken)
     {
         try
         {
-            var request = new DeleteMemberRequest { Id = memberId };
-            var response = await _memberClient.DeleteMemberAsync(request, cancellationToken: cancellationToken);
-            return response.Success;
+            var response = await _memberClient.DeleteMembersAsync(request, cancellationToken: cancellationToken);
+            return response;
         }
         catch (RpcException ex)
         {
@@ -77,13 +71,32 @@ public class MemberGrpcService : IMemberGrpcService
         }
     }
 
-    public async Task<IEnumerable<MemberDetail>> GetAllMembersByTripIdAsync(int tripId, CancellationToken cancellationToken)
+    public async Task<GetAllMembersByTripResponse> GetAllMembersByTripAsync(GetAllMembersByTripRequest request, CancellationToken cancellationToken)
     {
         try
         {
-            var request = new GetAllMembersByTripIdRequest { TripId = tripId };
-            var response = await _memberClient.GetAllMembersByTripIdAsync(request, cancellationToken: cancellationToken);
-            return response.Members;
+            var response = await _memberClient.GetAllMembersByTripAsync(request, cancellationToken: cancellationToken);
+            return response;
+
+        }
+        catch (RpcException ex)
+        {
+            Debug.WriteLine($"gRPC ERROR: {ex.StatusCode} - {ex.Status.Detail}");
+            throw;
+        }
+        catch (Exception ex)
+        {
+            Debug.WriteLine($"UNEXPECTED ERROR: {ex.Message}");
+            throw;
+        }
+    }
+
+    public async Task<GetAllMembersByGroupResponse> GetAllMembersByGroupAsync(GetAllMembersByGroupRequest request, CancellationToken cancellationToken)
+    {
+        try
+        {
+            var response = await _memberClient.GetAllMembersByGroupAsync(request, cancellationToken: cancellationToken);
+            return response;
 
         }
         catch (RpcException ex)

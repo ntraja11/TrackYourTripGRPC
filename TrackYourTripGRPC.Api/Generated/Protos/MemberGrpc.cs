@@ -50,17 +50,21 @@ namespace TrackYourTripGRPCApi.Protos {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::TrackYourTripGRPCApi.Protos.GetMemberResponse> __Marshaller_member_GetMemberResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::TrackYourTripGRPCApi.Protos.GetMemberResponse.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::TrackYourTripGRPCApi.Protos.GetAllMembersByTripIdRequest> __Marshaller_member_GetAllMembersByTripIdRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::TrackYourTripGRPCApi.Protos.GetAllMembersByTripIdRequest.Parser));
+    static readonly grpc::Marshaller<global::TrackYourTripGRPCApi.Protos.GetAllMembersByGroupRequest> __Marshaller_member_GetAllMembersByGroupRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::TrackYourTripGRPCApi.Protos.GetAllMembersByGroupRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::TrackYourTripGRPCApi.Protos.GetAllMembersByTripIdResponse> __Marshaller_member_GetAllMembersByTripIdResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::TrackYourTripGRPCApi.Protos.GetAllMembersByTripIdResponse.Parser));
+    static readonly grpc::Marshaller<global::TrackYourTripGRPCApi.Protos.GetAllMembersByGroupResponse> __Marshaller_member_GetAllMembersByGroupResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::TrackYourTripGRPCApi.Protos.GetAllMembersByGroupResponse.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::TrackYourTripGRPCApi.Protos.CreateMemberRequest> __Marshaller_member_CreateMemberRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::TrackYourTripGRPCApi.Protos.CreateMemberRequest.Parser));
+    static readonly grpc::Marshaller<global::TrackYourTripGRPCApi.Protos.GetAllMembersByTripRequest> __Marshaller_member_GetAllMembersByTripRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::TrackYourTripGRPCApi.Protos.GetAllMembersByTripRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::TrackYourTripGRPCApi.Protos.CreateMemberResponse> __Marshaller_member_CreateMemberResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::TrackYourTripGRPCApi.Protos.CreateMemberResponse.Parser));
+    static readonly grpc::Marshaller<global::TrackYourTripGRPCApi.Protos.GetAllMembersByTripResponse> __Marshaller_member_GetAllMembersByTripResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::TrackYourTripGRPCApi.Protos.GetAllMembersByTripResponse.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::TrackYourTripGRPCApi.Protos.DeleteMemberRequest> __Marshaller_member_DeleteMemberRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::TrackYourTripGRPCApi.Protos.DeleteMemberRequest.Parser));
+    static readonly grpc::Marshaller<global::TrackYourTripGRPCApi.Protos.CreateMembersRequest> __Marshaller_member_CreateMembersRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::TrackYourTripGRPCApi.Protos.CreateMembersRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::TrackYourTripGRPCApi.Protos.DeleteMemberResponse> __Marshaller_member_DeleteMemberResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::TrackYourTripGRPCApi.Protos.DeleteMemberResponse.Parser));
+    static readonly grpc::Marshaller<global::TrackYourTripGRPCApi.Protos.CreateMembersResponse> __Marshaller_member_CreateMembersResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::TrackYourTripGRPCApi.Protos.CreateMembersResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::TrackYourTripGRPCApi.Protos.DeleteMembersRequest> __Marshaller_member_DeleteMembersRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::TrackYourTripGRPCApi.Protos.DeleteMembersRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::TrackYourTripGRPCApi.Protos.DeleteMembersResponse> __Marshaller_member_DeleteMembersResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::TrackYourTripGRPCApi.Protos.DeleteMembersResponse.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::TrackYourTripGRPCApi.Protos.GetMemberRequest, global::TrackYourTripGRPCApi.Protos.GetMemberResponse> __Method_GetMember = new grpc::Method<global::TrackYourTripGRPCApi.Protos.GetMemberRequest, global::TrackYourTripGRPCApi.Protos.GetMemberResponse>(
@@ -71,28 +75,36 @@ namespace TrackYourTripGRPCApi.Protos {
         __Marshaller_member_GetMemberResponse);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Method<global::TrackYourTripGRPCApi.Protos.GetAllMembersByTripIdRequest, global::TrackYourTripGRPCApi.Protos.GetAllMembersByTripIdResponse> __Method_GetAllMembersByTripId = new grpc::Method<global::TrackYourTripGRPCApi.Protos.GetAllMembersByTripIdRequest, global::TrackYourTripGRPCApi.Protos.GetAllMembersByTripIdResponse>(
+    static readonly grpc::Method<global::TrackYourTripGRPCApi.Protos.GetAllMembersByGroupRequest, global::TrackYourTripGRPCApi.Protos.GetAllMembersByGroupResponse> __Method_GetAllMembersByGroup = new grpc::Method<global::TrackYourTripGRPCApi.Protos.GetAllMembersByGroupRequest, global::TrackYourTripGRPCApi.Protos.GetAllMembersByGroupResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
-        "GetAllMembersByTripId",
-        __Marshaller_member_GetAllMembersByTripIdRequest,
-        __Marshaller_member_GetAllMembersByTripIdResponse);
+        "GetAllMembersByGroup",
+        __Marshaller_member_GetAllMembersByGroupRequest,
+        __Marshaller_member_GetAllMembersByGroupResponse);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Method<global::TrackYourTripGRPCApi.Protos.CreateMemberRequest, global::TrackYourTripGRPCApi.Protos.CreateMemberResponse> __Method_CreateMember = new grpc::Method<global::TrackYourTripGRPCApi.Protos.CreateMemberRequest, global::TrackYourTripGRPCApi.Protos.CreateMemberResponse>(
+    static readonly grpc::Method<global::TrackYourTripGRPCApi.Protos.GetAllMembersByTripRequest, global::TrackYourTripGRPCApi.Protos.GetAllMembersByTripResponse> __Method_GetAllMembersByTrip = new grpc::Method<global::TrackYourTripGRPCApi.Protos.GetAllMembersByTripRequest, global::TrackYourTripGRPCApi.Protos.GetAllMembersByTripResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
-        "CreateMember",
-        __Marshaller_member_CreateMemberRequest,
-        __Marshaller_member_CreateMemberResponse);
+        "GetAllMembersByTrip",
+        __Marshaller_member_GetAllMembersByTripRequest,
+        __Marshaller_member_GetAllMembersByTripResponse);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Method<global::TrackYourTripGRPCApi.Protos.DeleteMemberRequest, global::TrackYourTripGRPCApi.Protos.DeleteMemberResponse> __Method_DeleteMember = new grpc::Method<global::TrackYourTripGRPCApi.Protos.DeleteMemberRequest, global::TrackYourTripGRPCApi.Protos.DeleteMemberResponse>(
+    static readonly grpc::Method<global::TrackYourTripGRPCApi.Protos.CreateMembersRequest, global::TrackYourTripGRPCApi.Protos.CreateMembersResponse> __Method_CreateMembers = new grpc::Method<global::TrackYourTripGRPCApi.Protos.CreateMembersRequest, global::TrackYourTripGRPCApi.Protos.CreateMembersResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
-        "DeleteMember",
-        __Marshaller_member_DeleteMemberRequest,
-        __Marshaller_member_DeleteMemberResponse);
+        "CreateMembers",
+        __Marshaller_member_CreateMembersRequest,
+        __Marshaller_member_CreateMembersResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::TrackYourTripGRPCApi.Protos.DeleteMembersRequest, global::TrackYourTripGRPCApi.Protos.DeleteMembersResponse> __Method_DeleteMembers = new grpc::Method<global::TrackYourTripGRPCApi.Protos.DeleteMembersRequest, global::TrackYourTripGRPCApi.Protos.DeleteMembersResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteMembers",
+        __Marshaller_member_DeleteMembersRequest,
+        __Marshaller_member_DeleteMembersResponse);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -111,19 +123,25 @@ namespace TrackYourTripGRPCApi.Protos {
       }
 
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::System.Threading.Tasks.Task<global::TrackYourTripGRPCApi.Protos.GetAllMembersByTripIdResponse> GetAllMembersByTripId(global::TrackYourTripGRPCApi.Protos.GetAllMembersByTripIdRequest request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::TrackYourTripGRPCApi.Protos.GetAllMembersByGroupResponse> GetAllMembersByGroup(global::TrackYourTripGRPCApi.Protos.GetAllMembersByGroupRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::System.Threading.Tasks.Task<global::TrackYourTripGRPCApi.Protos.CreateMemberResponse> CreateMember(global::TrackYourTripGRPCApi.Protos.CreateMemberRequest request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::TrackYourTripGRPCApi.Protos.GetAllMembersByTripResponse> GetAllMembersByTrip(global::TrackYourTripGRPCApi.Protos.GetAllMembersByTripRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::System.Threading.Tasks.Task<global::TrackYourTripGRPCApi.Protos.DeleteMemberResponse> DeleteMember(global::TrackYourTripGRPCApi.Protos.DeleteMemberRequest request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::TrackYourTripGRPCApi.Protos.CreateMembersResponse> CreateMembers(global::TrackYourTripGRPCApi.Protos.CreateMembersRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::TrackYourTripGRPCApi.Protos.DeleteMembersResponse> DeleteMembers(global::TrackYourTripGRPCApi.Protos.DeleteMembersRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -137,9 +155,10 @@ namespace TrackYourTripGRPCApi.Protos {
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
           .AddMethod(__Method_GetMember, serviceImpl.GetMember)
-          .AddMethod(__Method_GetAllMembersByTripId, serviceImpl.GetAllMembersByTripId)
-          .AddMethod(__Method_CreateMember, serviceImpl.CreateMember)
-          .AddMethod(__Method_DeleteMember, serviceImpl.DeleteMember).Build();
+          .AddMethod(__Method_GetAllMembersByGroup, serviceImpl.GetAllMembersByGroup)
+          .AddMethod(__Method_GetAllMembersByTrip, serviceImpl.GetAllMembersByTrip)
+          .AddMethod(__Method_CreateMembers, serviceImpl.CreateMembers)
+          .AddMethod(__Method_DeleteMembers, serviceImpl.DeleteMembers).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the service binding logic.
@@ -150,9 +169,10 @@ namespace TrackYourTripGRPCApi.Protos {
     public static void BindService(grpc::ServiceBinderBase serviceBinder, MemberBase serviceImpl)
     {
       serviceBinder.AddMethod(__Method_GetMember, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::TrackYourTripGRPCApi.Protos.GetMemberRequest, global::TrackYourTripGRPCApi.Protos.GetMemberResponse>(serviceImpl.GetMember));
-      serviceBinder.AddMethod(__Method_GetAllMembersByTripId, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::TrackYourTripGRPCApi.Protos.GetAllMembersByTripIdRequest, global::TrackYourTripGRPCApi.Protos.GetAllMembersByTripIdResponse>(serviceImpl.GetAllMembersByTripId));
-      serviceBinder.AddMethod(__Method_CreateMember, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::TrackYourTripGRPCApi.Protos.CreateMemberRequest, global::TrackYourTripGRPCApi.Protos.CreateMemberResponse>(serviceImpl.CreateMember));
-      serviceBinder.AddMethod(__Method_DeleteMember, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::TrackYourTripGRPCApi.Protos.DeleteMemberRequest, global::TrackYourTripGRPCApi.Protos.DeleteMemberResponse>(serviceImpl.DeleteMember));
+      serviceBinder.AddMethod(__Method_GetAllMembersByGroup, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::TrackYourTripGRPCApi.Protos.GetAllMembersByGroupRequest, global::TrackYourTripGRPCApi.Protos.GetAllMembersByGroupResponse>(serviceImpl.GetAllMembersByGroup));
+      serviceBinder.AddMethod(__Method_GetAllMembersByTrip, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::TrackYourTripGRPCApi.Protos.GetAllMembersByTripRequest, global::TrackYourTripGRPCApi.Protos.GetAllMembersByTripResponse>(serviceImpl.GetAllMembersByTrip));
+      serviceBinder.AddMethod(__Method_CreateMembers, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::TrackYourTripGRPCApi.Protos.CreateMembersRequest, global::TrackYourTripGRPCApi.Protos.CreateMembersResponse>(serviceImpl.CreateMembers));
+      serviceBinder.AddMethod(__Method_DeleteMembers, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::TrackYourTripGRPCApi.Protos.DeleteMembersRequest, global::TrackYourTripGRPCApi.Protos.DeleteMembersResponse>(serviceImpl.DeleteMembers));
     }
 
   }

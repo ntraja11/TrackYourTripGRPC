@@ -1,4 +1,6 @@
-﻿using TrackYourTripGrpc.Maui.Pages;
+﻿using TrackYourTripGrpc.Maui.Pages.Trip;
+using TrackYourTripGrpc.Maui.Pages.Account;
+using TrackYourTripGrpc.Maui.Pages.Member;
 using TrackYourTripGrpc.Maui.Utilities;
 
 namespace TrackYourTripGrpc.Maui
@@ -12,6 +14,7 @@ namespace TrackYourTripGrpc.Maui
 
             Routing.RegisterRoute(nameof(TripDetailPage), typeof(TripDetailPage));
             Routing.RegisterRoute(nameof(TripUpsertPage), typeof(TripUpsertPage));
+            Routing.RegisterRoute(nameof(MembersPage), typeof(MembersPage));
         }
 
         public Command LogoutCommand => new Command(async () =>

@@ -3,7 +3,8 @@
     x:Class="TrackYourTripGrpc.Maui.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:pages="clr-namespace:TrackYourTripGrpc.Maui.Pages"    
+    xmlns:accountPages="clr-namespace:TrackYourTripGrpc.Maui.Pages.Account"
+    xmlns:tripPages="clr-namespace:TrackYourTripGrpc.Maui.Pages.Trip"
     Title="TrackYourTripGrpc.Maui"
     Shell.FlyoutBehavior="Disabled"
     Shell.BackgroundColor="{StaticResource Primary}"
@@ -27,19 +28,21 @@
 
     <ShellContent
         Title="Loading"
-        ContentTemplate="{DataTemplate pages:MainPage}"
+        ContentTemplate="{DataTemplate accountPages:MainPage}"
         Route="MainPage" />
 
     <ShellContent
-        ContentTemplate="{DataTemplate pages:LoginPage}"
+        ContentTemplate="{DataTemplate accountPages:LoginPage}"
         Route="LoginPage" />
 
     <ShellContent
-        ContentTemplate="{DataTemplate pages:RegisterPage}"
+        ContentTemplate="{DataTemplate accountPages:RegisterPage}"
         Route="RegisterPage" />
 
     <ShellContent
-        ContentTemplate="{DataTemplate pages:TripsPage}"
+        ContentTemplate="{DataTemplate tripPages:TripsPage}"
         Route="TripsPage" />
+
+  
 
 </Shell>

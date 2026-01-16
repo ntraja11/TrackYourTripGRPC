@@ -2,7 +2,7 @@ using TrackYourTripGrpc.Maui.Utilities;
 using TrackYourTripGrpc.Maui.ViewModels;
 using TrackYourTripGRPCApi.Protos;
 
-namespace TrackYourTripGrpc.Maui.Pages;
+namespace TrackYourTripGrpc.Maui.Pages.Trip;
 
 public partial class TripsPage : ContentPage
 {

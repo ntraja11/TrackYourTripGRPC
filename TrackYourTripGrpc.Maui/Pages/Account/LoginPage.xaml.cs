@@ -1,11 +1,12 @@
 using TrackYourTripGrpc.Maui.Utilities;
 using TrackYourTripGrpc.Maui.ViewModels;
 
-namespace TrackYourTripGrpc.Maui.Pages;
+namespace TrackYourTripGrpc.Maui.Pages.Account;
 
-public partial class RegisterPage : ContentPage
+public partial class LoginPage : ContentPage
 {
-    public RegisterPage(RegisterViewModel viewModel)
+
+    public LoginPage(LoginViewModel viewModel)
 	{
 		InitializeComponent();
         BindingContext = viewModel;
@@ -15,8 +16,7 @@ public partial class RegisterPage : ContentPage
     {
         base.OnAppearing();
         AuthViewState.ToggleLogoutButton(false);
-    }
-
+    }    
 
     protected override void OnDisappearing()
     {

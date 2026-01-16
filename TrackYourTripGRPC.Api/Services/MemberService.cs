@@ -1,5 +1,4 @@
 ﻿using AutoMapper;
-using Google.Protobuf.WellKnownTypes;
 using Grpc.Core;
 using Microsoft.EntityFrameworkCore;
 using TrackYourTripGRPCApi.Data;
@@ -31,55 +30,85 @@ namespace TrackYourTripGRPCApi.Services
             throw new RpcException(new Status(StatusCode.NotFound, $"Member with Id {request.Id} is not found."));
         }
 
-        public override async Task<CreateMemberResponse> CreateMember(CreateMemberRequest request, ServerCallContext context)
+        public override async Task<CreateMembersResponse> CreateMembers(CreateMembersRequest request, ServerCallContext context)
         {
-            var tripExists = await _dbContext.Trips.AnyAsync(t => t.Id == request.TripId);
-            if (!tripExists)
-                throw new RpcException(new Status(StatusCode.NotFound, $"Trip with Id {request.TripId} not found."));
-
-            var member = new MemberEntity
+            if(request.Members.Any())
             {
-                Name = request.Name,
-                Email = request.Email,
-                TripId = request.TripId
-            };
-            _dbContext.Members.Add(member);
-            await _dbContext.SaveChangesAsync();
-            var memberDetail = _mapper.Map<MemberDetail>(member);
-            return new CreateMemberResponse
-            {
-                Member = memberDetail
-            };
-        }
-
-        public override async Task<DeleteMemberResponse> DeleteMember(DeleteMemberRequest request, ServerCallContext context)
-        {
-            var existingMember = await _dbContext.Members.FindAsync(request.Id);
-
-            if (existingMember != null) {
-                _dbContext.Members.Remove(existingMember);
-                await _dbContext.SaveChangesAsync();
-                return new DeleteMemberResponse
+                foreach (var member in request.Members)
                 {
-                    Success = true
-                };
+                    var memberEntity = new MemberEntity
+                    {
+                        Name = member.Name,
+                        Email = member.Email,
+                        TripId = member.TripId,
+                    };
+
+                    _dbContext.Members.Add(memberEntity);                    
+                }
+                await _dbContext.SaveChangesAsync();
+
+
+                return new CreateMembersResponse { Success = true };
             }
 
-            return new DeleteMemberResponse
-            {
-                Success = false
-            };
+            return new CreateMembersResponse { Success = false };
+            
         }
 
-        public override async Task<GetAllMembersByTripIdResponse> GetAllMembersByTripId(GetAllMembersByTripIdRequest request, ServerCallContext context)
+        public override async Task<DeleteMembersResponse> DeleteMembers(DeleteMembersRequest request, ServerCallContext context)
         {
-            var response = new GetAllMembersByTripIdResponse();
+            if (request.MemberIds.Any())
+            {
+                foreach (var memberId in request.MemberIds)
+                {
+                    var existingMember = await _dbContext.Members.FindAsync(memberId);
+
+                    if (existingMember != null)
+                    {
+                        _dbContext.Members.Remove(existingMember);                        
+                    }                   
+                }
+                await _dbContext.SaveChangesAsync();
+                return new DeleteMembersResponse { Success = true };
+            }
+
+            return new DeleteMembersResponse { Success = false };
+        }
+
+        public override async Task<GetAllMembersByTripResponse> GetAllMembersByTrip(GetAllMembersByTripRequest request, ServerCallContext context)
+        {
+            var response = new GetAllMembersByTripResponse();
 
             var members = await _dbContext.Members.Where(m => m.TripId == request.TripId).ToListAsync();
 
             var mappedMembers = _mapper.Map<IEnumerable<MemberDetail>>(members);
 
             response.Members.AddRange(mappedMembers);
+
+            return response;
+        }
+
+        public override async Task<GetAllMembersByGroupResponse> GetAllMembersByGroup(
+            GetAllMembersByGroupRequest request, ServerCallContext context)
+        {
+            var response = new GetAllMembersByGroupResponse();
+
+            var availableUsers = await _dbContext.ApplicationUsers.Where(g => g.GroupId == request.GroupId).ToListAsync();
+
+            IList<MemberDetail> availableMembers = new List<MemberDetail>();
+
+            foreach (var user in availableUsers)
+            {
+                var member = new MemberDetail
+                {
+                    Name = user.Name,
+                    Email = user.Email
+                };
+
+                availableMembers.Add(member);
+            }
+
+            response.Members.AddRange(availableMembers);
 
             return response;
         }

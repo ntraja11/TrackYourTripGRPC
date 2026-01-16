@@ -6,9 +6,10 @@ package member;
 
 service Member {
   rpc GetMember (GetMemberRequest) returns (GetMemberResponse);
-  rpc GetAllMembersByTripId (GetAllMembersByTripIdRequest) returns (GetAllMembersByTripIdResponse);
-  rpc CreateMember (CreateMemberRequest) returns (CreateMemberResponse);
-  rpc DeleteMember (DeleteMemberRequest) returns (DeleteMemberResponse);
+  rpc GetAllMembersByGroup (GetAllMembersByGroupRequest) returns (GetAllMembersByGroupResponse);
+  rpc GetAllMembersByTrip (GetAllMembersByTripRequest) returns (GetAllMembersByTripResponse);
+  rpc CreateMembers (CreateMembersRequest) returns (CreateMembersResponse);
+  rpc DeleteMembers (DeleteMembersRequest) returns (DeleteMembersResponse);
 }
 
 message MemberDetail {
@@ -27,29 +28,35 @@ message GetMemberResponse {
   MemberDetail member = 1;
 }
 
-message GetAllMembersByTripIdRequest {
-  int32 tripId = 1;
+message GetAllMembersByGroupRequest {
+  int32 groupId = 1;
 }
 
-message GetAllMembersByTripIdResponse {
+message GetAllMembersByGroupResponse {
   repeated MemberDetail members = 1;
 }
 
-message CreateMemberRequest {
-  string name = 1;
-  string email = 2;
-  int32 tripId = 3;
+message GetAllMembersByTripRequest {
+  int32 tripId = 1;
 }
 
-message CreateMemberResponse {
-  MemberDetail member = 1;
+message GetAllMembersByTripResponse {
+  repeated MemberDetail members = 1;
 }
 
-message DeleteMemberRequest {
-  int32 id = 1;
+message CreateMembersRequest {
+  repeated MemberDetail members = 1;
 }
 
-message DeleteMemberResponse {
+message CreateMembersResponse {
+  bool success = 1;
+}
+
+message DeleteMembersRequest {
+  repeated int32 memberIds = 1;
+}
+
+message DeleteMembersResponse {
   bool success = 1;
 }
 

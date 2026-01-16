@@ -1,6 +1,7 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
-using TrackYourTripGrpc.Maui.Pages;
+using TrackYourTripGrpc.Maui.Pages.Account;
+using TrackYourTripGrpc.Maui.Pages.Trip;
 using TrackYourTripGrpc.Maui.Utilities;
 using TrackYourTripGrpc.Sdk.Interfaces;
 using TrackYourTripGRPCApi.Protos;

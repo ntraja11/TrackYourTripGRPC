@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using TrackYourTripGRPCApi.Data;
 
@@ -11,9 +12,11 @@ using TrackYourTripGRPCApi.Data;
 namespace TrackYourTripGRPCApi.Data.Migrations
 {
     [DbContext(typeof(TrackYourTripDbContext))]
-    partial class TrackYourTripDbContextModelSnapshot : ModelSnapshot
+    [Migration("20260116121005_RemoveForeignKeyFromMember")]
+    partial class RemoveForeignKeyFromMember
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -257,6 +260,10 @@ namespace TrackYourTripGRPCApi.Data.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("MemberId");
+
+                    b.HasIndex("TripId");
+
                     b.ToTable("Expenses");
                 });
 
@@ -404,6 +411,25 @@ namespace TrackYourTripGRPCApi.Data.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("TrackYourTripGRPCApi.Models.ExpenseEntity", b =>
+                {
+                    b.HasOne("TrackYourTripGRPCApi.Models.MemberEntity", "Member")
+                        .WithMany()
+                        .HasForeignKey("MemberId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("TrackYourTripGRPCApi.Models.TripEntity", "Trip")
+                        .WithMany()
+                        .HasForeignKey("TripId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.Navigation("Member");
+
+                    b.Navigation("Trip");
                 });
 #pragma warning restore 612, 618
         }

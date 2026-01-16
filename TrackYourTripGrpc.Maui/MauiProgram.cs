@@ -1,6 +1,8 @@
 ﻿using CommunityToolkit.Maui;
 using Microsoft.Extensions.Logging;
-using TrackYourTripGrpc.Maui.Pages;
+using TrackYourTripGrpc.Maui.Pages.Account;
+using TrackYourTripGrpc.Maui.Pages.Trip;
+using TrackYourTripGrpc.Maui.Pages.Member;
 using TrackYourTripGrpc.Maui.ViewModels;
 using TrackYourTripGrpc.Sdk;
 
@@ -25,9 +27,9 @@ public static class MauiProgram
 
         builder.Services.AddTransient<LoginPage>();
         builder.Services.AddTransient<RegisterPage>();
-
         builder.Services.AddTransient<LoginViewModel>();
         builder.Services.AddTransient<RegisterViewModel>();
+
         builder.Services.AddTransient<TripDetailViewModel>();
         builder.Services.AddTransient<TripsViewModel>();
         builder.Services.AddTransient<TripUpsertViewModel>();
@@ -35,6 +37,9 @@ public static class MauiProgram
         builder.Services.AddTransient<TripDetailPage>();
         builder.Services.AddTransient<TripsPage>();
         builder.Services.AddTransient<TripUpsertPage>();
+
+        builder.Services.AddTransient<MembersPage>();
+        builder.Services.AddSingleton<MembersViewModel>();
 
         builder.Services.AddTransient<AppShell>();
         //builder.Services.AddSingleton<App>();

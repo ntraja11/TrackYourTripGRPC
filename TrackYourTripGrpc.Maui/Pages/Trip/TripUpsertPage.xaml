@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:vm="clr-namespace:TrackYourTripGrpc.Maui.ViewModels"
              x:DataType="vm:TripUpsertViewModel"
-             x:Class="TrackYourTripGrpc.Maui.Pages.TripUpsertPage"
+             x:Class="TrackYourTripGrpc.Maui.Pages.Trip.TripUpsertPage"
              Title="Trip Management"
              >
 
