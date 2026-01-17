@@ -4,27 +4,22 @@
              xmlns:converters="clr-namespace:TrackYourTripGrpc.Maui.Converters"
              xmlns:vm="clr-namespace:TrackYourTripGrpc.Maui.ViewModels"
              x:DataType="vm:TripDetailViewModel"
-             x:Class="TrackYourTripGrpc.Maui.Pages.Trip.TripDetailPage"  
+             x:Class="TrackYourTripGrpc.Maui.Pages.Trip.TripDetailPage" 
+             xmlns:protos="clr-namespace:TrackYourTripGRPCApi.Protos;assembly=TrackYourTripGrpc.Sdk"
              Title="Trip Management"
              >
 
     <ContentPage.Resources>
         <ResourceDictionary>
             <converters:TimestampToDateConverter x:Key="TimestampToDateConverter" />
-           
-            <!--<Style x:Key="LabelText" TargetType="Label">
-                <Setter Property="FontSize" Value="18" />
-                <Setter Property="TextColor" Value="{StaticResource PrimaryText}" />
-                <Setter Property="VerticalOptions" Value="Center" />
-                <Setter Property="LineBreakMode" Value="WordWrap" />
-            </Style>
 
-            <Style x:Key="LabelTextBold" TargetType="Label" 
-               BasedOn="{StaticResource LabelText}">
-                <Setter Property="FontAttributes" Value="Bold" />
-            </Style>-->
+            <ColumnDefinitionCollection x:Key="MembersTableColumns">
+                <ColumnDefinition Width="180" />
+                <ColumnDefinition Width="*"  />
+                <ColumnDefinition Width="*" />
+            </ColumnDefinitionCollection>
+
         </ResourceDictionary>
-        <!--<Style TargetType="Label" BasedOn="{StaticResource LabelText}" />-->
     </ContentPage.Resources>
 
     <ScrollView>        
@@ -69,13 +64,63 @@
 
             <BoxView BackgroundColor="{StaticResource PrimaryText}" Margin="0, 20" HeightRequest="1" />
 
-            <HorizontalStackLayout>
-
-                <Button Text="Manage Members" Padding="10" FontSize="18" HorizontalOptions="Start"
-                    VerticalOptions="Center"  Clicked="ManageMembers_ClickedEvent"/>
-
-            </HorizontalStackLayout>
             
+            <Grid ColumnDefinitions="*, Auto">
+
+                <Label Text="Trip Members:" FontAttributes="Bold" 
+                    FontSize="20" Grid.Column="0"  VerticalOptions="Center"/>
+
+                <Button Text="Manage Members" Padding="10" FontSize="18"
+                    VerticalOptions="Center" Grid.Column="1" 
+                        Clicked="ManageMembers_ClickedEvent"/>
+
+            </Grid>
+            
+
+            <VerticalStackLayout Margin="0, 20">
+
+                <Grid ColumnDefinitions="{StaticResource MembersTableColumns}" Padding="10,5" ColumnSpacing="5">
+                    <Label Text="Name" FontAttributes="Bold" />
+                    <Label Text="Expense" Grid.Column="1" FontAttributes="Bold" />
+                    <Label Text="Share" Grid.Column="2" FontAttributes="Bold" />
+                </Grid>
+
+                <BoxView HeightRequest="1" BackgroundColor="{StaticResource PrimaryText}" />
+
+                <CollectionView ItemsSource="{Binding TripMembers}" >
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate x:DataType="protos:MemberDetail">
+                            
+                                <VerticalStackLayout>
+                                    <Grid ColumnDefinitions="{StaticResource MembersTableColumns}" Padding="10,5">
+
+                                        <Label Text="{Binding Name}" />
+
+                                        <Label Text="0.00" Grid.Column="1" />
+
+                                        <Label Text="0.00" Grid.Column="2" />
+
+                                    </Grid>
+                                    <BoxView HeightRequest="1" BackgroundColor="{StaticResource PrimaryText}" />
+                                </VerticalStackLayout>
+                            
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+
+            </VerticalStackLayout>
+
+
+            <Grid ColumnDefinitions="*, Auto">
+
+                <Label Text="Expenses:" FontAttributes="Bold" 
+                    FontSize="20" Grid.Column="0"  VerticalOptions="Center"/>
+
+                <Button Text="Add Expense" Padding="10" FontSize="18"
+                    VerticalOptions="Center" Grid.Column="1" Clicked=""/>
+
+            </Grid>
+
         </VerticalStackLayout>
 
         

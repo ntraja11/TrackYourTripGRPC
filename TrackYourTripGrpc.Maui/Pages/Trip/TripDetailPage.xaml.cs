@@ -13,11 +13,11 @@ public partial class TripDetailPage : ContentPage
     private CancellationTokenSource? _cts;
 
     public TripDetailPage(TripDetailViewModel viewModel, IServiceProvider services)
-    {
-        InitializeComponent();
+    {        
         _viewModel = viewModel;
         _services = services;
         BindingContext = _viewModel;
+        InitializeComponent();
     }
 
     public void Initialize(int tripId)
