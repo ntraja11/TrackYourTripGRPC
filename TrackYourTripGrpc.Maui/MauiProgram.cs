@@ -1,8 +1,9 @@
 ﻿using CommunityToolkit.Maui;
 using Microsoft.Extensions.Logging;
 using TrackYourTripGrpc.Maui.Pages.Account;
-using TrackYourTripGrpc.Maui.Pages.Trip;
+using TrackYourTripGrpc.Maui.Pages.Expense;
 using TrackYourTripGrpc.Maui.Pages.Member;
+using TrackYourTripGrpc.Maui.Pages.Trip;
 using TrackYourTripGrpc.Maui.ViewModels;
 using TrackYourTripGrpc.Sdk;
 
@@ -13,7 +14,7 @@ public static class MauiProgram
     public static MauiApp CreateMauiApp()
     {
         var builder = MauiApp.CreateBuilder();
-                
+
         builder
             .UseMauiApp<App>()
             .ConfigureFonts(fonts =>
@@ -40,6 +41,9 @@ public static class MauiProgram
 
         builder.Services.AddTransient<MembersPage>();
         builder.Services.AddSingleton<MembersViewModel>();
+
+        builder.Services.AddTransient<ExpenseUpsertPage>();
+        builder.Services.AddTransient<ExpenseViewModel>();
 
         builder.Services.AddTransient<AppShell>();
         //builder.Services.AddSingleton<App>();

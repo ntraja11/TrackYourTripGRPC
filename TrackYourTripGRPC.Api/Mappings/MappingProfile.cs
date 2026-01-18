@@ -1,7 +1,7 @@
 ﻿using AutoMapper;
 using Google.Protobuf.WellKnownTypes;
+using TrackYourTripGRPC.SharedProtos.Protos;
 using TrackYourTripGRPCApi.Models;
-using TrackYourTripGRPCApi.Protos;
 
 namespace TrackYourTripGRPCApi.Mappings
 {
@@ -52,6 +52,6 @@ namespace TrackYourTripGRPCApi.Mappings
                     opt => opt.MapFrom(src => src.ExpenseDate.ToDateTime()));
 
 
-        }        
+        }
     }
 }

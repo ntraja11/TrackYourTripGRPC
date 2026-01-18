@@ -1,6 +1,7 @@
+using TrackYourTripGrpc.Maui.Pages.Expense;
 using TrackYourTripGrpc.Maui.Pages.Member;
 using TrackYourTripGrpc.Maui.ViewModels;
-using TrackYourTripGrpc.Sdk.Services;
+using TrackYourTripGRPC.SharedProtos.Protos;
 
 namespace TrackYourTripGrpc.Maui.Pages.Trip;
 
@@ -13,7 +14,7 @@ public partial class TripDetailPage : ContentPage
     private CancellationTokenSource? _cts;
 
     public TripDetailPage(TripDetailViewModel viewModel, IServiceProvider services)
-    {        
+    {
         _viewModel = viewModel;
         _services = services;
         BindingContext = _viewModel;
@@ -64,6 +65,14 @@ public partial class TripDetailPage : ContentPage
         var membersPage = _services.GetRequiredService<MembersPage>();
         await membersPage.Initialize(_tripId);
         await Navigation.PushAsync(membersPage);
-        
+
+    }
+
+    private async void AddExpense_ClickedEvent(object sender, EventArgs e)
+    {
+        var expensePage = _services.GetRequiredService<ExpenseUpsertPage>();
+        var expenseDetail = new ExpenseDetail { TripId = _tripId };
+        expensePage.InitializeForEdit(expenseDetail);
+        await Navigation.PushAsync(expensePage);
     }
 }

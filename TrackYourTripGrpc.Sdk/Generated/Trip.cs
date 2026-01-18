@@ -9,7 +9,7 @@ using pb = global::Google.Protobuf;
 using pbc = global::Google.Protobuf.Collections;
 using pbr = global::Google.Protobuf.Reflection;
 using scg = global::System.Collections.Generic;
-namespace TrackYourTripGRPCApi.Protos {
+namespace TrackYourTripGRPC.SharedProtos.Protos {
 
   /// <summary>Holder for reflection information generated from trip.proto</summary>
   public static partial class TripReflection {
@@ -58,21 +58,21 @@ namespace TrackYourTripGRPCApi.Protos {
             "ZVRyaXBSZXF1ZXN0GhgudHJpcC5DcmVhdGVUcmlwUmVzcG9uc2USPwoKVXBk",
             "YXRlVHJpcBIXLnRyaXAuVXBkYXRlVHJpcFJlcXVlc3QaGC50cmlwLlVwZGF0",
             "ZVRyaXBSZXNwb25zZRI/CgpEZWxldGVUcmlwEhcudHJpcC5EZWxldGVUcmlw",
-            "UmVxdWVzdBoYLnRyaXAuRGVsZXRlVHJpcFJlc3BvbnNlQh6qAhtUcmFja1lv",
-            "dXJUcmlwR1JQQ0FwaS5Qcm90b3NiBnByb3RvMw=="));
+            "UmVxdWVzdBoYLnRyaXAuRGVsZXRlVHJpcFJlc3BvbnNlQiiqAiVUcmFja1lv",
+            "dXJUcmlwR1JQQy5TaGFyZWRQcm90b3MuUHJvdG9zYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::TrackYourTripGRPCApi.Protos.TripStatus), }, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::TrackYourTripGRPCApi.Protos.TripDetail), global::TrackYourTripGRPCApi.Protos.TripDetail.Parser, new[]{ "Id", "Title", "Description", "StartDate", "EndDate", "From", "To", "TotalExpense", "Status", "Notes", "CreatedByUserEmail", "GroupId" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::TrackYourTripGRPCApi.Protos.GetTripRequest), global::TrackYourTripGRPCApi.Protos.GetTripRequest.Parser, new[]{ "Id" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::TrackYourTripGRPCApi.Protos.GetTripResponse), global::TrackYourTripGRPCApi.Protos.GetTripResponse.Parser, new[]{ "Trip" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::TrackYourTripGRPCApi.Protos.GetAllTripsResponse), global::TrackYourTripGRPCApi.Protos.GetAllTripsResponse.Parser, new[]{ "Trips" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::TrackYourTripGRPCApi.Protos.CreateTripRequest), global::TrackYourTripGRPCApi.Protos.CreateTripRequest.Parser, new[]{ "Title", "Description", "StartDate", "EndDate", "From", "To", "Notes", "CreatedByUserEmail", "GroupId" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::TrackYourTripGRPCApi.Protos.CreateTripResponse), global::TrackYourTripGRPCApi.Protos.CreateTripResponse.Parser, new[]{ "Trip" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::TrackYourTripGRPCApi.Protos.UpdateTripRequest), global::TrackYourTripGRPCApi.Protos.UpdateTripRequest.Parser, new[]{ "Id", "Title", "Description", "StartDate", "EndDate", "From", "To", "Status", "Notes" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::TrackYourTripGRPCApi.Protos.UpdateTripResponse), global::TrackYourTripGRPCApi.Protos.UpdateTripResponse.Parser, new[]{ "Trip" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::TrackYourTripGRPCApi.Protos.DeleteTripRequest), global::TrackYourTripGRPCApi.Protos.DeleteTripRequest.Parser, new[]{ "Id" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::TrackYourTripGRPCApi.Protos.DeleteTripResponse), global::TrackYourTripGRPCApi.Protos.DeleteTripResponse.Parser, new[]{ "Success" }, null, null, null, null)
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::TrackYourTripGRPC.SharedProtos.Protos.TripStatus), }, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::TrackYourTripGRPC.SharedProtos.Protos.TripDetail), global::TrackYourTripGRPC.SharedProtos.Protos.TripDetail.Parser, new[]{ "Id", "Title", "Description", "StartDate", "EndDate", "From", "To", "TotalExpense", "Status", "Notes", "CreatedByUserEmail", "GroupId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::TrackYourTripGRPC.SharedProtos.Protos.GetTripRequest), global::TrackYourTripGRPC.SharedProtos.Protos.GetTripRequest.Parser, new[]{ "Id" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::TrackYourTripGRPC.SharedProtos.Protos.GetTripResponse), global::TrackYourTripGRPC.SharedProtos.Protos.GetTripResponse.Parser, new[]{ "Trip" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::TrackYourTripGRPC.SharedProtos.Protos.GetAllTripsResponse), global::TrackYourTripGRPC.SharedProtos.Protos.GetAllTripsResponse.Parser, new[]{ "Trips" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::TrackYourTripGRPC.SharedProtos.Protos.CreateTripRequest), global::TrackYourTripGRPC.SharedProtos.Protos.CreateTripRequest.Parser, new[]{ "Title", "Description", "StartDate", "EndDate", "From", "To", "Notes", "CreatedByUserEmail", "GroupId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::TrackYourTripGRPC.SharedProtos.Protos.CreateTripResponse), global::TrackYourTripGRPC.SharedProtos.Protos.CreateTripResponse.Parser, new[]{ "Trip" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::TrackYourTripGRPC.SharedProtos.Protos.UpdateTripRequest), global::TrackYourTripGRPC.SharedProtos.Protos.UpdateTripRequest.Parser, new[]{ "Id", "Title", "Description", "StartDate", "EndDate", "From", "To", "Status", "Notes" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::TrackYourTripGRPC.SharedProtos.Protos.UpdateTripResponse), global::TrackYourTripGRPC.SharedProtos.Protos.UpdateTripResponse.Parser, new[]{ "Trip" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::TrackYourTripGRPC.SharedProtos.Protos.DeleteTripRequest), global::TrackYourTripGRPC.SharedProtos.Protos.DeleteTripRequest.Parser, new[]{ "Id" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::TrackYourTripGRPC.SharedProtos.Protos.DeleteTripResponse), global::TrackYourTripGRPC.SharedProtos.Protos.DeleteTripResponse.Parser, new[]{ "Success" }, null, null, null, null)
           }));
     }
     #endregion
@@ -104,7 +104,7 @@ namespace TrackYourTripGRPCApi.Protos {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::TrackYourTripGRPCApi.Protos.TripReflection.Descriptor.MessageTypes[0]; }
+      get { return global::TrackYourTripGRPC.SharedProtos.Protos.TripReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -243,10 +243,10 @@ namespace TrackYourTripGRPCApi.Protos {
 
     /// <summary>Field number for the "status" field.</summary>
     public const int StatusFieldNumber = 9;
-    private global::TrackYourTripGRPCApi.Protos.TripStatus status_ = global::TrackYourTripGRPCApi.Protos.TripStatus.Planned;
+    private global::TrackYourTripGRPC.SharedProtos.Protos.TripStatus status_ = global::TrackYourTripGRPC.SharedProtos.Protos.TripStatus.Planned;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::TrackYourTripGRPCApi.Protos.TripStatus Status {
+    public global::TrackYourTripGRPC.SharedProtos.Protos.TripStatus Status {
       get { return status_; }
       set {
         status_ = value;
@@ -331,7 +331,7 @@ namespace TrackYourTripGRPCApi.Protos {
       if (From.Length != 0) hash ^= From.GetHashCode();
       if (To.Length != 0) hash ^= To.GetHashCode();
       if (TotalExpense.Length != 0) hash ^= TotalExpense.GetHashCode();
-      if (Status != global::TrackYourTripGRPCApi.Protos.TripStatus.Planned) hash ^= Status.GetHashCode();
+      if (Status != global::TrackYourTripGRPC.SharedProtos.Protos.TripStatus.Planned) hash ^= Status.GetHashCode();
       if (Notes.Length != 0) hash ^= Notes.GetHashCode();
       if (CreatedByUserEmail.Length != 0) hash ^= CreatedByUserEmail.GetHashCode();
       if (GroupId != 0) hash ^= GroupId.GetHashCode();
@@ -385,7 +385,7 @@ namespace TrackYourTripGRPCApi.Protos {
         output.WriteRawTag(66);
         output.WriteString(TotalExpense);
       }
-      if (Status != global::TrackYourTripGRPCApi.Protos.TripStatus.Planned) {
+      if (Status != global::TrackYourTripGRPC.SharedProtos.Protos.TripStatus.Planned) {
         output.WriteRawTag(72);
         output.WriteEnum((int) Status);
       }
@@ -443,7 +443,7 @@ namespace TrackYourTripGRPCApi.Protos {
         output.WriteRawTag(66);
         output.WriteString(TotalExpense);
       }
-      if (Status != global::TrackYourTripGRPCApi.Protos.TripStatus.Planned) {
+      if (Status != global::TrackYourTripGRPC.SharedProtos.Protos.TripStatus.Planned) {
         output.WriteRawTag(72);
         output.WriteEnum((int) Status);
       }
@@ -493,7 +493,7 @@ namespace TrackYourTripGRPCApi.Protos {
       if (TotalExpense.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(TotalExpense);
       }
-      if (Status != global::TrackYourTripGRPCApi.Protos.TripStatus.Planned) {
+      if (Status != global::TrackYourTripGRPC.SharedProtos.Protos.TripStatus.Planned) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Status);
       }
       if (Notes.Length != 0) {
@@ -547,7 +547,7 @@ namespace TrackYourTripGRPCApi.Protos {
       if (other.TotalExpense.Length != 0) {
         TotalExpense = other.TotalExpense;
       }
-      if (other.Status != global::TrackYourTripGRPCApi.Protos.TripStatus.Planned) {
+      if (other.Status != global::TrackYourTripGRPC.SharedProtos.Protos.TripStatus.Planned) {
         Status = other.Status;
       }
       if (other.Notes.Length != 0) {
@@ -617,7 +617,7 @@ namespace TrackYourTripGRPCApi.Protos {
             break;
           }
           case 72: {
-            Status = (global::TrackYourTripGRPCApi.Protos.TripStatus) input.ReadEnum();
+            Status = (global::TrackYourTripGRPC.SharedProtos.Protos.TripStatus) input.ReadEnum();
             break;
           }
           case 82: {
@@ -690,7 +690,7 @@ namespace TrackYourTripGRPCApi.Protos {
             break;
           }
           case 72: {
-            Status = (global::TrackYourTripGRPCApi.Protos.TripStatus) input.ReadEnum();
+            Status = (global::TrackYourTripGRPC.SharedProtos.Protos.TripStatus) input.ReadEnum();
             break;
           }
           case 82: {
@@ -727,7 +727,7 @@ namespace TrackYourTripGRPCApi.Protos {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::TrackYourTripGRPCApi.Protos.TripReflection.Descriptor.MessageTypes[1]; }
+      get { return global::TrackYourTripGRPC.SharedProtos.Protos.TripReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -925,7 +925,7 @@ namespace TrackYourTripGRPCApi.Protos {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::TrackYourTripGRPCApi.Protos.TripReflection.Descriptor.MessageTypes[2]; }
+      get { return global::TrackYourTripGRPC.SharedProtos.Protos.TripReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -957,10 +957,10 @@ namespace TrackYourTripGRPCApi.Protos {
 
     /// <summary>Field number for the "trip" field.</summary>
     public const int TripFieldNumber = 1;
-    private global::TrackYourTripGRPCApi.Protos.TripDetail trip_;
+    private global::TrackYourTripGRPC.SharedProtos.Protos.TripDetail trip_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::TrackYourTripGRPCApi.Protos.TripDetail Trip {
+    public global::TrackYourTripGRPC.SharedProtos.Protos.TripDetail Trip {
       get { return trip_; }
       set {
         trip_ = value;
@@ -1054,7 +1054,7 @@ namespace TrackYourTripGRPCApi.Protos {
       }
       if (other.trip_ != null) {
         if (trip_ == null) {
-          Trip = new global::TrackYourTripGRPCApi.Protos.TripDetail();
+          Trip = new global::TrackYourTripGRPC.SharedProtos.Protos.TripDetail();
         }
         Trip.MergeFrom(other.Trip);
       }
@@ -1079,7 +1079,7 @@ namespace TrackYourTripGRPCApi.Protos {
             break;
           case 10: {
             if (trip_ == null) {
-              Trip = new global::TrackYourTripGRPCApi.Protos.TripDetail();
+              Trip = new global::TrackYourTripGRPC.SharedProtos.Protos.TripDetail();
             }
             input.ReadMessage(Trip);
             break;
@@ -1105,7 +1105,7 @@ namespace TrackYourTripGRPCApi.Protos {
             break;
           case 10: {
             if (trip_ == null) {
-              Trip = new global::TrackYourTripGRPCApi.Protos.TripDetail();
+              Trip = new global::TrackYourTripGRPC.SharedProtos.Protos.TripDetail();
             }
             input.ReadMessage(Trip);
             break;
@@ -1132,7 +1132,7 @@ namespace TrackYourTripGRPCApi.Protos {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::TrackYourTripGRPCApi.Protos.TripReflection.Descriptor.MessageTypes[3]; }
+      get { return global::TrackYourTripGRPC.SharedProtos.Protos.TripReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1164,12 +1164,12 @@ namespace TrackYourTripGRPCApi.Protos {
 
     /// <summary>Field number for the "trips" field.</summary>
     public const int TripsFieldNumber = 1;
-    private static readonly pb::FieldCodec<global::TrackYourTripGRPCApi.Protos.TripDetail> _repeated_trips_codec
-        = pb::FieldCodec.ForMessage(10, global::TrackYourTripGRPCApi.Protos.TripDetail.Parser);
-    private readonly pbc::RepeatedField<global::TrackYourTripGRPCApi.Protos.TripDetail> trips_ = new pbc::RepeatedField<global::TrackYourTripGRPCApi.Protos.TripDetail>();
+    private static readonly pb::FieldCodec<global::TrackYourTripGRPC.SharedProtos.Protos.TripDetail> _repeated_trips_codec
+        = pb::FieldCodec.ForMessage(10, global::TrackYourTripGRPC.SharedProtos.Protos.TripDetail.Parser);
+    private readonly pbc::RepeatedField<global::TrackYourTripGRPC.SharedProtos.Protos.TripDetail> trips_ = new pbc::RepeatedField<global::TrackYourTripGRPC.SharedProtos.Protos.TripDetail>();
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public pbc::RepeatedField<global::TrackYourTripGRPCApi.Protos.TripDetail> Trips {
+    public pbc::RepeatedField<global::TrackYourTripGRPC.SharedProtos.Protos.TripDetail> Trips {
       get { return trips_; }
     }
 
@@ -1319,7 +1319,7 @@ namespace TrackYourTripGRPCApi.Protos {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::TrackYourTripGRPCApi.Protos.TripReflection.Descriptor.MessageTypes[4]; }
+      get { return global::TrackYourTripGRPC.SharedProtos.Protos.TripReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1831,7 +1831,7 @@ namespace TrackYourTripGRPCApi.Protos {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::TrackYourTripGRPCApi.Protos.TripReflection.Descriptor.MessageTypes[5]; }
+      get { return global::TrackYourTripGRPC.SharedProtos.Protos.TripReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1863,10 +1863,10 @@ namespace TrackYourTripGRPCApi.Protos {
 
     /// <summary>Field number for the "trip" field.</summary>
     public const int TripFieldNumber = 1;
-    private global::TrackYourTripGRPCApi.Protos.TripDetail trip_;
+    private global::TrackYourTripGRPC.SharedProtos.Protos.TripDetail trip_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::TrackYourTripGRPCApi.Protos.TripDetail Trip {
+    public global::TrackYourTripGRPC.SharedProtos.Protos.TripDetail Trip {
       get { return trip_; }
       set {
         trip_ = value;
@@ -1960,7 +1960,7 @@ namespace TrackYourTripGRPCApi.Protos {
       }
       if (other.trip_ != null) {
         if (trip_ == null) {
-          Trip = new global::TrackYourTripGRPCApi.Protos.TripDetail();
+          Trip = new global::TrackYourTripGRPC.SharedProtos.Protos.TripDetail();
         }
         Trip.MergeFrom(other.Trip);
       }
@@ -1985,7 +1985,7 @@ namespace TrackYourTripGRPCApi.Protos {
             break;
           case 10: {
             if (trip_ == null) {
-              Trip = new global::TrackYourTripGRPCApi.Protos.TripDetail();
+              Trip = new global::TrackYourTripGRPC.SharedProtos.Protos.TripDetail();
             }
             input.ReadMessage(Trip);
             break;
@@ -2011,7 +2011,7 @@ namespace TrackYourTripGRPCApi.Protos {
             break;
           case 10: {
             if (trip_ == null) {
-              Trip = new global::TrackYourTripGRPCApi.Protos.TripDetail();
+              Trip = new global::TrackYourTripGRPC.SharedProtos.Protos.TripDetail();
             }
             input.ReadMessage(Trip);
             break;
@@ -2038,7 +2038,7 @@ namespace TrackYourTripGRPCApi.Protos {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::TrackYourTripGRPCApi.Protos.TripReflection.Descriptor.MessageTypes[6]; }
+      get { return global::TrackYourTripGRPC.SharedProtos.Protos.TripReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2162,10 +2162,10 @@ namespace TrackYourTripGRPCApi.Protos {
 
     /// <summary>Field number for the "status" field.</summary>
     public const int StatusFieldNumber = 8;
-    private global::TrackYourTripGRPCApi.Protos.TripStatus status_ = global::TrackYourTripGRPCApi.Protos.TripStatus.Planned;
+    private global::TrackYourTripGRPC.SharedProtos.Protos.TripStatus status_ = global::TrackYourTripGRPC.SharedProtos.Protos.TripStatus.Planned;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::TrackYourTripGRPCApi.Protos.TripStatus Status {
+    public global::TrackYourTripGRPC.SharedProtos.Protos.TripStatus Status {
       get { return status_; }
       set {
         status_ = value;
@@ -2222,7 +2222,7 @@ namespace TrackYourTripGRPCApi.Protos {
       if (endDate_ != null) hash ^= EndDate.GetHashCode();
       if (From.Length != 0) hash ^= From.GetHashCode();
       if (To.Length != 0) hash ^= To.GetHashCode();
-      if (Status != global::TrackYourTripGRPCApi.Protos.TripStatus.Planned) hash ^= Status.GetHashCode();
+      if (Status != global::TrackYourTripGRPC.SharedProtos.Protos.TripStatus.Planned) hash ^= Status.GetHashCode();
       if (Notes.Length != 0) hash ^= Notes.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -2270,7 +2270,7 @@ namespace TrackYourTripGRPCApi.Protos {
         output.WriteRawTag(58);
         output.WriteString(To);
       }
-      if (Status != global::TrackYourTripGRPCApi.Protos.TripStatus.Planned) {
+      if (Status != global::TrackYourTripGRPC.SharedProtos.Protos.TripStatus.Planned) {
         output.WriteRawTag(64);
         output.WriteEnum((int) Status);
       }
@@ -2316,7 +2316,7 @@ namespace TrackYourTripGRPCApi.Protos {
         output.WriteRawTag(58);
         output.WriteString(To);
       }
-      if (Status != global::TrackYourTripGRPCApi.Protos.TripStatus.Planned) {
+      if (Status != global::TrackYourTripGRPC.SharedProtos.Protos.TripStatus.Planned) {
         output.WriteRawTag(64);
         output.WriteEnum((int) Status);
       }
@@ -2355,7 +2355,7 @@ namespace TrackYourTripGRPCApi.Protos {
       if (To.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(To);
       }
-      if (Status != global::TrackYourTripGRPCApi.Protos.TripStatus.Planned) {
+      if (Status != global::TrackYourTripGRPC.SharedProtos.Protos.TripStatus.Planned) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Status);
       }
       if (Notes.Length != 0) {
@@ -2400,7 +2400,7 @@ namespace TrackYourTripGRPCApi.Protos {
       if (other.To.Length != 0) {
         To = other.To;
       }
-      if (other.Status != global::TrackYourTripGRPCApi.Protos.TripStatus.Planned) {
+      if (other.Status != global::TrackYourTripGRPC.SharedProtos.Protos.TripStatus.Planned) {
         Status = other.Status;
       }
       if (other.Notes.Length != 0) {
@@ -2460,7 +2460,7 @@ namespace TrackYourTripGRPCApi.Protos {
             break;
           }
           case 64: {
-            Status = (global::TrackYourTripGRPCApi.Protos.TripStatus) input.ReadEnum();
+            Status = (global::TrackYourTripGRPC.SharedProtos.Protos.TripStatus) input.ReadEnum();
             break;
           }
           case 74: {
@@ -2521,7 +2521,7 @@ namespace TrackYourTripGRPCApi.Protos {
             break;
           }
           case 64: {
-            Status = (global::TrackYourTripGRPCApi.Protos.TripStatus) input.ReadEnum();
+            Status = (global::TrackYourTripGRPC.SharedProtos.Protos.TripStatus) input.ReadEnum();
             break;
           }
           case 74: {
@@ -2550,7 +2550,7 @@ namespace TrackYourTripGRPCApi.Protos {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::TrackYourTripGRPCApi.Protos.TripReflection.Descriptor.MessageTypes[7]; }
+      get { return global::TrackYourTripGRPC.SharedProtos.Protos.TripReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2582,10 +2582,10 @@ namespace TrackYourTripGRPCApi.Protos {
 
     /// <summary>Field number for the "trip" field.</summary>
     public const int TripFieldNumber = 1;
-    private global::TrackYourTripGRPCApi.Protos.TripDetail trip_;
+    private global::TrackYourTripGRPC.SharedProtos.Protos.TripDetail trip_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public global::TrackYourTripGRPCApi.Protos.TripDetail Trip {
+    public global::TrackYourTripGRPC.SharedProtos.Protos.TripDetail Trip {
       get { return trip_; }
       set {
         trip_ = value;
@@ -2679,7 +2679,7 @@ namespace TrackYourTripGRPCApi.Protos {
       }
       if (other.trip_ != null) {
         if (trip_ == null) {
-          Trip = new global::TrackYourTripGRPCApi.Protos.TripDetail();
+          Trip = new global::TrackYourTripGRPC.SharedProtos.Protos.TripDetail();
         }
         Trip.MergeFrom(other.Trip);
       }
@@ -2704,7 +2704,7 @@ namespace TrackYourTripGRPCApi.Protos {
             break;
           case 10: {
             if (trip_ == null) {
-              Trip = new global::TrackYourTripGRPCApi.Protos.TripDetail();
+              Trip = new global::TrackYourTripGRPC.SharedProtos.Protos.TripDetail();
             }
             input.ReadMessage(Trip);
             break;
@@ -2730,7 +2730,7 @@ namespace TrackYourTripGRPCApi.Protos {
             break;
           case 10: {
             if (trip_ == null) {
-              Trip = new global::TrackYourTripGRPCApi.Protos.TripDetail();
+              Trip = new global::TrackYourTripGRPC.SharedProtos.Protos.TripDetail();
             }
             input.ReadMessage(Trip);
             break;
@@ -2757,7 +2757,7 @@ namespace TrackYourTripGRPCApi.Protos {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::TrackYourTripGRPCApi.Protos.TripReflection.Descriptor.MessageTypes[8]; }
+      get { return global::TrackYourTripGRPC.SharedProtos.Protos.TripReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2955,7 +2955,7 @@ namespace TrackYourTripGRPCApi.Protos {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::TrackYourTripGRPCApi.Protos.TripReflection.Descriptor.MessageTypes[9]; }
+      get { return global::TrackYourTripGRPC.SharedProtos.Protos.TripReflection.Descriptor.MessageTypes[9]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

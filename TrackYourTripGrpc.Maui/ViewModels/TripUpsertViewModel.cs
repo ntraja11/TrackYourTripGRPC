@@ -5,14 +5,14 @@ using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using TrackYourTripGrpc.Maui.Utilities;
 using TrackYourTripGrpc.Sdk.Interfaces;
-using TrackYourTripGRPCApi.Protos;
+using TrackYourTripGRPC.SharedProtos.Protos;
 
 namespace TrackYourTripGrpc.Maui.ViewModels;
 
 public partial class TripUpsertViewModel : ObservableValidator
 {
-    private readonly ITripGrpcService? _tripService;        
-        
+    private readonly ITripGrpcService? _tripService;
+
     public TripUpsertViewModel(ITripGrpcService tripService)
     {
         _tripService = tripService;
@@ -64,7 +64,7 @@ public partial class TripUpsertViewModel : ObservableValidator
     {
         base.OnPropertyChanged(e);
 
-        if(e.PropertyName != nameof(IsValid))
+        if (e.PropertyName != nameof(IsValid))
             OnPropertyChanged(nameof(IsValid));
     }
 
@@ -88,9 +88,9 @@ public partial class TripUpsertViewModel : ObservableValidator
         };
 
 
-        if(Trip is null)
+        if (Trip is null)
         {
-            tripDetail.CreatedByUserEmail = AuthViewState.UserEmail;            
+            tripDetail.CreatedByUserEmail = AuthViewState.UserEmail;
             tripDetail.GroupId = AuthViewState.GroupId ?? 0;
             await _tripService!.CreateTripAsync(tripDetail!, cancellationToken);
         }
@@ -98,7 +98,7 @@ public partial class TripUpsertViewModel : ObservableValidator
         {
             tripDetail.Id = Trip.Id;
             await _tripService!.UpdateTripAsync(tripDetail, cancellationToken);
-        }        
+        }
 
         Trip = new();
 

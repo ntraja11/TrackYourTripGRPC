@@ -11,9 +11,9 @@ public class MemberEntity
 
     [Precision(10, 2)]
     public decimal TotalTripExpense { get; set; } = 0;
-    
+
     public int TripId { get; set; }
 
     [NotMapped]
-    public IEnumerable<ExpenseEntity> ExpenseList { get; set; } = new List<ExpenseEntity>();
+    public IEnumerable<ExpenseEntity> Expenses { get; set; } = new List<ExpenseEntity>();
 }

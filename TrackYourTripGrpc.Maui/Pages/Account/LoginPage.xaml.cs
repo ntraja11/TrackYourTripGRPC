@@ -7,8 +7,8 @@ public partial class LoginPage : ContentPage
 {
 
     public LoginPage(LoginViewModel viewModel)
-	{
-		InitializeComponent();
+    {
+        InitializeComponent();
         BindingContext = viewModel;
     }
 
@@ -16,7 +16,7 @@ public partial class LoginPage : ContentPage
     {
         base.OnAppearing();
         AuthViewState.ToggleLogoutButton(false);
-    }    
+    }
 
     protected override void OnDisappearing()
     {

@@ -1,7 +1,10 @@
 <Solution>
   <Folder Name="/src/">
     <Project Path="TrackYourTripGRPC.Api/TrackYourTripGRPC.Api.csproj" />
-    <Project Path="TrackYourTripGrpc.Maui/TrackYourTripGrpc.Maui.csproj" Id="4c06e64b-9230-4a0f-a146-952eaa333fb7" />
+    <Project Path="TrackYourTripGrpc.Maui/TrackYourTripGrpc.Maui.csproj" Id="4c06e64b-9230-4a0f-a146-952eaa333fb7">
+      <Deploy Solution="Debug|*" />
+    </Project>
     <Project Path="TrackYourTripGrpc.Sdk/TrackYourTripGrpc.Sdk.csproj" />
+    <Project Path="TrackYourTripGRPC.SharedProtos/TrackYourTripGRPC.SharedProtos.csproj" Id="4f239f9f-ff04-4f8d-b152-408a94972bd8" />
   </Folder>
 </Solution>

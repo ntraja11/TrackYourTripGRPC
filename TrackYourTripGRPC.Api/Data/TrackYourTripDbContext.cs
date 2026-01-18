@@ -17,9 +17,22 @@ namespace TrackYourTripGRPCApi.Data
 
         public DbSet<ApplicationUser> ApplicationUsers { get; set; }
 
-        protected override void OnModelCreating(ModelBuilder builder)
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            base.OnModelCreating(builder);
+            base.OnModelCreating(modelBuilder);
+
+            modelBuilder.Entity<ExpenseEntity>()
+                .HasOne(e => e.Trip)
+                .WithMany(t => t.Expenses) // Ensure Trip has a collection of Expenses
+                .HasForeignKey(e => e.TripId)
+                .OnDelete(DeleteBehavior.Cascade); // Cascade delete
+
+            // Configure Expense -> Participant relationship
+            modelBuilder.Entity<ExpenseEntity>()
+                .HasOne(e => e.Member)
+                .WithMany(p => p.Expenses) // Ensure Participant has a collection of Expenses
+                .HasForeignKey(e => e.MemberId)
+                .OnDelete(DeleteBehavior.Restrict);
 
         }
     }

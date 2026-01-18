@@ -7,7 +7,7 @@
 
 using grpc = global::Grpc.Core;
 
-namespace TrackYourTripGRPCApi.Protos {
+namespace TrackYourTripGRPC.SharedProtos.Protos {
   public static partial class Auth
   {
     static readonly string __ServiceName = "auth.Auth";
@@ -46,16 +46,16 @@ namespace TrackYourTripGRPCApi.Protos {
     }
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::TrackYourTripGRPCApi.Protos.RegisterRequest> __Marshaller_auth_RegisterRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::TrackYourTripGRPCApi.Protos.RegisterRequest.Parser));
+    static readonly grpc::Marshaller<global::TrackYourTripGRPC.SharedProtos.Protos.RegisterRequest> __Marshaller_auth_RegisterRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::TrackYourTripGRPC.SharedProtos.Protos.RegisterRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::TrackYourTripGRPCApi.Protos.RegisterResponse> __Marshaller_auth_RegisterResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::TrackYourTripGRPCApi.Protos.RegisterResponse.Parser));
+    static readonly grpc::Marshaller<global::TrackYourTripGRPC.SharedProtos.Protos.RegisterResponse> __Marshaller_auth_RegisterResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::TrackYourTripGRPC.SharedProtos.Protos.RegisterResponse.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::TrackYourTripGRPCApi.Protos.LoginRequest> __Marshaller_auth_LoginRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::TrackYourTripGRPCApi.Protos.LoginRequest.Parser));
+    static readonly grpc::Marshaller<global::TrackYourTripGRPC.SharedProtos.Protos.LoginRequest> __Marshaller_auth_LoginRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::TrackYourTripGRPC.SharedProtos.Protos.LoginRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::TrackYourTripGRPCApi.Protos.LoginResponse> __Marshaller_auth_LoginResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::TrackYourTripGRPCApi.Protos.LoginResponse.Parser));
+    static readonly grpc::Marshaller<global::TrackYourTripGRPC.SharedProtos.Protos.LoginResponse> __Marshaller_auth_LoginResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::TrackYourTripGRPC.SharedProtos.Protos.LoginResponse.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Method<global::TrackYourTripGRPCApi.Protos.RegisterRequest, global::TrackYourTripGRPCApi.Protos.RegisterResponse> __Method_Register = new grpc::Method<global::TrackYourTripGRPCApi.Protos.RegisterRequest, global::TrackYourTripGRPCApi.Protos.RegisterResponse>(
+    static readonly grpc::Method<global::TrackYourTripGRPC.SharedProtos.Protos.RegisterRequest, global::TrackYourTripGRPC.SharedProtos.Protos.RegisterResponse> __Method_Register = new grpc::Method<global::TrackYourTripGRPC.SharedProtos.Protos.RegisterRequest, global::TrackYourTripGRPC.SharedProtos.Protos.RegisterResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "Register",
@@ -63,7 +63,7 @@ namespace TrackYourTripGRPCApi.Protos {
         __Marshaller_auth_RegisterResponse);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Method<global::TrackYourTripGRPCApi.Protos.LoginRequest, global::TrackYourTripGRPCApi.Protos.LoginResponse> __Method_Login = new grpc::Method<global::TrackYourTripGRPCApi.Protos.LoginRequest, global::TrackYourTripGRPCApi.Protos.LoginResponse>(
+    static readonly grpc::Method<global::TrackYourTripGRPC.SharedProtos.Protos.LoginRequest, global::TrackYourTripGRPC.SharedProtos.Protos.LoginResponse> __Method_Login = new grpc::Method<global::TrackYourTripGRPC.SharedProtos.Protos.LoginRequest, global::TrackYourTripGRPC.SharedProtos.Protos.LoginResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
         "Login",
@@ -73,7 +73,7 @@ namespace TrackYourTripGRPCApi.Protos {
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
     {
-      get { return global::TrackYourTripGRPCApi.Protos.AuthReflection.Descriptor.Services[0]; }
+      get { return global::TrackYourTripGRPC.SharedProtos.Protos.AuthReflection.Descriptor.Services[0]; }
     }
 
     /// <summary>Client for Auth</summary>
@@ -104,42 +104,42 @@ namespace TrackYourTripGRPCApi.Protos {
       }
 
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::TrackYourTripGRPCApi.Protos.RegisterResponse Register(global::TrackYourTripGRPCApi.Protos.RegisterRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::TrackYourTripGRPC.SharedProtos.Protos.RegisterResponse Register(global::TrackYourTripGRPC.SharedProtos.Protos.RegisterRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return Register(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::TrackYourTripGRPCApi.Protos.RegisterResponse Register(global::TrackYourTripGRPCApi.Protos.RegisterRequest request, grpc::CallOptions options)
+      public virtual global::TrackYourTripGRPC.SharedProtos.Protos.RegisterResponse Register(global::TrackYourTripGRPC.SharedProtos.Protos.RegisterRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_Register, null, options, request);
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::TrackYourTripGRPCApi.Protos.RegisterResponse> RegisterAsync(global::TrackYourTripGRPCApi.Protos.RegisterRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::TrackYourTripGRPC.SharedProtos.Protos.RegisterResponse> RegisterAsync(global::TrackYourTripGRPC.SharedProtos.Protos.RegisterRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return RegisterAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::TrackYourTripGRPCApi.Protos.RegisterResponse> RegisterAsync(global::TrackYourTripGRPCApi.Protos.RegisterRequest request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::TrackYourTripGRPC.SharedProtos.Protos.RegisterResponse> RegisterAsync(global::TrackYourTripGRPC.SharedProtos.Protos.RegisterRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_Register, null, options, request);
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::TrackYourTripGRPCApi.Protos.LoginResponse Login(global::TrackYourTripGRPCApi.Protos.LoginRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual global::TrackYourTripGRPC.SharedProtos.Protos.LoginResponse Login(global::TrackYourTripGRPC.SharedProtos.Protos.LoginRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return Login(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::TrackYourTripGRPCApi.Protos.LoginResponse Login(global::TrackYourTripGRPCApi.Protos.LoginRequest request, grpc::CallOptions options)
+      public virtual global::TrackYourTripGRPC.SharedProtos.Protos.LoginResponse Login(global::TrackYourTripGRPC.SharedProtos.Protos.LoginRequest request, grpc::CallOptions options)
       {
         return CallInvoker.BlockingUnaryCall(__Method_Login, null, options, request);
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::TrackYourTripGRPCApi.Protos.LoginResponse> LoginAsync(global::TrackYourTripGRPCApi.Protos.LoginRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      public virtual grpc::AsyncUnaryCall<global::TrackYourTripGRPC.SharedProtos.Protos.LoginResponse> LoginAsync(global::TrackYourTripGRPC.SharedProtos.Protos.LoginRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
       {
         return LoginAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::TrackYourTripGRPCApi.Protos.LoginResponse> LoginAsync(global::TrackYourTripGRPCApi.Protos.LoginRequest request, grpc::CallOptions options)
+      public virtual grpc::AsyncUnaryCall<global::TrackYourTripGRPC.SharedProtos.Protos.LoginResponse> LoginAsync(global::TrackYourTripGRPC.SharedProtos.Protos.LoginRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_Login, null, options, request);
       }

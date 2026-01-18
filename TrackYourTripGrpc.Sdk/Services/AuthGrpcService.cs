@@ -1,6 +1,6 @@
 ﻿using Grpc.Core;
 using TrackYourTripGrpc.Sdk.Interfaces;
-using TrackYourTripGRPCApi.Protos;
+using TrackYourTripGRPC.SharedProtos.Protos;
 
 namespace TrackYourTripGrpc.Sdk.Services;
 
@@ -12,15 +12,15 @@ public class AuthGrpcService : IAuthGrpcService
     {
         _authClient = authClient;
     }
-       
+
     public async Task<LoginResponse> LoginAsync(LoginRequest loginRequest, CancellationToken cancellationToken)
     {
         try
-        {            
+        {
             var response = await _authClient.LoginAsync(loginRequest, cancellationToken: cancellationToken);
             return response;
 
-        }        
+        }
         catch (Exception ex)
         {
             LoginResponse response = new LoginResponse
@@ -37,11 +37,11 @@ public class AuthGrpcService : IAuthGrpcService
     public async Task<RegisterResponse> RegisterAsync(RegisterRequest registerRequest, CancellationToken cancellationToken)
     {
         try
-        {            
+        {
             var response = await _authClient.RegisterAsync(registerRequest, cancellationToken: cancellationToken);
             return response;
 
-        }        
+        }
         catch (Exception ex)
         {
             RegisterResponse response = new RegisterResponse

@@ -1,4 +1,4 @@
-﻿using TrackYourTripGRPCApi.Protos;
+﻿using TrackYourTripGRPC.SharedProtos.Protos;
 
 namespace TrackYourTripGrpc.Sdk.Interfaces;
 

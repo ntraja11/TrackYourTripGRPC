@@ -15,7 +15,7 @@
         public const int AlreadyExists = 403;
         public const int NotFound = 404;
         public const int ServerError = 500;
-        
+
 
     }
 }

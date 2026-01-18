@@ -4,32 +4,8 @@
              xmlns:vm="clr-namespace:TrackYourTripGrpc.Maui.ViewModels"
              x:DataType="vm:TripUpsertViewModel"
              x:Class="TrackYourTripGrpc.Maui.Pages.Trip.TripUpsertPage"
-             Title="Trip Management"
              >
-
-    <ContentPage.Resources>
-        <ResourceDictionary>
-            <Style x:Key="MyLabelText" TargetType="Label">
-                <Setter Property="FontSize" Value="18" />
-                <Setter Property="TextColor" Value="{StaticResource PrimaryText}" />
-                <Setter Property="VerticalOptions" Value="Center" />
-                <Setter Property="LineBreakMode" Value="WordWrap" />
-            </Style>
-
-            <Style x:Key="EntryText" TargetType="Entry">
-                <Setter Property="FontSize" Value="18" />
-                <Setter Property="TextColor" Value="{StaticResource PrimaryText}" />
-                <Setter Property="VerticalOptions" Value="Center" />
-            </Style>
-
-            <Style x:Key="LabelTextBold" TargetType="Label" 
-           BasedOn="{StaticResource MyLabelText}">
-                <Setter Property="FontAttributes" Value="Bold" />
-            </Style>
-        </ResourceDictionary>
-        <Style TargetType="Label" BasedOn="{StaticResource MyLabelText}" />
-        <Style TargetType="Entry" BasedOn="{StaticResource EntryText}" />
-    </ContentPage.Resources>
+    
 
     <VerticalStackLayout Padding="20" Spacing="20">
         <Label 

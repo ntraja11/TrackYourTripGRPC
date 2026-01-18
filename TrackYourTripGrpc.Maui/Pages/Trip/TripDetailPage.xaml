@@ -5,8 +5,7 @@
              xmlns:vm="clr-namespace:TrackYourTripGrpc.Maui.ViewModels"
              x:DataType="vm:TripDetailViewModel"
              x:Class="TrackYourTripGrpc.Maui.Pages.Trip.TripDetailPage" 
-             xmlns:protos="clr-namespace:TrackYourTripGRPCApi.Protos;assembly=TrackYourTripGrpc.Sdk"
-             Title="Trip Management"
+             xmlns:protos="clr-namespace:TrackYourTripGRPC.SharedProtos.Protos;assembly=TrackYourTripGrpc.Sdk"
              >
 
     <ContentPage.Resources>
@@ -17,6 +16,12 @@
                 <ColumnDefinition Width="180" />
                 <ColumnDefinition Width="*"  />
                 <ColumnDefinition Width="*" />
+            </ColumnDefinitionCollection>
+
+            <ColumnDefinitionCollection x:Key="ExpenseTableColumns">
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*"  />
+                <ColumnDefinition Width="150" />
             </ColumnDefinitionCollection>
 
         </ResourceDictionary>
@@ -65,7 +70,7 @@
             <BoxView BackgroundColor="{StaticResource PrimaryText}" Margin="0, 20" HeightRequest="1" />
 
             
-            <Grid ColumnDefinitions="*, Auto">
+            <Grid ColumnDefinitions="*, Auto" Margin="0, 20">
 
                 <Label Text="Trip Members:" FontAttributes="Bold" 
                     FontSize="20" Grid.Column="0"  VerticalOptions="Center"/>
@@ -77,7 +82,7 @@
             </Grid>
             
 
-            <VerticalStackLayout Margin="0, 20">
+            <VerticalStackLayout IsVisible="{Binding HasMembers}" Margin="0,0,0,30">
 
                 <Grid ColumnDefinitions="{StaticResource MembersTableColumns}" Padding="10,5" ColumnSpacing="5">
                     <Label Text="Name" FontAttributes="Bold" />
@@ -111,15 +116,49 @@
             </VerticalStackLayout>
 
 
-            <Grid ColumnDefinitions="*, Auto">
+            <Grid ColumnDefinitions="*, Auto" Margin="0,20" IsVisible="{Binding HasMembers}">
 
                 <Label Text="Expenses:" FontAttributes="Bold" 
                     FontSize="20" Grid.Column="0"  VerticalOptions="Center"/>
 
                 <Button Text="Add Expense" Padding="10" FontSize="18"
-                    VerticalOptions="Center" Grid.Column="1" Clicked=""/>
+                    VerticalOptions="Center" Grid.Column="1" Clicked="AddExpense_ClickedEvent"/>
 
             </Grid>
+
+            <VerticalStackLayout IsVisible="{Binding HasExpenses}">
+
+                <Grid ColumnDefinitions="{StaticResource ExpenseTableColumns}" Padding="10,5" ColumnSpacing="5">
+                    <Label Text="Expense" FontAttributes="Bold" />
+                    <Label Text="Amount" Grid.Column="1" FontAttributes="Bold" />
+                    <Label Text="Paid By" Grid.Column="2" FontAttributes="Bold" />
+                </Grid>
+
+                <BoxView HeightRequest="1" BackgroundColor="{StaticResource PrimaryText}" />
+
+                <CollectionView ItemsSource="{Binding TripExpenses}" >
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate x:DataType="protos:ExpenseDetail">
+
+                            <VerticalStackLayout>
+                                <Grid ColumnDefinitions="{StaticResource ExpenseTableColumns}" Padding="10,5">
+
+                                    <Label Text="{Binding Title}" />
+
+                                    <Label Text="{Binding Amount}" Grid.Column="1" />
+
+                                    <Label Text="{Binding Member.Name}" Grid.Column="2" />
+
+                                </Grid>
+                                <BoxView HeightRequest="1" BackgroundColor="{StaticResource PrimaryText}" />
+                            </VerticalStackLayout>
+
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+
+            </VerticalStackLayout>
+            
 
         </VerticalStackLayout>
 

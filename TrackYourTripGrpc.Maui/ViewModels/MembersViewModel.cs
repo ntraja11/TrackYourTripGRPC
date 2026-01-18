@@ -3,13 +3,13 @@ using CommunityToolkit.Mvvm.Input;
 using System.Collections.ObjectModel;
 using TrackYourTripGrpc.Maui.Utilities;
 using TrackYourTripGrpc.Sdk.Interfaces;
-using TrackYourTripGRPCApi.Protos;
+using TrackYourTripGRPC.SharedProtos.Protos;
 
 namespace TrackYourTripGrpc.Maui.ViewModels;
 
 public partial class MembersViewModel : ObservableObject
 {
-    
+
     [ObservableProperty]
     private ObservableCollection<MemberDetail> availableMembers = new();
 
@@ -36,8 +36,10 @@ public partial class MembersViewModel : ObservableObject
 
     public async Task LoadMembersAsync(CancellationToken cancellationToken = default)
     {
-        var request = new GetAllMembersByGroupRequest { 
-                                GroupId = AuthViewState.GroupId ?? 0};
+        var request = new GetAllMembersByGroupRequest
+        {
+            GroupId = AuthViewState.GroupId ?? 0
+        };
         var response = await _memberService.GetAllMembersByGroupAsync(request, cancellationToken);
 
         ExistingMembers = await GetExistingMembers(cancellationToken);
@@ -61,7 +63,7 @@ public partial class MembersViewModel : ObservableObject
                 SelectedMembers.Add(match);
         }
 
-        _initializingSelection = false;                      
+        _initializingSelection = false;
 
     }
 
@@ -84,10 +86,6 @@ public partial class MembersViewModel : ObservableObject
     [RelayCommand]
     public async Task SubmitMemberSelectionAsync(CancellationToken cancellationToken = default)
     {
-        if (SelectedMembers.Count == 0)
-            return;
-
-
         var selectedLookup = SelectedMembers
             .Select(m => (m.Name?.Trim().ToLower(), m.Email?.Trim().ToLower()))
             .ToHashSet();

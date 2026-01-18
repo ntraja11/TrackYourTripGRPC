@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-option csharp_namespace = "TrackYourTripGRPCApi.Protos";
+option csharp_namespace = "TrackYourTripGRPC.SharedProtos.Protos";
 
 package auth;
 

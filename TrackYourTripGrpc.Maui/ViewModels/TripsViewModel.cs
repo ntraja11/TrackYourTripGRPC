@@ -2,14 +2,14 @@
 using CommunityToolkit.Mvvm.Input;
 using System.Collections.ObjectModel;
 using TrackYourTripGrpc.Sdk.Interfaces;
-using TrackYourTripGRPCApi.Protos;
+using TrackYourTripGRPC.SharedProtos.Protos;
 
 namespace TrackYourTripGrpc.Maui.ViewModels;
 
 public partial class TripsViewModel : ObservableObject
 {
     [ObservableProperty]
-    private ObservableCollection<TripDetail> trips = new ();
+    private ObservableCollection<TripDetail> trips = new();
 
     [ObservableProperty]
     private bool isRefreshing;
@@ -44,7 +44,7 @@ public partial class TripsViewModel : ObservableObject
     public async Task LoadTripsAsync(CancellationToken cancellationToken = default)
     {
         if (IsBusy)
-             return;
+            return;
 
         try
         {
@@ -58,6 +58,6 @@ public partial class TripsViewModel : ObservableObject
         finally
         {
             IsBusy = false;
-        }        
+        }
     }
 }

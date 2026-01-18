@@ -1,7 +1,7 @@
 ﻿using Grpc.Core;
 using System.Diagnostics;
 using TrackYourTripGrpc.Sdk.Interfaces;
-using TrackYourTripGRPCApi.Protos;
+using TrackYourTripGRPC.SharedProtos.Protos;
 
 namespace TrackYourTripGrpc.Sdk.Services;
 
@@ -62,12 +62,12 @@ public class ExpenseGrpcService : IExpenseGrpcService
         }
     }
 
-    public async Task<IEnumerable<ExpenseDetail>> GetAllExpensesByMemberIdAsync(int MemberId, CancellationToken cancellationToken)
+    public async Task<IEnumerable<ExpenseDetail>> GetAllExpensesByMemberAsync(int memberId, CancellationToken cancellationToken)
     {
         try
         {
-            var request = new GetAllExpensesByMemberIdRequest { MemberId = MemberId };
-            var response = await _expenseClient.GetAllExpensesByMemberIdAsync(request, cancellationToken: cancellationToken);
+            var request = new GetAllExpensesByMemberRequest { MemberId = memberId };
+            var response = await _expenseClient.GetAllExpensesByMemberAsync(request, cancellationToken: cancellationToken);
             return response.Expenses;
 
         }
@@ -83,12 +83,12 @@ public class ExpenseGrpcService : IExpenseGrpcService
         }
     }
 
-    public async Task<IEnumerable<ExpenseDetail>> GetAllExpensesByTripIdAsync(int tripId, CancellationToken cancellationToken)
+    public async Task<IEnumerable<ExpenseDetail>> GetAllExpensesByTripAsync(int tripId, CancellationToken cancellationToken)
     {
         try
         {
-            var request = new GetAllExpensesByTripIdRequest { TripId = tripId };
-            var response = await _expenseClient.GetAllExpensesByTripIdAsync(request, cancellationToken: cancellationToken);
+            var request = new GetAllExpensesByTripRequest { TripId = tripId };
+            var response = await _expenseClient.GetAllExpensesByTripAsync(request, cancellationToken: cancellationToken);
             return response.Expenses;
 
         }

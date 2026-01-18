@@ -1,7 +1,7 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using TrackYourTripGrpc.Sdk.Interfaces;
 using TrackYourTripGrpc.Sdk.Services;
-using TrackYourTripGRPCApi.Protos;
+using TrackYourTripGRPC.SharedProtos.Protos;
 
 namespace TrackYourTripGrpc.Sdk
 {
@@ -25,7 +25,8 @@ namespace TrackYourTripGrpc.Sdk
         private static IHttpClientBuilder AddGrpcClientWithHandler<TClient>
             (this IServiceCollection services, string baseAddress) where TClient : class
         {
-            return services.AddGrpcClient<TClient>(client => {
+            return services.AddGrpcClient<TClient>(client =>
+            {
                 client.Address = new Uri(baseAddress);
             })
            .ConfigurePrimaryHttpMessageHandler(() =>

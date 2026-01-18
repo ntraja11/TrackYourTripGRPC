@@ -1,7 +1,7 @@
 ﻿using Grpc.Core;
 using System.Diagnostics;
 using TrackYourTripGrpc.Sdk.Interfaces;
-using TrackYourTripGRPCApi.Protos;
+using TrackYourTripGRPC.SharedProtos.Protos;
 
 namespace TrackYourTripGrpc.Sdk.Services;
 
@@ -56,8 +56,9 @@ public class TripGrpcService : ITripGrpcService
     {
         try
         {
-            var request = new CreateTripRequest { 
-                Title = tripDetail.Title, 
+            var request = new CreateTripRequest
+            {
+                Title = tripDetail.Title,
                 Description = tripDetail.Description,
                 CreatedByUserEmail = tripDetail.CreatedByUserEmail,
                 StartDate = tripDetail.StartDate,

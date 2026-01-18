@@ -8,9 +8,9 @@ public partial class MembersPage : ContentPage
     private int _tripId;
 
     public MembersPage(MembersViewModel viewModel)
-	{
+    {
         _viewModel = viewModel;
-		BindingContext = _viewModel;
+        BindingContext = _viewModel;
         InitializeComponent();
     }
 
@@ -32,8 +32,8 @@ public partial class MembersPage : ContentPage
     }
 
     protected override async void OnAppearing()
-	{
-		await _viewModel.LoadMembersAsync();
+    {
+        await _viewModel.LoadMembersAsync();
         MembersList.SelectedItems = _viewModel.SelectedMembers.Cast<object>().ToList();
     }
 }

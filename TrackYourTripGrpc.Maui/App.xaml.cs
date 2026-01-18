@@ -1,7 +1,4 @@
-﻿using Microsoft.Extensions.DependencyInjection;
-using TrackYourTripGrpc.Maui.Pages;
-
-namespace TrackYourTripGrpc.Maui
+﻿namespace TrackYourTripGrpc.Maui
 {
     public partial class App : Application
     {

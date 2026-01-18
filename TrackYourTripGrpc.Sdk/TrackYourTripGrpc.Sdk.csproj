@@ -16,11 +16,14 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\TrackYourTripGRPC.SharedProtos\TrackYourTripGRPC.SharedProtos.csproj" />
+  </ItemGroup>
+
 	<ItemGroup>
-		<Protobuf Include="..\TrackYourTripGRPC.Api\Protos\auth.proto" GrpcServices="Client" OutputDir="Generated" />
-		<Protobuf Include="..\TrackYourTripGRPC.Api\Protos\Expense.proto" GrpcServices="Client" OutputDir="Generated" />
-		<Protobuf Include="..\TrackYourTripGRPC.Api\Protos\Member.proto" GrpcServices="Client" OutputDir="Generated" />
-		<Protobuf Include="..\TrackYourTripGRPC.Api\Protos\trip.proto" GrpcServices="Client" OutputDir="Generated" />
+		<Protobuf Include="..\TrackYourTripGRPC.SharedProtos\Protos\**\*.proto"
+            GrpcServices="Client"
+            OutputDir="Generated" />
 	</ItemGroup>
 
 </Project>

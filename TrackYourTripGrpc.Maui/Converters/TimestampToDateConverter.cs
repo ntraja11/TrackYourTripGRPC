@@ -7,7 +7,7 @@ public class TimestampToDateConverter : IValueConverter
 {
     public object? Convert(object? value, System.Type targetType, object? parameter, CultureInfo culture)
     {
-        if(value is Timestamp ts)
+        if (value is Timestamp ts)
         {
             return ts.ToDateTime().ToString("dd-MM-yyyy");
         }

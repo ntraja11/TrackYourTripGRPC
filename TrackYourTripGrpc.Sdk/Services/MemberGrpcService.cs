@@ -1,7 +1,7 @@
 ﻿using Grpc.Core;
 using System.Diagnostics;
 using TrackYourTripGrpc.Sdk.Interfaces;
-using TrackYourTripGRPCApi.Protos;
+using TrackYourTripGRPC.SharedProtos.Protos;
 
 namespace TrackYourTripGrpc.Sdk.Services;
 
@@ -11,7 +11,7 @@ public class MemberGrpcService : IMemberGrpcService
     public MemberGrpcService(Member.MemberClient memberClient)
     {
         _memberClient = memberClient;
-    } 
+    }
 
     public async Task<MemberDetail> GetMemberAsync(int memberId, CancellationToken cancellationToken)
     {
@@ -36,8 +36,8 @@ public class MemberGrpcService : IMemberGrpcService
     public async Task<CreateMembersResponse> CreateMembersAsync(CreateMembersRequest request, CancellationToken cancellationToken)
     {
         try
-        {            
-            var response =  await _memberClient.CreateMembersAsync(request, cancellationToken: cancellationToken);
+        {
+            var response = await _memberClient.CreateMembersAsync(request, cancellationToken: cancellationToken);
             return response;
         }
         catch (RpcException ex)

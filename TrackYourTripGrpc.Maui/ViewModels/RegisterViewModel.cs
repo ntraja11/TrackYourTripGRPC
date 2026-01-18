@@ -1,9 +1,8 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
-using TrackYourTripGrpc.Maui.Pages;
 using TrackYourTripGrpc.Maui.Pages.Account;
 using TrackYourTripGrpc.Sdk.Interfaces;
-using TrackYourTripGRPCApi.Protos;
+using TrackYourTripGRPC.SharedProtos.Protos;
 
 namespace TrackYourTripGrpc.Maui.ViewModels;
 
@@ -14,7 +13,7 @@ public partial class RegisterViewModel : ObservableObject
 
     [ObservableProperty]
     private string email = string.Empty;
-    
+
     [ObservableProperty]
     private string password = string.Empty;
 

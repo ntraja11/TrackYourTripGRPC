@@ -9,7 +9,7 @@ using pb = global::Google.Protobuf;
 using pbc = global::Google.Protobuf.Collections;
 using pbr = global::Google.Protobuf.Reflection;
 using scg = global::System.Collections.Generic;
-namespace TrackYourTripGRPCApi.Protos {
+namespace TrackYourTripGRPC.SharedProtos.Protos {
 
   /// <summary>Holder for reflection information generated from auth.proto</summary>
   public static partial class AuthReflection {
@@ -34,15 +34,15 @@ namespace TrackYourTripGRPCApi.Protos {
             "b2RlGAMgASgFEhQKDGVycm9yTWVzc2FnZRgEIAEoCTJzCgRBdXRoEjkKCFJl",
             "Z2lzdGVyEhUuYXV0aC5SZWdpc3RlclJlcXVlc3QaFi5hdXRoLlJlZ2lzdGVy",
             "UmVzcG9uc2USMAoFTG9naW4SEi5hdXRoLkxvZ2luUmVxdWVzdBoTLmF1dGgu",
-            "TG9naW5SZXNwb25zZUIeqgIbVHJhY2tZb3VyVHJpcEdSUENBcGkuUHJvdG9z",
-            "YgZwcm90bzM="));
+            "TG9naW5SZXNwb25zZUIoqgIlVHJhY2tZb3VyVHJpcEdSUEMuU2hhcmVkUHJv",
+            "dG9zLlByb3Rvc2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::TrackYourTripGRPCApi.Protos.RegisterRequest), global::TrackYourTripGRPCApi.Protos.RegisterRequest.Parser, new[]{ "Email", "Password", "Name", "GroupName", "IsNewGroup" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::TrackYourTripGRPCApi.Protos.RegisterResponse), global::TrackYourTripGRPCApi.Protos.RegisterResponse.Parser, new[]{ "IsSuccess", "StatusCode", "ErrorMessage" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::TrackYourTripGRPCApi.Protos.LoginRequest), global::TrackYourTripGRPCApi.Protos.LoginRequest.Parser, new[]{ "Email", "Password" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::TrackYourTripGRPCApi.Protos.LoginResponse), global::TrackYourTripGRPCApi.Protos.LoginResponse.Parser, new[]{ "IsSuccess", "Token", "StatusCode", "ErrorMessage" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::TrackYourTripGRPC.SharedProtos.Protos.RegisterRequest), global::TrackYourTripGRPC.SharedProtos.Protos.RegisterRequest.Parser, new[]{ "Email", "Password", "Name", "GroupName", "IsNewGroup" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::TrackYourTripGRPC.SharedProtos.Protos.RegisterResponse), global::TrackYourTripGRPC.SharedProtos.Protos.RegisterResponse.Parser, new[]{ "IsSuccess", "StatusCode", "ErrorMessage" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::TrackYourTripGRPC.SharedProtos.Protos.LoginRequest), global::TrackYourTripGRPC.SharedProtos.Protos.LoginRequest.Parser, new[]{ "Email", "Password" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::TrackYourTripGRPC.SharedProtos.Protos.LoginResponse), global::TrackYourTripGRPC.SharedProtos.Protos.LoginResponse.Parser, new[]{ "IsSuccess", "Token", "StatusCode", "ErrorMessage" }, null, null, null, null)
           }));
     }
     #endregion
@@ -64,7 +64,7 @@ namespace TrackYourTripGRPCApi.Protos {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::TrackYourTripGRPCApi.Protos.AuthReflection.Descriptor.MessageTypes[0]; }
+      get { return global::TrackYourTripGRPC.SharedProtos.Protos.AuthReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -410,7 +410,7 @@ namespace TrackYourTripGRPCApi.Protos {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::TrackYourTripGRPCApi.Protos.AuthReflection.Descriptor.MessageTypes[1]; }
+      get { return global::TrackYourTripGRPC.SharedProtos.Protos.AuthReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -682,7 +682,7 @@ namespace TrackYourTripGRPCApi.Protos {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::TrackYourTripGRPCApi.Protos.AuthReflection.Descriptor.MessageTypes[2]; }
+      get { return global::TrackYourTripGRPC.SharedProtos.Protos.AuthReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -917,7 +917,7 @@ namespace TrackYourTripGRPCApi.Protos {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::TrackYourTripGRPCApi.Protos.AuthReflection.Descriptor.MessageTypes[3]; }
+      get { return global::TrackYourTripGRPC.SharedProtos.Protos.AuthReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

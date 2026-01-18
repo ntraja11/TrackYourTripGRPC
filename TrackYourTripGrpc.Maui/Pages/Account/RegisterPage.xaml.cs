@@ -6,8 +6,8 @@ namespace TrackYourTripGrpc.Maui.Pages.Account;
 public partial class RegisterPage : ContentPage
 {
     public RegisterPage(RegisterViewModel viewModel)
-	{
-		InitializeComponent();
+    {
+        InitializeComponent();
         BindingContext = viewModel;
     }
 
