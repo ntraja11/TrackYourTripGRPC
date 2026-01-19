@@ -23,10 +23,13 @@ namespace TrackYourTripGRPCApi.Mappings
                         (DateTime.SpecifyKind(src.EndDate.Value, DateTimeKind.Utc))
                         : null))
 
+                //.ForMember(dest => dest.TotalExpense,
+                //opt => opt.MapFrom(src => src.TotalExpense.HasValue
+                //        ? src.TotalExpense.Value.ToString()
+                //        : "0"))
+
                 .ForMember(dest => dest.TotalExpense,
-                opt => opt.MapFrom(src => src.TotalExpense.HasValue
-                        ? src.TotalExpense.Value.ToString()
-                        : "0"));
+                    opt => opt.MapFrom(src => src.TotalExpense ?? 0));  ;
 
 
             CreateMap<MemberEntity, MemberDetail>()

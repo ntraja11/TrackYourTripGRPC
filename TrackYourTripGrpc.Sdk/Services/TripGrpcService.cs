@@ -52,6 +52,26 @@ public class TripGrpcService : ITripGrpcService
         }
     }
 
+    public async Task<IEnumerable<TripDetail>> GetAllTripsByGroupAsync(int groupId, CancellationToken cancellationToken)
+    {
+        try
+        {
+            var request = new GetAllByGroupRequest{GroupId = groupId};
+            var response = await _tripClient.GetAllTripsByGroupAsync(request, cancellationToken: cancellationToken);
+            return response.Trips;
+        }
+        catch (RpcException ex)
+        {
+            Debug.WriteLine($"gRPC ERROR: {ex.StatusCode} - {ex.Status.Detail}");
+            throw;
+        }
+        catch (Exception ex)
+        {
+            Debug.WriteLine($"UNEXPECTED ERROR: {ex.Message}");
+            throw;
+        }
+    }
+
     public async Task<TripDetail> CreateTripAsync(TripDetail tripDetail, CancellationToken cancellationToken)
     {
         try

@@ -54,6 +54,10 @@ namespace TrackYourTripGRPC.SharedProtos.Protos {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::TrackYourTripGRPC.SharedProtos.Protos.GetAllTripsResponse> __Marshaller_trip_GetAllTripsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::TrackYourTripGRPC.SharedProtos.Protos.GetAllTripsResponse.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::TrackYourTripGRPC.SharedProtos.Protos.GetAllByGroupRequest> __Marshaller_trip_GetAllByGroupRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::TrackYourTripGRPC.SharedProtos.Protos.GetAllByGroupRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::TrackYourTripGRPC.SharedProtos.Protos.GetAllByGroupResponse> __Marshaller_trip_GetAllByGroupResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::TrackYourTripGRPC.SharedProtos.Protos.GetAllByGroupResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::TrackYourTripGRPC.SharedProtos.Protos.CreateTripRequest> __Marshaller_trip_CreateTripRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::TrackYourTripGRPC.SharedProtos.Protos.CreateTripRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::TrackYourTripGRPC.SharedProtos.Protos.CreateTripResponse> __Marshaller_trip_CreateTripResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::TrackYourTripGRPC.SharedProtos.Protos.CreateTripResponse.Parser));
@@ -81,6 +85,14 @@ namespace TrackYourTripGRPC.SharedProtos.Protos {
         "GetAllTrips",
         __Marshaller_google_protobuf_Empty,
         __Marshaller_trip_GetAllTripsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::TrackYourTripGRPC.SharedProtos.Protos.GetAllByGroupRequest, global::TrackYourTripGRPC.SharedProtos.Protos.GetAllByGroupResponse> __Method_GetAllTripsByGroup = new grpc::Method<global::TrackYourTripGRPC.SharedProtos.Protos.GetAllByGroupRequest, global::TrackYourTripGRPC.SharedProtos.Protos.GetAllByGroupResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetAllTripsByGroup",
+        __Marshaller_trip_GetAllByGroupRequest,
+        __Marshaller_trip_GetAllByGroupResponse);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::TrackYourTripGRPC.SharedProtos.Protos.CreateTripRequest, global::TrackYourTripGRPC.SharedProtos.Protos.CreateTripResponse> __Method_CreateTrip = new grpc::Method<global::TrackYourTripGRPC.SharedProtos.Protos.CreateTripRequest, global::TrackYourTripGRPC.SharedProtos.Protos.CreateTripResponse>(
@@ -178,6 +190,26 @@ namespace TrackYourTripGRPC.SharedProtos.Protos {
       public virtual grpc::AsyncUnaryCall<global::TrackYourTripGRPC.SharedProtos.Protos.GetAllTripsResponse> GetAllTripsAsync(global::Google.Protobuf.WellKnownTypes.Empty request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetAllTrips, null, options, request);
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::TrackYourTripGRPC.SharedProtos.Protos.GetAllByGroupResponse GetAllTripsByGroup(global::TrackYourTripGRPC.SharedProtos.Protos.GetAllByGroupRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetAllTripsByGroup(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::TrackYourTripGRPC.SharedProtos.Protos.GetAllByGroupResponse GetAllTripsByGroup(global::TrackYourTripGRPC.SharedProtos.Protos.GetAllByGroupRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetAllTripsByGroup, null, options, request);
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::TrackYourTripGRPC.SharedProtos.Protos.GetAllByGroupResponse> GetAllTripsByGroupAsync(global::TrackYourTripGRPC.SharedProtos.Protos.GetAllByGroupRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetAllTripsByGroupAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::TrackYourTripGRPC.SharedProtos.Protos.GetAllByGroupResponse> GetAllTripsByGroupAsync(global::TrackYourTripGRPC.SharedProtos.Protos.GetAllByGroupRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetAllTripsByGroup, null, options, request);
       }
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::TrackYourTripGRPC.SharedProtos.Protos.CreateTripResponse CreateTrip(global::TrackYourTripGRPC.SharedProtos.Protos.CreateTripRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))

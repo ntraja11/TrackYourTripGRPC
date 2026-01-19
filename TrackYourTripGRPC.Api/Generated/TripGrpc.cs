@@ -54,6 +54,10 @@ namespace TrackYourTripGRPC.SharedProtos.Protos {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::TrackYourTripGRPC.SharedProtos.Protos.GetAllTripsResponse> __Marshaller_trip_GetAllTripsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::TrackYourTripGRPC.SharedProtos.Protos.GetAllTripsResponse.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::TrackYourTripGRPC.SharedProtos.Protos.GetAllByGroupRequest> __Marshaller_trip_GetAllByGroupRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::TrackYourTripGRPC.SharedProtos.Protos.GetAllByGroupRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::TrackYourTripGRPC.SharedProtos.Protos.GetAllByGroupResponse> __Marshaller_trip_GetAllByGroupResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::TrackYourTripGRPC.SharedProtos.Protos.GetAllByGroupResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::TrackYourTripGRPC.SharedProtos.Protos.CreateTripRequest> __Marshaller_trip_CreateTripRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::TrackYourTripGRPC.SharedProtos.Protos.CreateTripRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::TrackYourTripGRPC.SharedProtos.Protos.CreateTripResponse> __Marshaller_trip_CreateTripResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::TrackYourTripGRPC.SharedProtos.Protos.CreateTripResponse.Parser));
@@ -81,6 +85,14 @@ namespace TrackYourTripGRPC.SharedProtos.Protos {
         "GetAllTrips",
         __Marshaller_google_protobuf_Empty,
         __Marshaller_trip_GetAllTripsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::TrackYourTripGRPC.SharedProtos.Protos.GetAllByGroupRequest, global::TrackYourTripGRPC.SharedProtos.Protos.GetAllByGroupResponse> __Method_GetAllTripsByGroup = new grpc::Method<global::TrackYourTripGRPC.SharedProtos.Protos.GetAllByGroupRequest, global::TrackYourTripGRPC.SharedProtos.Protos.GetAllByGroupResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetAllTripsByGroup",
+        __Marshaller_trip_GetAllByGroupRequest,
+        __Marshaller_trip_GetAllByGroupResponse);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::TrackYourTripGRPC.SharedProtos.Protos.CreateTripRequest, global::TrackYourTripGRPC.SharedProtos.Protos.CreateTripResponse> __Method_CreateTrip = new grpc::Method<global::TrackYourTripGRPC.SharedProtos.Protos.CreateTripRequest, global::TrackYourTripGRPC.SharedProtos.Protos.CreateTripResponse>(
@@ -129,6 +141,12 @@ namespace TrackYourTripGRPC.SharedProtos.Protos {
       }
 
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::TrackYourTripGRPC.SharedProtos.Protos.GetAllByGroupResponse> GetAllTripsByGroup(global::TrackYourTripGRPC.SharedProtos.Protos.GetAllByGroupRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::TrackYourTripGRPC.SharedProtos.Protos.CreateTripResponse> CreateTrip(global::TrackYourTripGRPC.SharedProtos.Protos.CreateTripRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
@@ -156,6 +174,7 @@ namespace TrackYourTripGRPC.SharedProtos.Protos {
       return grpc::ServerServiceDefinition.CreateBuilder()
           .AddMethod(__Method_GetTrip, serviceImpl.GetTrip)
           .AddMethod(__Method_GetAllTrips, serviceImpl.GetAllTrips)
+          .AddMethod(__Method_GetAllTripsByGroup, serviceImpl.GetAllTripsByGroup)
           .AddMethod(__Method_CreateTrip, serviceImpl.CreateTrip)
           .AddMethod(__Method_UpdateTrip, serviceImpl.UpdateTrip)
           .AddMethod(__Method_DeleteTrip, serviceImpl.DeleteTrip).Build();
@@ -170,6 +189,7 @@ namespace TrackYourTripGRPC.SharedProtos.Protos {
     {
       serviceBinder.AddMethod(__Method_GetTrip, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::TrackYourTripGRPC.SharedProtos.Protos.GetTripRequest, global::TrackYourTripGRPC.SharedProtos.Protos.GetTripResponse>(serviceImpl.GetTrip));
       serviceBinder.AddMethod(__Method_GetAllTrips, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Protobuf.WellKnownTypes.Empty, global::TrackYourTripGRPC.SharedProtos.Protos.GetAllTripsResponse>(serviceImpl.GetAllTrips));
+      serviceBinder.AddMethod(__Method_GetAllTripsByGroup, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::TrackYourTripGRPC.SharedProtos.Protos.GetAllByGroupRequest, global::TrackYourTripGRPC.SharedProtos.Protos.GetAllByGroupResponse>(serviceImpl.GetAllTripsByGroup));
       serviceBinder.AddMethod(__Method_CreateTrip, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::TrackYourTripGRPC.SharedProtos.Protos.CreateTripRequest, global::TrackYourTripGRPC.SharedProtos.Protos.CreateTripResponse>(serviceImpl.CreateTrip));
       serviceBinder.AddMethod(__Method_UpdateTrip, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::TrackYourTripGRPC.SharedProtos.Protos.UpdateTripRequest, global::TrackYourTripGRPC.SharedProtos.Protos.UpdateTripResponse>(serviceImpl.UpdateTrip));
       serviceBinder.AddMethod(__Method_DeleteTrip, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::TrackYourTripGRPC.SharedProtos.Protos.DeleteTripRequest, global::TrackYourTripGRPC.SharedProtos.Protos.DeleteTripResponse>(serviceImpl.DeleteTrip));

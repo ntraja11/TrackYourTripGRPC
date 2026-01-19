@@ -41,12 +41,12 @@ public static class MauiProgram
 
         builder.Services.AddTransient<MembersPage>();
         builder.Services.AddSingleton<MembersViewModel>();
+        builder.Services.AddTransient<MemberDetailViewModel>();
 
         builder.Services.AddTransient<ExpenseUpsertPage>();
         builder.Services.AddTransient<ExpenseViewModel>();
 
         builder.Services.AddTransient<AppShell>();
-        //builder.Services.AddSingleton<App>();
 
 #if DEBUG
         builder.Logging.AddDebug();

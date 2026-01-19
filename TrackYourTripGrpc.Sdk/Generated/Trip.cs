@@ -30,36 +30,40 @@ namespace TrackYourTripGRPC.SharedProtos.Protos {
             "b24YAyABKAkSLQoJc3RhcnREYXRlGAQgASgLMhouZ29vZ2xlLnByb3RvYnVm",
             "LlRpbWVzdGFtcBIrCgdlbmREYXRlGAUgASgLMhouZ29vZ2xlLnByb3RvYnVm",
             "LlRpbWVzdGFtcBIMCgRmcm9tGAYgASgJEgoKAnRvGAcgASgJEhQKDHRvdGFs",
-            "RXhwZW5zZRgIIAEoCRIgCgZzdGF0dXMYCSABKA4yEC50cmlwLlRyaXBTdGF0",
+            "RXhwZW5zZRgIIAEoARIgCgZzdGF0dXMYCSABKA4yEC50cmlwLlRyaXBTdGF0",
             "dXMSDQoFbm90ZXMYCiABKAkSGgoSY3JlYXRlZEJ5VXNlckVtYWlsGAsgASgJ",
             "Eg8KB2dyb3VwSWQYDCABKAUiHAoOR2V0VHJpcFJlcXVlc3QSCgoCaWQYASAB",
             "KAUiMQoPR2V0VHJpcFJlc3BvbnNlEh4KBHRyaXAYASABKAsyEC50cmlwLlRy",
             "aXBEZXRhaWwiNgoTR2V0QWxsVHJpcHNSZXNwb25zZRIfCgV0cmlwcxgBIAMo",
-            "CzIQLnRyaXAuVHJpcERldGFpbCLpAQoRQ3JlYXRlVHJpcFJlcXVlc3QSDQoF",
-            "dGl0bGUYASABKAkSEwoLZGVzY3JpcHRpb24YAiABKAkSLQoJc3RhcnREYXRl",
-            "GAMgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIrCgdlbmREYXRl",
-            "GAQgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIMCgRmcm9tGAUg",
-            "ASgJEgoKAnRvGAYgASgJEg0KBW5vdGVzGAcgASgJEhoKEmNyZWF0ZWRCeVVz",
-            "ZXJFbWFpbBgIIAEoCRIPCgdncm91cElkGAkgASgFIjQKEkNyZWF0ZVRyaXBS",
-            "ZXNwb25zZRIeCgR0cmlwGAEgASgLMhAudHJpcC5UcmlwRGV0YWlsIuoBChFV",
-            "cGRhdGVUcmlwUmVxdWVzdBIKCgJpZBgBIAEoBRINCgV0aXRsZRgCIAEoCRIT",
-            "CgtkZXNjcmlwdGlvbhgDIAEoCRItCglzdGFydERhdGUYBCABKAsyGi5nb29n",
-            "bGUucHJvdG9idWYuVGltZXN0YW1wEisKB2VuZERhdGUYBSABKAsyGi5nb29n",
-            "bGUucHJvdG9idWYuVGltZXN0YW1wEgwKBGZyb20YBiABKAkSCgoCdG8YByAB",
-            "KAkSIAoGc3RhdHVzGAggASgOMhAudHJpcC5UcmlwU3RhdHVzEg0KBW5vdGVz",
-            "GAkgASgJIjQKElVwZGF0ZVRyaXBSZXNwb25zZRIeCgR0cmlwGAEgASgLMhAu",
-            "dHJpcC5UcmlwRGV0YWlsIh8KEURlbGV0ZVRyaXBSZXF1ZXN0EgoKAmlkGAEg",
-            "ASgFIiUKEkRlbGV0ZVRyaXBSZXNwb25zZRIPCgdzdWNjZXNzGAEgASgIKkQK",
-            "ClRyaXBTdGF0dXMSCwoHUExBTk5FRBAAEgsKB09OR09JTkcQARINCglDT01Q",
-            "TEVURUQQAhINCglDQU5DRUxMRUQQAzLDAgoEVHJpcBI2CgdHZXRUcmlwEhQu",
-            "dHJpcC5HZXRUcmlwUmVxdWVzdBoVLnRyaXAuR2V0VHJpcFJlc3BvbnNlEkAK",
-            "C0dldEFsbFRyaXBzEhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5GhkudHJpcC5H",
-            "ZXRBbGxUcmlwc1Jlc3BvbnNlEj8KCkNyZWF0ZVRyaXASFy50cmlwLkNyZWF0",
-            "ZVRyaXBSZXF1ZXN0GhgudHJpcC5DcmVhdGVUcmlwUmVzcG9uc2USPwoKVXBk",
-            "YXRlVHJpcBIXLnRyaXAuVXBkYXRlVHJpcFJlcXVlc3QaGC50cmlwLlVwZGF0",
-            "ZVRyaXBSZXNwb25zZRI/CgpEZWxldGVUcmlwEhcudHJpcC5EZWxldGVUcmlw",
-            "UmVxdWVzdBoYLnRyaXAuRGVsZXRlVHJpcFJlc3BvbnNlQiiqAiVUcmFja1lv",
-            "dXJUcmlwR1JQQy5TaGFyZWRQcm90b3MuUHJvdG9zYgZwcm90bzM="));
+            "CzIQLnRyaXAuVHJpcERldGFpbCInChRHZXRBbGxCeUdyb3VwUmVxdWVzdBIP",
+            "Cgdncm91cElkGAEgASgFIjgKFUdldEFsbEJ5R3JvdXBSZXNwb25zZRIfCgV0",
+            "cmlwcxgBIAMoCzIQLnRyaXAuVHJpcERldGFpbCLpAQoRQ3JlYXRlVHJpcFJl",
+            "cXVlc3QSDQoFdGl0bGUYASABKAkSEwoLZGVzY3JpcHRpb24YAiABKAkSLQoJ",
+            "c3RhcnREYXRlGAMgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIr",
+            "CgdlbmREYXRlGAQgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIM",
+            "CgRmcm9tGAUgASgJEgoKAnRvGAYgASgJEg0KBW5vdGVzGAcgASgJEhoKEmNy",
+            "ZWF0ZWRCeVVzZXJFbWFpbBgIIAEoCRIPCgdncm91cElkGAkgASgFIjQKEkNy",
+            "ZWF0ZVRyaXBSZXNwb25zZRIeCgR0cmlwGAEgASgLMhAudHJpcC5UcmlwRGV0",
+            "YWlsIuoBChFVcGRhdGVUcmlwUmVxdWVzdBIKCgJpZBgBIAEoBRINCgV0aXRs",
+            "ZRgCIAEoCRITCgtkZXNjcmlwdGlvbhgDIAEoCRItCglzdGFydERhdGUYBCAB",
+            "KAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEisKB2VuZERhdGUYBSAB",
+            "KAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEgwKBGZyb20YBiABKAkS",
+            "CgoCdG8YByABKAkSIAoGc3RhdHVzGAggASgOMhAudHJpcC5UcmlwU3RhdHVz",
+            "Eg0KBW5vdGVzGAkgASgJIjQKElVwZGF0ZVRyaXBSZXNwb25zZRIeCgR0cmlw",
+            "GAEgASgLMhAudHJpcC5UcmlwRGV0YWlsIh8KEURlbGV0ZVRyaXBSZXF1ZXN0",
+            "EgoKAmlkGAEgASgFIiUKEkRlbGV0ZVRyaXBSZXNwb25zZRIPCgdzdWNjZXNz",
+            "GAEgASgIKkQKClRyaXBTdGF0dXMSCwoHUExBTk5FRBAAEgsKB09OR09JTkcQ",
+            "ARINCglDT01QTEVURUQQAhINCglDQU5DRUxMRUQQAzKSAwoEVHJpcBI2CgdH",
+            "ZXRUcmlwEhQudHJpcC5HZXRUcmlwUmVxdWVzdBoVLnRyaXAuR2V0VHJpcFJl",
+            "c3BvbnNlEkAKC0dldEFsbFRyaXBzEhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5",
+            "GhkudHJpcC5HZXRBbGxUcmlwc1Jlc3BvbnNlEk0KEkdldEFsbFRyaXBzQnlH",
+            "cm91cBIaLnRyaXAuR2V0QWxsQnlHcm91cFJlcXVlc3QaGy50cmlwLkdldEFs",
+            "bEJ5R3JvdXBSZXNwb25zZRI/CgpDcmVhdGVUcmlwEhcudHJpcC5DcmVhdGVU",
+            "cmlwUmVxdWVzdBoYLnRyaXAuQ3JlYXRlVHJpcFJlc3BvbnNlEj8KClVwZGF0",
+            "ZVRyaXASFy50cmlwLlVwZGF0ZVRyaXBSZXF1ZXN0GhgudHJpcC5VcGRhdGVU",
+            "cmlwUmVzcG9uc2USPwoKRGVsZXRlVHJpcBIXLnRyaXAuRGVsZXRlVHJpcFJl",
+            "cXVlc3QaGC50cmlwLkRlbGV0ZVRyaXBSZXNwb25zZUIoqgIlVHJhY2tZb3Vy",
+            "VHJpcEdSUEMuU2hhcmVkUHJvdG9zLlByb3Rvc2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::TrackYourTripGRPC.SharedProtos.Protos.TripStatus), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -67,6 +71,8 @@ namespace TrackYourTripGRPC.SharedProtos.Protos {
             new pbr::GeneratedClrTypeInfo(typeof(global::TrackYourTripGRPC.SharedProtos.Protos.GetTripRequest), global::TrackYourTripGRPC.SharedProtos.Protos.GetTripRequest.Parser, new[]{ "Id" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::TrackYourTripGRPC.SharedProtos.Protos.GetTripResponse), global::TrackYourTripGRPC.SharedProtos.Protos.GetTripResponse.Parser, new[]{ "Trip" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::TrackYourTripGRPC.SharedProtos.Protos.GetAllTripsResponse), global::TrackYourTripGRPC.SharedProtos.Protos.GetAllTripsResponse.Parser, new[]{ "Trips" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::TrackYourTripGRPC.SharedProtos.Protos.GetAllByGroupRequest), global::TrackYourTripGRPC.SharedProtos.Protos.GetAllByGroupRequest.Parser, new[]{ "GroupId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::TrackYourTripGRPC.SharedProtos.Protos.GetAllByGroupResponse), global::TrackYourTripGRPC.SharedProtos.Protos.GetAllByGroupResponse.Parser, new[]{ "Trips" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::TrackYourTripGRPC.SharedProtos.Protos.CreateTripRequest), global::TrackYourTripGRPC.SharedProtos.Protos.CreateTripRequest.Parser, new[]{ "Title", "Description", "StartDate", "EndDate", "From", "To", "Notes", "CreatedByUserEmail", "GroupId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::TrackYourTripGRPC.SharedProtos.Protos.CreateTripResponse), global::TrackYourTripGRPC.SharedProtos.Protos.CreateTripResponse.Parser, new[]{ "Trip" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::TrackYourTripGRPC.SharedProtos.Protos.UpdateTripRequest), global::TrackYourTripGRPC.SharedProtos.Protos.UpdateTripRequest.Parser, new[]{ "Id", "Title", "Description", "StartDate", "EndDate", "From", "To", "Status", "Notes" }, null, null, null, null),
@@ -231,13 +237,13 @@ namespace TrackYourTripGRPC.SharedProtos.Protos {
 
     /// <summary>Field number for the "totalExpense" field.</summary>
     public const int TotalExpenseFieldNumber = 8;
-    private string totalExpense_ = "";
+    private double totalExpense_;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
-    public string TotalExpense {
+    public double TotalExpense {
       get { return totalExpense_; }
       set {
-        totalExpense_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        totalExpense_ = value;
       }
     }
 
@@ -311,7 +317,7 @@ namespace TrackYourTripGRPC.SharedProtos.Protos {
       if (!object.Equals(EndDate, other.EndDate)) return false;
       if (From != other.From) return false;
       if (To != other.To) return false;
-      if (TotalExpense != other.TotalExpense) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(TotalExpense, other.TotalExpense)) return false;
       if (Status != other.Status) return false;
       if (Notes != other.Notes) return false;
       if (CreatedByUserEmail != other.CreatedByUserEmail) return false;
@@ -330,7 +336,7 @@ namespace TrackYourTripGRPC.SharedProtos.Protos {
       if (endDate_ != null) hash ^= EndDate.GetHashCode();
       if (From.Length != 0) hash ^= From.GetHashCode();
       if (To.Length != 0) hash ^= To.GetHashCode();
-      if (TotalExpense.Length != 0) hash ^= TotalExpense.GetHashCode();
+      if (TotalExpense != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(TotalExpense);
       if (Status != global::TrackYourTripGRPC.SharedProtos.Protos.TripStatus.Planned) hash ^= Status.GetHashCode();
       if (Notes.Length != 0) hash ^= Notes.GetHashCode();
       if (CreatedByUserEmail.Length != 0) hash ^= CreatedByUserEmail.GetHashCode();
@@ -381,9 +387,9 @@ namespace TrackYourTripGRPC.SharedProtos.Protos {
         output.WriteRawTag(58);
         output.WriteString(To);
       }
-      if (TotalExpense.Length != 0) {
-        output.WriteRawTag(66);
-        output.WriteString(TotalExpense);
+      if (TotalExpense != 0D) {
+        output.WriteRawTag(65);
+        output.WriteDouble(TotalExpense);
       }
       if (Status != global::TrackYourTripGRPC.SharedProtos.Protos.TripStatus.Planned) {
         output.WriteRawTag(72);
@@ -439,9 +445,9 @@ namespace TrackYourTripGRPC.SharedProtos.Protos {
         output.WriteRawTag(58);
         output.WriteString(To);
       }
-      if (TotalExpense.Length != 0) {
-        output.WriteRawTag(66);
-        output.WriteString(TotalExpense);
+      if (TotalExpense != 0D) {
+        output.WriteRawTag(65);
+        output.WriteDouble(TotalExpense);
       }
       if (Status != global::TrackYourTripGRPC.SharedProtos.Protos.TripStatus.Planned) {
         output.WriteRawTag(72);
@@ -490,8 +496,8 @@ namespace TrackYourTripGRPC.SharedProtos.Protos {
       if (To.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(To);
       }
-      if (TotalExpense.Length != 0) {
-        size += 1 + pb::CodedOutputStream.ComputeStringSize(TotalExpense);
+      if (TotalExpense != 0D) {
+        size += 1 + 8;
       }
       if (Status != global::TrackYourTripGRPC.SharedProtos.Protos.TripStatus.Planned) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Status);
@@ -544,7 +550,7 @@ namespace TrackYourTripGRPC.SharedProtos.Protos {
       if (other.To.Length != 0) {
         To = other.To;
       }
-      if (other.TotalExpense.Length != 0) {
+      if (other.TotalExpense != 0D) {
         TotalExpense = other.TotalExpense;
       }
       if (other.Status != global::TrackYourTripGRPC.SharedProtos.Protos.TripStatus.Planned) {
@@ -612,8 +618,8 @@ namespace TrackYourTripGRPC.SharedProtos.Protos {
             To = input.ReadString();
             break;
           }
-          case 66: {
-            TotalExpense = input.ReadString();
+          case 65: {
+            TotalExpense = input.ReadDouble();
             break;
           }
           case 72: {
@@ -685,8 +691,8 @@ namespace TrackYourTripGRPC.SharedProtos.Protos {
             To = input.ReadString();
             break;
           }
-          case 66: {
-            TotalExpense = input.ReadString();
+          case 65: {
+            TotalExpense = input.ReadDouble();
             break;
           }
           case 72: {
@@ -1305,6 +1311,391 @@ namespace TrackYourTripGRPC.SharedProtos.Protos {
   }
 
   [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class GetAllByGroupRequest : pb::IMessage<GetAllByGroupRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<GetAllByGroupRequest> _parser = new pb::MessageParser<GetAllByGroupRequest>(() => new GetAllByGroupRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<GetAllByGroupRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::TrackYourTripGRPC.SharedProtos.Protos.TripReflection.Descriptor.MessageTypes[4]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GetAllByGroupRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GetAllByGroupRequest(GetAllByGroupRequest other) : this() {
+      groupId_ = other.groupId_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GetAllByGroupRequest Clone() {
+      return new GetAllByGroupRequest(this);
+    }
+
+    /// <summary>Field number for the "groupId" field.</summary>
+    public const int GroupIdFieldNumber = 1;
+    private int groupId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int GroupId {
+      get { return groupId_; }
+      set {
+        groupId_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as GetAllByGroupRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(GetAllByGroupRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (GroupId != other.GroupId) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (GroupId != 0) hash ^= GroupId.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (GroupId != 0) {
+        output.WriteRawTag(8);
+        output.WriteInt32(GroupId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (GroupId != 0) {
+        output.WriteRawTag(8);
+        output.WriteInt32(GroupId);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (GroupId != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(GroupId);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(GetAllByGroupRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.GroupId != 0) {
+        GroupId = other.GroupId;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            GroupId = input.ReadInt32();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            GroupId = input.ReadInt32();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
+  public sealed partial class GetAllByGroupResponse : pb::IMessage<GetAllByGroupResponse>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<GetAllByGroupResponse> _parser = new pb::MessageParser<GetAllByGroupResponse>(() => new GetAllByGroupResponse());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<GetAllByGroupResponse> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::TrackYourTripGRPC.SharedProtos.Protos.TripReflection.Descriptor.MessageTypes[5]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GetAllByGroupResponse() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GetAllByGroupResponse(GetAllByGroupResponse other) : this() {
+      trips_ = other.trips_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GetAllByGroupResponse Clone() {
+      return new GetAllByGroupResponse(this);
+    }
+
+    /// <summary>Field number for the "trips" field.</summary>
+    public const int TripsFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::TrackYourTripGRPC.SharedProtos.Protos.TripDetail> _repeated_trips_codec
+        = pb::FieldCodec.ForMessage(10, global::TrackYourTripGRPC.SharedProtos.Protos.TripDetail.Parser);
+    private readonly pbc::RepeatedField<global::TrackYourTripGRPC.SharedProtos.Protos.TripDetail> trips_ = new pbc::RepeatedField<global::TrackYourTripGRPC.SharedProtos.Protos.TripDetail>();
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::TrackYourTripGRPC.SharedProtos.Protos.TripDetail> Trips {
+      get { return trips_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as GetAllByGroupResponse);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(GetAllByGroupResponse other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!trips_.Equals(other.trips_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= trips_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      trips_.WriteTo(output, _repeated_trips_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      trips_.WriteTo(ref output, _repeated_trips_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      size += trips_.CalculateSize(_repeated_trips_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(GetAllByGroupResponse other) {
+      if (other == null) {
+        return;
+      }
+      trips_.Add(other.trips_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            trips_.AddEntriesFrom(input, _repeated_trips_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+      if ((tag & 7) == 4) {
+        // Abort on any end group tag.
+        return;
+      }
+      switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            trips_.AddEntriesFrom(ref input, _repeated_trips_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  [global::System.Diagnostics.DebuggerDisplayAttribute("{ToString(),nq}")]
   public sealed partial class CreateTripRequest : pb::IMessage<CreateTripRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       , pb::IBufferMessage
@@ -1319,7 +1710,7 @@ namespace TrackYourTripGRPC.SharedProtos.Protos {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::TrackYourTripGRPC.SharedProtos.Protos.TripReflection.Descriptor.MessageTypes[4]; }
+      get { return global::TrackYourTripGRPC.SharedProtos.Protos.TripReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1831,7 +2222,7 @@ namespace TrackYourTripGRPC.SharedProtos.Protos {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::TrackYourTripGRPC.SharedProtos.Protos.TripReflection.Descriptor.MessageTypes[5]; }
+      get { return global::TrackYourTripGRPC.SharedProtos.Protos.TripReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2038,7 +2429,7 @@ namespace TrackYourTripGRPC.SharedProtos.Protos {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::TrackYourTripGRPC.SharedProtos.Protos.TripReflection.Descriptor.MessageTypes[6]; }
+      get { return global::TrackYourTripGRPC.SharedProtos.Protos.TripReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2550,7 +2941,7 @@ namespace TrackYourTripGRPC.SharedProtos.Protos {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::TrackYourTripGRPC.SharedProtos.Protos.TripReflection.Descriptor.MessageTypes[7]; }
+      get { return global::TrackYourTripGRPC.SharedProtos.Protos.TripReflection.Descriptor.MessageTypes[9]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2757,7 +3148,7 @@ namespace TrackYourTripGRPC.SharedProtos.Protos {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::TrackYourTripGRPC.SharedProtos.Protos.TripReflection.Descriptor.MessageTypes[8]; }
+      get { return global::TrackYourTripGRPC.SharedProtos.Protos.TripReflection.Descriptor.MessageTypes[10]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2955,7 +3346,7 @@ namespace TrackYourTripGRPC.SharedProtos.Protos {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::TrackYourTripGRPC.SharedProtos.Protos.TripReflection.Descriptor.MessageTypes[9]; }
+      get { return global::TrackYourTripGRPC.SharedProtos.Protos.TripReflection.Descriptor.MessageTypes[11]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

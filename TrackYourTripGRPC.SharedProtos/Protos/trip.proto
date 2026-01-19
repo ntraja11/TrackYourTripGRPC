@@ -10,6 +10,7 @@ package trip;
 service Trip {
   rpc GetTrip (GetTripRequest) returns (GetTripResponse);
   rpc GetAllTrips (google.protobuf.Empty) returns (GetAllTripsResponse);
+  rpc GetAllTripsByGroup (GetAllByGroupRequest) returns (GetAllByGroupResponse);
   rpc CreateTrip (CreateTripRequest) returns (CreateTripResponse);
   rpc UpdateTrip (UpdateTripRequest) returns (UpdateTripResponse);
   rpc DeleteTrip (DeleteTripRequest) returns (DeleteTripResponse);
@@ -26,13 +27,13 @@ message TripDetail {
   string from = 6;
   string to = 7;
 
-  string totalExpense = 8;
-
+  double totalExpense = 8;
+  
   TripStatus status = 9;
   string notes = 10;
 
   string createdByUserEmail = 11;
-  int32 groupId	= 12;
+  int32 groupId	= 12;  
 }
 
 message GetTripRequest {
@@ -45,6 +46,14 @@ message GetTripResponse {
 
 message GetAllTripsResponse {
   repeated TripDetail trips = 1;
+}
+
+message GetAllByGroupRequest{
+	int32 groupId = 1;
+}
+
+message GetAllByGroupResponse{
+	repeated TripDetail trips = 1;
 }
 
 message CreateTripRequest {

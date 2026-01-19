@@ -70,9 +70,33 @@ public partial class TripDetailPage : ContentPage
 
     private async void AddExpense_ClickedEvent(object sender, EventArgs e)
     {
+        //var expensePage = _services.GetRequiredService<ExpenseUpsertPage>();
+        //var expenseDetail = new ExpenseDetail { TripId = _tripId };
+        //expensePage.InitializeForEdit(expenseDetail);
+        //await Navigation.PushAsync(expensePage);
+        await OpenExpensePageAsync();
+
+    }
+
+    private async Task OpenExpensePageAsync(ExpenseDetail? expense = null)
+    {
         var expensePage = _services.GetRequiredService<ExpenseUpsertPage>();
-        var expenseDetail = new ExpenseDetail { TripId = _tripId };
-        expensePage.InitializeForEdit(expenseDetail);
+
+        if (expense == null)
+            expense = new ExpenseDetail { TripId = _tripId };
+
+        expensePage.InitializeForEdit(expense);
         await Navigation.PushAsync(expensePage);
     }
+
+    private async void OnExpenseSelected(object sender, SelectionChangedEventArgs e)
+    {
+        if (e.CurrentSelection.FirstOrDefault() is ExpenseDetail selectedExpense)
+        {
+            await OpenExpensePageAsync(selectedExpense);
+        }
+
+        ((CollectionView)sender).SelectedItem = null;
+    }
+
 }

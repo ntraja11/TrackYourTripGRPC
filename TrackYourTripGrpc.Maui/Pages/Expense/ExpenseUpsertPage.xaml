@@ -9,28 +9,28 @@
 
     <VerticalStackLayout Padding="20" Spacing="20">
         <Label 
-        Text="Expense Upsert"
-        FontSize="20" FontAttributes="Bold"
-        VerticalOptions="Center" 
-        HorizontalOptions="Center" />
+            Text="Expense Upsert"
+            FontSize="20" FontAttributes="Bold"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
 
         <Label Text="{Binding ErrorMessage}" TextColor="Red"
             IsVisible="{Binding ShowErrorMessage}"/>
 
         <Grid ColumnDefinitions="Auto, *" ColumnSpacing="10" RowSpacing="15"
-          RowDefinitions="Auto, Auto, Auto, Auto, Auto, Auto, Auto, Auto, Auto">
+          RowDefinitions="Auto, Auto, Auto, Auto, Auto, Auto, Auto">
 
             <Label Text="Title" Grid.Row="0" />
             <Entry Text="{Binding Title}" Grid.Row="0" Grid.Column="1" />
 
-            <Label Text="Description" Grid.Row="2" />
-            <Entry Text="{Binding Description}" Grid.Row="2" Grid.Column="1" />
+            <!--<Label Text="Description" Grid.Row="2" />
+            <Entry Text="{Binding Description}" Grid.Row="2" Grid.Column="1" />-->
 
-            <Label Text="Amount" Grid.Row="4" />
-            <Entry Text="{Binding Amount}" Grid.Row="4" Grid.Column="1" />
+            <Label Text="Amount" Grid.Row="2" />
+            <Entry Text="{Binding Amount}" Grid.Row="2" Grid.Column="1" />
 
-            <Label Text="Paid By" Grid.Row="6" />
-            <Picker Grid.Row="6" Grid.Column="1"
+            <Label Text="Paid By" Grid.Row="4" />
+            <Picker Grid.Row="4" Grid.Column="1" FontSize="18"
                 Title="Select member" ItemsSource="{Binding TripMembers}"
                 ItemDisplayBinding="{Binding Name}"
                 SelectedItem="{Binding SelectedMember, Mode=TwoWay}" />

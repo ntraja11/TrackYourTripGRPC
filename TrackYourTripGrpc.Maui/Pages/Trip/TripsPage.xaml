@@ -44,7 +44,7 @@
 
 
         <Border BackgroundColor="{StaticResource PrimaryLight}"
-                StrokeThickness="0"
+                IsVisible="{Binding HasTrips}" StrokeThickness="0"
                 StrokeShape="RoundRectangle 10">
             <VerticalStackLayout>
 
@@ -94,7 +94,9 @@
 
             </VerticalStackLayout>
         </Border>
-        
+
+        <Label Text="No trips added yet." Padding="10, 20" FontSize="20"
+               IsVisible="{Binding NoTrips}"/>
 
     </VerticalStackLayout>
 

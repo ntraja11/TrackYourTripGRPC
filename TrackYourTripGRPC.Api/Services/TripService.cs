@@ -105,6 +105,14 @@ public class TripService : Trip.TripBase
         return response;
     }
 
+    public override async Task<GetAllByGroupResponse> GetAllTripsByGroup(GetAllByGroupRequest request, ServerCallContext context)
+    {
+        var response = new GetAllByGroupResponse();
+        var trips = await _dbContext.Trips.Where(t => t.GroupId == request.GroupId).ToListAsync();
+        response.Trips.AddRange(_mapper.Map<IEnumerable<TripDetail>>(trips));
+        return response;
+    }
+
 
 
 }

@@ -1,6 +1,7 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using System.Collections.ObjectModel;
+using TrackYourTripGrpc.Maui.Utilities;
 using TrackYourTripGrpc.Sdk.Interfaces;
 using TrackYourTripGRPC.SharedProtos.Protos;
 
@@ -10,6 +11,13 @@ public partial class TripsViewModel : ObservableObject
 {
     [ObservableProperty]
     private ObservableCollection<TripDetail> trips = new();
+
+    [ObservableProperty]
+    private bool hasTrips;
+
+    [ObservableProperty]
+    private bool noTrips;
+        
 
     [ObservableProperty]
     private bool isRefreshing;
@@ -49,11 +57,15 @@ public partial class TripsViewModel : ObservableObject
         try
         {
             IsBusy = true;
-            var tripList = await _tripService.GetAllTripsAsync(cancellationToken);
+            //var tripList = await _tripService.GetAllTripsAsync(cancellationToken);
+            var tripList = await _tripService.GetAllTripsByGroupAsync(AuthViewState.GroupId ?? 0, cancellationToken);
 
             Trips.Clear();
             foreach (var trip in tripList)
                 Trips.Add(trip);
+
+            HasTrips = Trips.Any() == true;
+            NoTrips = !HasTrips;
         }
         finally
         {

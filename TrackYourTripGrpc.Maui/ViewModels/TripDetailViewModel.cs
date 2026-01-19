@@ -14,15 +14,24 @@ public partial class TripDetailViewModel : ObservableObject
     private TripDetail? trip;
 
     [ObservableProperty]
-    private ObservableCollection<MemberDetail> tripMembers = new();
+    private ObservableCollection<MemberDetailViewModel> tripMembers = new();
+    //private ObservableCollection<MemberDetail> tripMembers = new();
 
     [ObservableProperty]
     private ObservableCollection<ExpenseDetail> tripExpenses = new();
 
     [ObservableProperty]
-    public bool hasExpenses;
+    private bool hasExpenses;
     [ObservableProperty]
-    public bool hasMembers;
+    private bool hasMembers;
+
+    [ObservableProperty]
+    private int singleMemberShare;
+
+    [ObservableProperty]
+    private int totalTripExpense;
+
+
 
     public TripDetailViewModel(ITripGrpcService tripService, IMemberGrpcService memberService,
         IExpenseGrpcService expenseService)
@@ -34,7 +43,7 @@ public partial class TripDetailViewModel : ObservableObject
 
     public async Task InitializeAsync(int tripId, CancellationToken cancellationToken)
     {
-        Trip = null;
+        //Trip = null;
         Trip = await _tripService.GetTripAsync(tripId, cancellationToken);
 
         var request = new GetAllMembersByTripRequest { TripId = tripId };
@@ -42,7 +51,7 @@ public partial class TripDetailViewModel : ObservableObject
 
         TripMembers.Clear();
         foreach (var member in response.Members)
-            TripMembers.Add(member);
+            TripMembers.Add(new MemberDetailViewModel(member));
 
         var expenses = await _expenseService.GetAllExpensesByTripAsync(tripId, cancellationToken);
 
@@ -52,6 +61,29 @@ public partial class TripDetailViewModel : ObservableObject
 
         HasMembers = TripMembers.Any() == true;
         HasExpenses = TripExpenses.Any() == true;
+
+        if (HasExpenses)
+            CalculateTripCost();
+    }
+
+    private void CalculateTripCost()
+    {
+        Trip!.TotalExpense = 0;
+        foreach (var member in TripMembers)
+        {
+            member.TotalTripExpense = TripExpenses.Where(m => m.MemberId == member.Id).Sum(s => s.Amount);
+            Trip.TotalExpense += Convert.ToInt32(member.TotalTripExpense);
+        }
+
+        TotalTripExpense = Convert.ToInt32(Trip.TotalExpense);
+
+        SingleMemberShare = Convert.ToInt32(Trip!.TotalExpense / TripMembers.Count());
+
+        foreach (var member in TripMembers)
+        {
+            member.SingleMemberShare = SingleMemberShare;
+        }
+
     }
 
     public async Task DeleteAsync(CancellationToken cancellationToken = default)

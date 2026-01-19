@@ -24,35 +24,36 @@ namespace TrackYourTripGRPC.SharedProtos.Protos {
     static MemberReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "CgxtZW1iZXIucHJvdG8SBm1lbWJlciJhCgxNZW1iZXJEZXRhaWwSCgoCaWQY",
+            "CgxtZW1iZXIucHJvdG8SBm1lbWJlciJ6CgxNZW1iZXJEZXRhaWwSCgoCaWQY",
             "ASABKAUSDAoEbmFtZRgCIAEoCRINCgVlbWFpbBgDIAEoCRIOCgZ0cmlwSWQY",
-            "BCABKAUSGAoQdG90YWxUcmlwRXhwZW5zZRgFIAEoASIeChBHZXRNZW1iZXJS",
-            "ZXF1ZXN0EgoKAmlkGAEgASgFIjkKEUdldE1lbWJlclJlc3BvbnNlEiQKBm1l",
-            "bWJlchgBIAEoCzIULm1lbWJlci5NZW1iZXJEZXRhaWwiLgobR2V0QWxsTWVt",
-            "YmVyc0J5R3JvdXBSZXF1ZXN0Eg8KB2dyb3VwSWQYASABKAUiRQocR2V0QWxs",
-            "TWVtYmVyc0J5R3JvdXBSZXNwb25zZRIlCgdtZW1iZXJzGAEgAygLMhQubWVt",
-            "YmVyLk1lbWJlckRldGFpbCIsChpHZXRBbGxNZW1iZXJzQnlUcmlwUmVxdWVz",
-            "dBIOCgZ0cmlwSWQYASABKAUiRAobR2V0QWxsTWVtYmVyc0J5VHJpcFJlc3Bv",
-            "bnNlEiUKB21lbWJlcnMYASADKAsyFC5tZW1iZXIuTWVtYmVyRGV0YWlsIj0K",
-            "FENyZWF0ZU1lbWJlcnNSZXF1ZXN0EiUKB21lbWJlcnMYASADKAsyFC5tZW1i",
-            "ZXIuTWVtYmVyRGV0YWlsIigKFUNyZWF0ZU1lbWJlcnNSZXNwb25zZRIPCgdz",
-            "dWNjZXNzGAEgASgIIikKFERlbGV0ZU1lbWJlcnNSZXF1ZXN0EhEKCW1lbWJl",
-            "cklkcxgBIAMoBSIoChVEZWxldGVNZW1iZXJzUmVzcG9uc2USDwoHc3VjY2Vz",
-            "cxgBIAEoCDKpAwoGTWVtYmVyEkAKCUdldE1lbWJlchIYLm1lbWJlci5HZXRN",
-            "ZW1iZXJSZXF1ZXN0GhkubWVtYmVyLkdldE1lbWJlclJlc3BvbnNlEmEKFEdl",
-            "dEFsbE1lbWJlcnNCeUdyb3VwEiMubWVtYmVyLkdldEFsbE1lbWJlcnNCeUdy",
-            "b3VwUmVxdWVzdBokLm1lbWJlci5HZXRBbGxNZW1iZXJzQnlHcm91cFJlc3Bv",
-            "bnNlEl4KE0dldEFsbE1lbWJlcnNCeVRyaXASIi5tZW1iZXIuR2V0QWxsTWVt",
-            "YmVyc0J5VHJpcFJlcXVlc3QaIy5tZW1iZXIuR2V0QWxsTWVtYmVyc0J5VHJp",
-            "cFJlc3BvbnNlEkwKDUNyZWF0ZU1lbWJlcnMSHC5tZW1iZXIuQ3JlYXRlTWVt",
-            "YmVyc1JlcXVlc3QaHS5tZW1iZXIuQ3JlYXRlTWVtYmVyc1Jlc3BvbnNlEkwK",
-            "DURlbGV0ZU1lbWJlcnMSHC5tZW1iZXIuRGVsZXRlTWVtYmVyc1JlcXVlc3Qa",
-            "HS5tZW1iZXIuRGVsZXRlTWVtYmVyc1Jlc3BvbnNlQiiqAiVUcmFja1lvdXJU",
-            "cmlwR1JQQy5TaGFyZWRQcm90b3MuUHJvdG9zYgZwcm90bzM="));
+            "BCABKAUSGAoQdG90YWxUcmlwRXhwZW5zZRgFIAEoARIXCg9zaGFyZURpZmZl",
+            "cmVuY2UYBiABKAEiHgoQR2V0TWVtYmVyUmVxdWVzdBIKCgJpZBgBIAEoBSI5",
+            "ChFHZXRNZW1iZXJSZXNwb25zZRIkCgZtZW1iZXIYASABKAsyFC5tZW1iZXIu",
+            "TWVtYmVyRGV0YWlsIi4KG0dldEFsbE1lbWJlcnNCeUdyb3VwUmVxdWVzdBIP",
+            "Cgdncm91cElkGAEgASgFIkUKHEdldEFsbE1lbWJlcnNCeUdyb3VwUmVzcG9u",
+            "c2USJQoHbWVtYmVycxgBIAMoCzIULm1lbWJlci5NZW1iZXJEZXRhaWwiLAoa",
+            "R2V0QWxsTWVtYmVyc0J5VHJpcFJlcXVlc3QSDgoGdHJpcElkGAEgASgFIkQK",
+            "G0dldEFsbE1lbWJlcnNCeVRyaXBSZXNwb25zZRIlCgdtZW1iZXJzGAEgAygL",
+            "MhQubWVtYmVyLk1lbWJlckRldGFpbCI9ChRDcmVhdGVNZW1iZXJzUmVxdWVz",
+            "dBIlCgdtZW1iZXJzGAEgAygLMhQubWVtYmVyLk1lbWJlckRldGFpbCIoChVD",
+            "cmVhdGVNZW1iZXJzUmVzcG9uc2USDwoHc3VjY2VzcxgBIAEoCCIpChREZWxl",
+            "dGVNZW1iZXJzUmVxdWVzdBIRCgltZW1iZXJJZHMYASADKAUiKAoVRGVsZXRl",
+            "TWVtYmVyc1Jlc3BvbnNlEg8KB3N1Y2Nlc3MYASABKAgyqQMKBk1lbWJlchJA",
+            "CglHZXRNZW1iZXISGC5tZW1iZXIuR2V0TWVtYmVyUmVxdWVzdBoZLm1lbWJl",
+            "ci5HZXRNZW1iZXJSZXNwb25zZRJhChRHZXRBbGxNZW1iZXJzQnlHcm91cBIj",
+            "Lm1lbWJlci5HZXRBbGxNZW1iZXJzQnlHcm91cFJlcXVlc3QaJC5tZW1iZXIu",
+            "R2V0QWxsTWVtYmVyc0J5R3JvdXBSZXNwb25zZRJeChNHZXRBbGxNZW1iZXJz",
+            "QnlUcmlwEiIubWVtYmVyLkdldEFsbE1lbWJlcnNCeVRyaXBSZXF1ZXN0GiMu",
+            "bWVtYmVyLkdldEFsbE1lbWJlcnNCeVRyaXBSZXNwb25zZRJMCg1DcmVhdGVN",
+            "ZW1iZXJzEhwubWVtYmVyLkNyZWF0ZU1lbWJlcnNSZXF1ZXN0Gh0ubWVtYmVy",
+            "LkNyZWF0ZU1lbWJlcnNSZXNwb25zZRJMCg1EZWxldGVNZW1iZXJzEhwubWVt",
+            "YmVyLkRlbGV0ZU1lbWJlcnNSZXF1ZXN0Gh0ubWVtYmVyLkRlbGV0ZU1lbWJl",
+            "cnNSZXNwb25zZUIoqgIlVHJhY2tZb3VyVHJpcEdSUEMuU2hhcmVkUHJvdG9z",
+            "LlByb3Rvc2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::TrackYourTripGRPC.SharedProtos.Protos.MemberDetail), global::TrackYourTripGRPC.SharedProtos.Protos.MemberDetail.Parser, new[]{ "Id", "Name", "Email", "TripId", "TotalTripExpense" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::TrackYourTripGRPC.SharedProtos.Protos.MemberDetail), global::TrackYourTripGRPC.SharedProtos.Protos.MemberDetail.Parser, new[]{ "Id", "Name", "Email", "TripId", "TotalTripExpense", "ShareDifference" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::TrackYourTripGRPC.SharedProtos.Protos.GetMemberRequest), global::TrackYourTripGRPC.SharedProtos.Protos.GetMemberRequest.Parser, new[]{ "Id" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::TrackYourTripGRPC.SharedProtos.Protos.GetMemberResponse), global::TrackYourTripGRPC.SharedProtos.Protos.GetMemberResponse.Parser, new[]{ "Member" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::TrackYourTripGRPC.SharedProtos.Protos.GetAllMembersByGroupRequest), global::TrackYourTripGRPC.SharedProtos.Protos.GetAllMembersByGroupRequest.Parser, new[]{ "GroupId" }, null, null, null, null),
@@ -109,6 +110,7 @@ namespace TrackYourTripGRPC.SharedProtos.Protos {
       email_ = other.email_;
       tripId_ = other.tripId_;
       totalTripExpense_ = other.totalTripExpense_;
+      shareDifference_ = other.shareDifference_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -178,6 +180,18 @@ namespace TrackYourTripGRPC.SharedProtos.Protos {
       }
     }
 
+    /// <summary>Field number for the "shareDifference" field.</summary>
+    public const int ShareDifferenceFieldNumber = 6;
+    private double shareDifference_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public double ShareDifference {
+      get { return shareDifference_; }
+      set {
+        shareDifference_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -198,6 +212,7 @@ namespace TrackYourTripGRPC.SharedProtos.Protos {
       if (Email != other.Email) return false;
       if (TripId != other.TripId) return false;
       if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(TotalTripExpense, other.TotalTripExpense)) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(ShareDifference, other.ShareDifference)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -210,6 +225,7 @@ namespace TrackYourTripGRPC.SharedProtos.Protos {
       if (Email.Length != 0) hash ^= Email.GetHashCode();
       if (TripId != 0) hash ^= TripId.GetHashCode();
       if (TotalTripExpense != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(TotalTripExpense);
+      if (ShareDifference != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(ShareDifference);
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -248,6 +264,10 @@ namespace TrackYourTripGRPC.SharedProtos.Protos {
         output.WriteRawTag(41);
         output.WriteDouble(TotalTripExpense);
       }
+      if (ShareDifference != 0D) {
+        output.WriteRawTag(49);
+        output.WriteDouble(ShareDifference);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -278,6 +298,10 @@ namespace TrackYourTripGRPC.SharedProtos.Protos {
         output.WriteRawTag(41);
         output.WriteDouble(TotalTripExpense);
       }
+      if (ShareDifference != 0D) {
+        output.WriteRawTag(49);
+        output.WriteDouble(ShareDifference);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -301,6 +325,9 @@ namespace TrackYourTripGRPC.SharedProtos.Protos {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(TripId);
       }
       if (TotalTripExpense != 0D) {
+        size += 1 + 8;
+      }
+      if (ShareDifference != 0D) {
         size += 1 + 8;
       }
       if (_unknownFields != null) {
@@ -329,6 +356,9 @@ namespace TrackYourTripGRPC.SharedProtos.Protos {
       }
       if (other.TotalTripExpense != 0D) {
         TotalTripExpense = other.TotalTripExpense;
+      }
+      if (other.ShareDifference != 0D) {
+        ShareDifference = other.ShareDifference;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -369,6 +399,10 @@ namespace TrackYourTripGRPC.SharedProtos.Protos {
             TotalTripExpense = input.ReadDouble();
             break;
           }
+          case 49: {
+            ShareDifference = input.ReadDouble();
+            break;
+          }
         }
       }
     #endif
@@ -406,6 +440,10 @@ namespace TrackYourTripGRPC.SharedProtos.Protos {
           }
           case 41: {
             TotalTripExpense = input.ReadDouble();
+            break;
+          }
+          case 49: {
+            ShareDifference = input.ReadDouble();
             break;
           }
         }
