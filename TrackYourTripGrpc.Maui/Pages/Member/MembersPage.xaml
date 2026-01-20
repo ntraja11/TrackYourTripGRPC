@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="TrackYourTripGrpc.Maui.Pages.Member.MembersPage"
              xmlns:vm="clr-namespace:TrackYourTripGrpc.Maui.ViewModels"
-             xmlns:protos="clr-namespace:TrackYourTripGRPCApi.Protos;assembly=TrackYourTripGrpc.Sdk"
+             xmlns:protos="clr-namespace:TrackYourTripGRPC.SharedProtos.Protos;assembly=TrackYourTripGrpc.Sdk"
              x:DataType="vm:MembersViewModel"             
              >
 

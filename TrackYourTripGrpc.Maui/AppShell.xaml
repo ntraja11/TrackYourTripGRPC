@@ -17,7 +17,10 @@
                VerticalOptions="Center" FontSize="24" />
 
             <Button Text="Logout" Padding="5" Margin="0,0,15,0" x:Name="LogoutButton"
-                FontSize="18" Command="{Binding LogoutCommand}" Grid.Column="1" />
+                FontSize="18" Clicked="LogoutButton_Clicked" Grid.Column="1" />
+
+            <!--<Button Text="Logout" Padding="5" Margin="0,0,15,0" x:Name="LogoutButton"
+    FontSize="18" Command="{Binding LogoutCommand}" Grid.Column="1" />-->
         </Grid>
     </Shell.TitleView>
 
