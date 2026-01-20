@@ -361,3 +361,6 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+/TrackYourTripGRPC.Api/appsettings.Production.json
+/TrackYourTripGRPC.Api/appsettings.Development.json
+/TrackYourTripGRPC.Api/dotnet-tools.json

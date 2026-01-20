@@ -2,6 +2,7 @@
 using TrackYourTripGrpc.Sdk.Interfaces;
 using TrackYourTripGrpc.Sdk.Services;
 using TrackYourTripGRPC.SharedProtos.Protos;
+using Grpc.Net.Client.Web;
 
 namespace TrackYourTripGrpc.Sdk
 {
@@ -29,17 +30,29 @@ namespace TrackYourTripGrpc.Sdk
             {
                 client.Address = new Uri(baseAddress);
             })
-           .ConfigurePrimaryHttpMessageHandler(() =>
-           {
-               return new SocketsHttpHandler
-               {
-                   SslOptions = new System.Net.Security.SslClientAuthenticationOptions
-                   {
-                       RemoteCertificateValidationCallback = (sender, cert, chain, errors) => true
-                   }
-               };
+            .ConfigurePrimaryHttpMessageHandler(() =>
+            {
+                var inner = new SocketsHttpHandler
+                {
+                    SslOptions = new System.Net.Security.SslClientAuthenticationOptions
+                    {
+                        RemoteCertificateValidationCallback = (sender, cert, chain, errors) => true
+                    }
+                };
 
-           });
+                return new GrpcWebHandler(GrpcWebMode.GrpcWebText, inner);
+            });
+           //.ConfigurePrimaryHttpMessageHandler(() =>
+           //{
+           //    return new SocketsHttpHandler
+           //    {
+           //        SslOptions = new System.Net.Security.SslClientAuthenticationOptions
+           //        {
+           //            RemoteCertificateValidationCallback = (sender, cert, chain, errors) => true
+           //        }
+           //    };
+
+           //});
         }
     }
 }

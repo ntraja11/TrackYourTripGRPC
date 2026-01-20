@@ -19,6 +19,22 @@ namespace TrackYourTripGrpc.Maui
             Routing.RegisterRoute(nameof(ExpenseUpsertPage), typeof(ExpenseUpsertPage));
         }
 
+        protected override async void OnAppearing()
+        {
+            base.OnAppearing();
+
+            try
+            {
+                var http = new HttpClient();
+                await http.GetAsync(AppConstants.ApiUrl + "/api/status");
+            }
+            catch
+            {
+                // swallow errors silently — it's just a warm-up
+            }
+        }
+
+
         public Command LogoutCommand => new Command(async () =>
         {
             SecureStorage.Remove(AppConstants.AuthTokenKey);

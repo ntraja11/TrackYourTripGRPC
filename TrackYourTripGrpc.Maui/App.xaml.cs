@@ -1,18 +1,19 @@
-﻿namespace TrackYourTripGrpc.Maui
+﻿using TrackYourTripGrpc.Maui.Utilities;
+
+namespace TrackYourTripGrpc.Maui;
+
+public partial class App : Application
 {
-    public partial class App : Application
+    private readonly IServiceProvider _services;
+    public App(IServiceProvider services)
     {
-        private readonly IServiceProvider _services;
-        public App(IServiceProvider services)
-        {
-            InitializeComponent();
-            _services = services;
-        }
-
-        protected override Window CreateWindow(IActivationState? activationState)
-        {
-            return new Window(_services.GetRequiredService<AppShell>());
-        }
-
+        InitializeComponent();
+        _services = services;
     }
+
+    protected override Window CreateWindow(IActivationState? activationState)
+    {
+        return new Window(_services.GetRequiredService<AppShell>());
+    }
+
 }

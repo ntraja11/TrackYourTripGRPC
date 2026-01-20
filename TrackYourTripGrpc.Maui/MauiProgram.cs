@@ -1,9 +1,11 @@
 ﻿using CommunityToolkit.Maui;
+using Grpc.Net.Client;
 using Microsoft.Extensions.Logging;
 using TrackYourTripGrpc.Maui.Pages.Account;
 using TrackYourTripGrpc.Maui.Pages.Expense;
 using TrackYourTripGrpc.Maui.Pages.Member;
 using TrackYourTripGrpc.Maui.Pages.Trip;
+using TrackYourTripGrpc.Maui.Utilities;
 using TrackYourTripGrpc.Maui.ViewModels;
 using TrackYourTripGrpc.Sdk;
 
@@ -24,8 +26,9 @@ public static class MauiProgram
             })
             .UseMauiCommunityToolkit();
 
-        builder.Services.AddTrackYourTripGrpcSdk("https://10.0.2.2:7089");
-
+        
+        builder.Services.AddTrackYourTripGrpcSdk(AppConstants.ApiUrl);
+        
         builder.Services.AddTransient<LoginPage>();
         builder.Services.AddTransient<RegisterPage>();
         builder.Services.AddTransient<LoginViewModel>();
