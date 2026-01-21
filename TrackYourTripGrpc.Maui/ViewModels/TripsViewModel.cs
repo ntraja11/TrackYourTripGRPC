@@ -17,7 +17,7 @@ public partial class TripsViewModel : ObservableObject
 
     [ObservableProperty]
     private bool noTrips;
-        
+
 
     [ObservableProperty]
     private bool isRefreshing;

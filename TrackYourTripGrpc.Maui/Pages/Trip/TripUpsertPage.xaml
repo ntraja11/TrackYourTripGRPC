@@ -18,8 +18,8 @@
               RowDefinitions="Auto, Auto, Auto, Auto, Auto, Auto, Auto, Auto, Auto">
 
             <Label Text="Title" Grid.Row="0" />
-            <Entry Text="{Binding Title}" Grid.Row="0" Grid.Column="1" />
-
+            <Entry Text="{Binding Title}" Grid.Row="0" Grid.Column="1" Style="{StaticResource EntryText}" />
+            
             <Label Text="Description" Grid.Row="2" />
             <Entry Text="{Binding Description}" Grid.Row="2" Grid.Column="1" />
 

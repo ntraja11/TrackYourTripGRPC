@@ -13,7 +13,7 @@
             <converters:TimestampToDateConverter x:Key="TimestampToDateConverter" />
 
             <ColumnDefinitionCollection x:Key="MembersTableColumns">
-                <ColumnDefinition Width="160" />
+                <ColumnDefinition Width="1.7*" />
                 <ColumnDefinition Width="*"  />
                 <ColumnDefinition Width="*" />
             </ColumnDefinitionCollection>
@@ -36,7 +36,7 @@
     
         <VerticalStackLayout Padding="20">
 
-            <Grid ColumnDefinitions="*, Auto, Auto" Margin="0,0,25,0" ColumnSpacing="10">
+            <Grid ColumnDefinitions="*, Auto, Auto" Margin="0,0,25,20" ColumnSpacing="10">
                 <Label Text="Trip Detail" FontSize="28" FontAttributes="Bold"
                         Grid.Column="0" VerticalOptions="Center" />
 
@@ -84,7 +84,9 @@
             </Grid>
             
 
-            <BoxView BackgroundColor="{StaticResource PrimaryText}" Margin="0, 20" HeightRequest="1" />
+            <BoxView Margin="0,20" HeightRequest="1"
+                BackgroundColor="{AppThemeBinding Light={StaticResource SecondaryDark},
+                                     Dark={StaticResource PrimaryLight}}" />
 
             
             <Grid ColumnDefinitions="*, Auto" Margin="0, 20">
@@ -104,10 +106,13 @@
                 <Grid ColumnDefinitions="{StaticResource MembersTableColumns}" Padding="10,5" ColumnSpacing="5">
                     <Label Text="Name" FontAttributes="Bold" />
                     <Label Text="Expense" Grid.Column="1" FontAttributes="Bold" />
-                    <Label Text="Difference" Grid.Column="2" FontAttributes="Bold" />
+                    <Label Text="Difference" Grid.Column="2" FontAttributes="Bold"
+                           HorizontalTextAlignment="End" LineBreakMode="NoWrap"/>
                 </Grid>
 
-                <BoxView HeightRequest="1" BackgroundColor="{StaticResource PrimaryText}" />
+                <BoxView Margin="0,10" HeightRequest="1"
+                        BackgroundColor="{AppThemeBinding Light={StaticResource SecondaryDark},
+                         Dark={StaticResource PrimaryLight}}" />
 
                 <CollectionView ItemsSource="{Binding TripMembers}" >
                     <CollectionView.ItemTemplate>
@@ -127,12 +132,16 @@
 
                                             <DataTrigger TargetType="Label"
                                                 Binding="{Binding IsPositive}" Value="True">
-                                                <Setter Property="TextColor" Value="Green" />
+                                                <Setter Property="TextColor"
+                                                    Value="{AppThemeBinding Light={StaticResource PositiveLight},
+                                                            Dark={StaticResource PositiveDark}}" />
                                             </DataTrigger>
 
                                             <DataTrigger TargetType="Label"
                                                 Binding="{Binding IsNegative}" Value="True">
-                                                <Setter Property="TextColor" Value="Red" />
+                                                <Setter Property="TextColor"
+                                                        Value="{AppThemeBinding Light={StaticResource NegativeLight},
+                                                         Dark={StaticResource NegativeDark}}" />
                                             </DataTrigger>
 
                                         </Label.Triggers>
@@ -140,8 +149,10 @@
                                     </Label>
 
                                 </Grid>
-                                    <BoxView HeightRequest="1" BackgroundColor="{StaticResource PrimaryText}" />
-                                </VerticalStackLayout>
+                                    <BoxView Margin="0,10" HeightRequest="1"
+                                            BackgroundColor="{AppThemeBinding Light={StaticResource SecondaryDark},
+                                            Dark={StaticResource PrimaryLight}}" />
+                            </VerticalStackLayout>
                             
                         </DataTemplate>
                     </CollectionView.ItemTemplate>
@@ -150,8 +161,7 @@
             </VerticalStackLayout>
 
 
-            <Border Stroke="{StaticResource PrimaryText}" StrokeThickness="1" 
-                        StrokeShape="RoundRectangle 10" IsVisible="{Binding HasExpenses}"
+            <Border StrokeShape="RoundRectangle 10" IsVisible="{Binding HasExpenses}"
                         Margin="0, 50, 0, 20">
 
                 <VerticalStackLayout>
@@ -164,7 +174,9 @@
                             HorizontalOptions="Start" FontAttributes="Bold"/>
                     </Grid>
 
-                    <BoxView HeightRequest="1" BackgroundColor="{StaticResource PrimaryText}" />
+                    <BoxView Margin="0,10" HeightRequest="1"
+                            BackgroundColor="{AppThemeBinding Light={StaticResource SecondaryDark},
+                            Dark={StaticResource PrimaryLight}}" />
 
                     <Grid ColumnDefinitions="{StaticResource AverageExpenseGridColumns}" 
                           Padding="10">
@@ -196,7 +208,9 @@
                     <Label Text="Paid By" Grid.Column="2" FontAttributes="Bold" />
                 </Grid>
 
-                <BoxView HeightRequest="1" BackgroundColor="{StaticResource PrimaryText}" />
+                <BoxView Margin="0,10" HeightRequest="1"
+                        BackgroundColor="{AppThemeBinding Light={StaticResource SecondaryDark},
+                        Dark={StaticResource PrimaryLight}}" />
 
                 <CollectionView ItemsSource="{Binding TripExpenses}"
                                 SelectionMode="Single" SelectionChanged="OnExpenseSelected">
@@ -213,7 +227,9 @@
                                     <Label Text="{Binding Member.Name}" Grid.Column="2" />
 
                                 </Grid>
-                                <BoxView HeightRequest="1" BackgroundColor="{StaticResource PrimaryText}" />
+                                <BoxView Margin="0,10" HeightRequest="1"
+                                        BackgroundColor="{AppThemeBinding Light={StaticResource SecondaryDark},
+                                         Dark={StaticResource PrimaryLight}}" />
                             </VerticalStackLayout>
 
                         </DataTemplate>

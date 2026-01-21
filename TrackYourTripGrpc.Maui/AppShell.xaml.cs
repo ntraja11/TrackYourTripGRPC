@@ -35,18 +35,21 @@ namespace TrackYourTripGrpc.Maui
         }
 
 
-        //public Command LogoutCommand => new Command(async () =>
-        //{
-        //    SecureStorage.Remove(AppConstants.AuthTokenKey);
-
-        //    await Shell.Current.GoToAsync($"//{nameof(LoginPage)}");
-        //});
-
         private async void LogoutButton_Clicked(object sender, EventArgs e)
         {
             SecureStorage.Remove(AppConstants.AuthTokenKey);
 
             await Shell.Current.GoToAsync($"//{nameof(LoginPage)}");
+        }
+
+        private async void ToggleTheme_Clicked(object sender, EventArgs e)
+        {
+            Application.Current.UserAppTheme =
+                    Application.Current.UserAppTheme == AppTheme.Dark
+                        ? AppTheme.Light
+                        : AppTheme.Dark;
+
+            Preferences.Set("AppTheme", Application.Current.UserAppTheme.ToString());
         }
     }
 }

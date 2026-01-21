@@ -24,21 +24,22 @@
 
             <CollectionView.ItemTemplate>
                 <DataTemplate x:DataType="protos:MemberDetail">    
-                    <Border 
-                        Padding="10"
-                        Margin="5"
+                    <Border Margin="0,0,0,10" Padding="10" 
+                        Stroke="{AppThemeBinding Light={StaticResource SecondaryText},
+                                 Dark={StaticResource PrimaryLight}}"
+
                         >
 
                         <Label Padding="5" 
                             Text="{Binding Name}" HorizontalOptions="Center"
-                            TextColor="{StaticResource PrimaryText}"
+                            
                             />
                     </Border>
                 </DataTemplate>
             </CollectionView.ItemTemplate>
         </CollectionView>
 
-        <Button Text="Submit" Command="{Binding SubmitMemberSelectionCommand}"/>
+        <Button Text="Submit" FontSize="22" Command="{Binding SubmitMemberSelectionCommand}"/>
 
     </VerticalStackLayout>
 

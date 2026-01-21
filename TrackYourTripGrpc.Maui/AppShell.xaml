@@ -2,25 +2,28 @@
 <Shell
     x:Class="TrackYourTripGrpc.Maui.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"    
     xmlns:accountPages="clr-namespace:TrackYourTripGrpc.Maui.Pages.Account"
     xmlns:tripPages="clr-namespace:TrackYourTripGrpc.Maui.Pages.Trip"
     Title="TrackYourTripGrpc.Maui"
-    Shell.FlyoutBehavior="Disabled"
-    Shell.BackgroundColor="{StaticResource Primary}"
+    Shell.FlyoutBehavior="Disabled"    
+    Shell.BackgroundColor="{AppThemeBinding Light={StaticResource Primary}, Dark={StaticResource PrimaryDark}}"
     >
-    
 
+    
     <Shell.TitleView>
-        <Grid ColumnDefinitions="*,Auto">
+        <Grid ColumnDefinitions="*,Auto,Auto" Padding="5" ColumnSpacing="10">
             <Label Text="Track Your Trip"
                VerticalOptions="Center" FontSize="24" />
 
-            <Button Text="Logout" Padding="5" Margin="0,0,15,0" x:Name="LogoutButton"
-                FontSize="18" Clicked="LogoutButton_Clicked" Grid.Column="1" />
+            <ImageButton Padding="5" Source="theme_toggle.png" BackgroundColor="Transparent"
+                    Aspect="AspectFit" Grid.Column="1" Clicked="ToggleTheme_Clicked"
+                         HeightRequest="22" WidthRequest="22"/>
 
-            <!--<Button Text="Logout" Padding="5" Margin="0,0,15,0" x:Name="LogoutButton"
-    FontSize="18" Command="{Binding LogoutCommand}" Grid.Column="1" />-->
+            <ImageButton Padding="5" Source="user_logout.png" BackgroundColor="Transparent"
+                    Aspect="AspectFit" Grid.Column="2" Clicked="LogoutButton_Clicked" 
+                         HeightRequest="22" WidthRequest="22"/>
+
         </Grid>
     </Shell.TitleView>
 

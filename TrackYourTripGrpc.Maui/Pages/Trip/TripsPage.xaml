@@ -1,18 +1,25 @@
 <ContentPage
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:mct="clr-namespace:CommunityToolkit.Maui.Behaviors;assembly=CommunityToolkit.Maui"
     xmlns:converters="clr-namespace:TrackYourTripGrpc.Maui.Converters"
-    x:Class="TrackYourTripGrpc.Maui.Pages.Trip.TripsPage"
-    Shell.BackgroundColor="{StaticResource Primary}"
+    x:Class="TrackYourTripGrpc.Maui.Pages.Trip.TripsPage"   
     Title="Trip Management"
     >
+    
+    <ContentPage.Behaviors>
+        <mct:StatusBarBehavior 
+            StatusBarColor="White" 
+            StatusBarStyle="Default" />
+    </ContentPage.Behaviors>
+
 
     <ContentPage.Resources>
         <ResourceDictionary>
             <converters:TimestampToDateConverter x:Key="TimestampToDateConverter" />
 
             <ColumnDefinitionCollection x:Key="TripsTableColumns">
-                <ColumnDefinition Width="190" />
+                <ColumnDefinition Width="1.5*" />
                 <ColumnDefinition Width="*"  />
                 <ColumnDefinition Width="*" />                
             </ColumnDefinitionCollection>
@@ -83,7 +90,8 @@
                                         Style="{StaticResource TableCellLabel}" />
 
                                     <Label Text="{Binding StartDate, Converter={StaticResource TimestampToDateConverter}}"
-                                       Grid.Column="2"
+                                       Grid.Column="2" HorizontalTextAlignment="End"
+                                           LineBreakMode="NoWrap"
                                        Style="{StaticResource TableCellLabel}" />
                                 </Grid>
                             </DataTemplate>
@@ -97,6 +105,9 @@
 
         <Label Text="No trips added yet." Padding="10, 20" FontSize="20"
                IsVisible="{Binding NoTrips}"/>
+
+        <Label Text="Loading..." Padding="10, 20" FontSize="20"
+                IsVisible="{Binding IsBusy}"/>
 
     </VerticalStackLayout>
 

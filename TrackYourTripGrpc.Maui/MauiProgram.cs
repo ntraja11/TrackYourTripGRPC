@@ -1,6 +1,4 @@
 ﻿using CommunityToolkit.Maui;
-using Grpc.Net.Client;
-using Microsoft.Extensions.Logging;
 using TrackYourTripGrpc.Maui.Pages.Account;
 using TrackYourTripGrpc.Maui.Pages.Expense;
 using TrackYourTripGrpc.Maui.Pages.Member;
@@ -19,16 +17,16 @@ public static class MauiProgram
 
         builder
             .UseMauiApp<App>()
+            .UseMauiCommunityToolkit()
             .ConfigureFonts(fonts =>
             {
                 fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
                 fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
-            })
-            .UseMauiCommunityToolkit();
+            });
 
-        
+
         builder.Services.AddTrackYourTripGrpcSdk(AppConstants.ApiUrl);
-        
+
         builder.Services.AddTransient<LoginPage>();
         builder.Services.AddTransient<RegisterPage>();
         builder.Services.AddTransient<LoginViewModel>();
@@ -52,9 +50,10 @@ public static class MauiProgram
         builder.Services.AddTransient<AppShell>();
 
 #if DEBUG
-        builder.Logging.AddDebug();
+        //builder.Logging.AddDebug();
 #endif
 
         return builder.Build();
     }
+
 }

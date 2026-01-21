@@ -39,7 +39,7 @@ public partial class MemberDetailViewModel : ObservableObject
 
     public double ShareDifference => TotalTripExpense - SingleMemberShare;
     public bool IsPositive => ShareDifference > 0;
-    public bool IsNegative => ShareDifference < 0;    
+    public bool IsNegative => ShareDifference < 0;
 
     private void RaiseComputedProperties()
     {

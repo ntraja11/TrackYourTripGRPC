@@ -1,6 +1,4 @@
-﻿using TrackYourTripGrpc.Maui.Utilities;
-
-namespace TrackYourTripGrpc.Maui;
+﻿namespace TrackYourTripGrpc.Maui;
 
 public partial class App : Application
 {
@@ -8,6 +6,10 @@ public partial class App : Application
     public App(IServiceProvider services)
     {
         InitializeComponent();
+
+        var theme = Preferences.Get("AppTheme", "Light");
+        UserAppTheme = Enum.Parse<AppTheme>(theme);
+
         _services = services;
     }
 

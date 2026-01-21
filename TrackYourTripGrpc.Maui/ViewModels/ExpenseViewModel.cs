@@ -57,7 +57,7 @@ public partial class ExpenseViewModel : ObservableObject
         Title = Expense.Title;
         Description = Expense.Description;
         Amount = Convert.ToDecimal(Expense.Amount);
-        MemberId = Expense.MemberId;        
+        MemberId = Expense.MemberId;
 
         var request = new GetAllMembersByTripRequest { TripId = Expense.TripId };
         var response = await _memberService.GetAllMembersByTripAsync(request, cancellationToken);
